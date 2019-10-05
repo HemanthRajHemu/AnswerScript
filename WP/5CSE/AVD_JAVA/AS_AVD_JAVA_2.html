@@ -102,7 +102,7 @@ Exam Marks 60<br/>
  </p>
 
 <p> <h1 style="color:green; font-family:courier; font-size:25px; text-align:justify;">
- These Questions are being framed for helping the students in the “FINAL Exams” Only 
+ These Questions are being framed for helping the students in the "FINAL Exams" Only 
  (Remember for Internals the Question Paper is set by your respective teachers). 
  Questions may be repeated, just to show students how VTU can frame Questions.
 <br/></h1>
@@ -125,7 +125,7 @@ Exam Marks 60<br/>
 			</p><p>An annotation with a retention policy of <b>SOURCE</b> is retained only in the source file and is discarded during compilation. 
 			</p><p>An annotation with a retention policy of <b>CLASS</b> is stored in the .class file during compilation. However, it is not available through the JVM during run time. 
 			</p><p>An annotation with a retention policy of <b>RUNTIME</b> is stored in the .class file during compilation and is available through the JVM during run time. Thus, <b>RUNTIME retention offers the greatest annotation persistence</b>.
-			</p><p>A retention policy is specified for an annotation by using one of Java’s built-in annotations: <b>@Retention</b>. Its general form is shown here: 
+			</p><p>A retention policy is specified for an annotation by using one of Java's built-in annotations: <b>@Retention</b>. Its general form is shown here: 
 			</p><p class="code">@Retention(retention-policy)
 			</p><p>Here, retention-policy must be one of the previously discussed enumeration constants. If no retention policy is specified for an annotation, then the default policy of CLASS is used. 
 			</p><p>The following version of MyAnno uses @Retention to specify the RUNTIME retention policy. Thus, MyAnno will be available to the JVM during program execution.
@@ -139,27 +139,85 @@ Exam Marks 60<br/>
 			</div><br/>
 			
 <!-- Answer Script -->
-			<div class="QAS"><a onclick="show('ANScript2')">Question 2</a></div>
+			<div class="QAS"><a onclick="show('ANScript2')">7.	What is an Enumeration? Explain with an example. (5-Marks) (1a) (June/July 2018)</a></div>
 			<div class="ansclass" id="ANScript2">
-			This is my DIV element. Question 2
+			<p>An enumeration is created using the enum keyword. For example, here is a simple enumeration that lists various apple varieties:
+			</p><p class="code">// An enumeration of apple varieties.
+			</p><p class="code" style="margin-left: 40px">enum Apple {
+			</p><p class="code" style="margin-left: 80px">Jonathan, GoldenDel, RedDel, Winesap, Cortland
+			</p><p class="code" style="margin-left: 40px">}
+			</p><p>The identifiers Jonathan, GoldenDel, and so on, are called enumeration constants. Each is implicitly declared as a public, static final member of Apple. Furthermore, their type is the type of the enumeration in which they are declared, which is Apple in this case. Thus, in the language of Java, these constants are called self-typed, in which "self" refers to the enclosing enumeration.
+			</p><p>Once you have defined an enumeration, you can create a variable of that type. However, even though enumerations define a class type, you do not instantiate an enum using new. Instead, you declare and use an enumeration variable in much the same way as you do one of the primitive types. For example, this declares ap as a variable of enumeration type Apple:
+			</p><p class="code">Apple ap;
+			</p><p>Because ap is of type Apple, the only values that it can be assigned (or can contain) are those defined by the enumeration. For example, this assigns ap the value RedDel:
+			</p><p class="code">ap = Apple.RedDel;
+			</p><p>Notice that the symbol RedDel is preceded by Apple.
+			</p><p>Two enumeration constants can be compared for equality by using the = = relational operator. For example, this statement compares the value in ap with the GoldenDel constant:
+			</p><p class="code">if(ap == Apple.GoldenDel) // ...
+			</p><p>An enumeration value can also be used to control a switch statement. Of course, all of the case statements must use constants from the same enum as that used by the switch
+			</p><p>expression. For example, this switch is perfectly valid:
+			</p><p class="code">// Use an enum to control a switch statement.<br/>
+			switch(ap) {<br/>
+			case Jonathan:<br/>
+			// ...<br/>
+			case Winesap:<br/>
+			// ...<br/>
+			</p><p>The following program puts together all of the pieces and demonstrates the Apple enumeration:
+			</p>
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/AVD_JAVA/IMG/M1/7.1.png" 
+alt="Loading Image" class="resIMG"/><br/>Fig 7.1: Demonstration of Enumeration of apple varieties</center>
+			
+			<p>The <b>values( ) and valueOf( )</b> Methods:
+			</p><p>All enumerations automatically contain two predefined methods: <b>values( ) and valueOf( )</b>. Their general forms are shown here:
+			</p><p class="code">public static enum-type[ ] values( )
+					public static enum-type valueOf(String str)
+			</p><p>The <b>values( )</b> method returns an array that contains a list of the enumeration constants. The <b>valueOf( )</b> method returns the enumeration constant whose value corresponds to the string passed in str. In both cases, enum-type is the type of the enumeration. For example, in the case of the Apple enumeration shown earlier, the return type of Apple.valueOf("Winesap") is Winesap.
+			</p><p>The following program demonstrates the values( ) and valueOf( ) methods:
+			</p>
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/AVD_JAVA/IMG/M1/7.2.png" 
+alt="Loading Image" class="resIMG"/><br/>Fig 7.2: Demonstration of values( ) and valueOf( ) methods.</center>
+			
 			</div><br/>
 			
 <!-- Answer Script -->
-			<div class="QAS"><a onclick="show('ANScript3')">Question 3</a></div>
+			<div class="QAS"><a onclick="show('ANScript3')">8.	Demonstrate how enumerations can be applied as class types. (5-Marks) (1b)(June/July 2018)</a></div>
 			<div class="ansclass" id="ANScript3">
-			<P>This is my DIV element. Question 3 </P>
-			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/AVD_JAVA/IMG/M1/1.1.png" 
-alt="Loading Image" class="resIMG"/><br/>Fig 1.1: Demonstration of Auto-Boxing and Auto-Unboxing.</center>
+			
+			</p><p>A Java enumeration is a class type. Although you don't instantiate an enum using new, it otherwise has much the same capabilities as other classes. The fact that enum defines a class gives powers to the Java enumeration that enumerations in other languages simply do not have. For example, you can give them constructors, add instance variables and methods, and even implement interfaces.
+			</p><p>It is important to understand that each enumeration constant is an object of its enumeration type. Thus, when you define a constructor for an enum, the constructor is called when each enumeration constant is created. Also, each enumeration constant has its own copy of any instance variables defined by the enumeration. For example, consider the following version of Apple:
+			</p>
+			
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/AVD_JAVA/IMG/M1/8.1.png" 
+alt="Loading Image" class="resIMG"/><br/>Fig 8.1: Demonstration of enum Constructor ,instance variable & method.</center>
+			
+			<p>This version of Apple adds three things. The first is the instance variable price, which is used to hold the price of each variety of apple. The second is the Apple constructor, which is passed the price of an apple. The third is the method getPrice( ), which returns the value of price.
+			</p><p>When the variable ap is declared in main( ), the constructor for Apple is called once for each constant that is specified. Notice how the arguments to the constructor are specified, by putting them inside parentheses after each constant, as shown here:
+			</p><p class="code">Jonathan(10), GoldenDel(9), RedDel(12), Winesap(15), Cortland(8);
+			</p><p>These values are passed to the p parameter of Apple( ), which then assigns this value to price. Again, the constructor is called once for each constant.
+			</p><p>Because each enumeration constant has its own copy of price, you can obtain the price ofa specified type of apple by calling getPrice( ). For example, in main( ) the price of a Winesap is obtained by the following call:
+			</p><p class="code">Apple.Winesap.getPrice()
+			</p><p>The prices of all varieties are obtained by cycling through the enumeration using a for loop. Because there is a copy of price for each enumeration constant, the value associated with one constant is separate and distinct from the value associated with another constant. This is a powerful concept, which is only available when enumerations are implemented as classes, as Java does.
+			</p><p>Although the preceding example contains only one constructor, an enum can offer two or more overloaded forms, just as can any other class. For example, this version of Apple provides a default constructor that initializes the price to -1, to indicate that no price data is available:
+			</p>
+
+<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/AVD_JAVA/IMG/M1/8.2.png" 
+alt="Loading Image" class="resIMG"/><br/>Fig 8.1: Demonstration of enum Constructor</center>
+			
+
+			</p><p>Notice that in this version, RedDel is not given an argument. This means that the default constructor is called, and RedDel's price variable is given the value -1.
+			</p><p>Here are two restrictions that apply to enumerations. First, an enumeration can't inherit another class. Second, an enum cannot be a superclass. This means that an enum can't be extended. Otherwise, enum acts much like any other class type. The key is to remember that each of the enumeration constants is an object of the class in which it is defined.
+			</p>
+			
 			</div><br/>
 <!-- Answer Script -->
 
-			<div class="QAS"><a onclick="show('ANScript4')">Question 4</a></div>
+			<div class="QAS"><a onclick="show('ANScript4')">9.	Discuss Auto boxing/unboxing in Java with an example. (6-Marks) (1c)(June/July 2018)</a></div>
 			<div class="ansclass" id="ANScript4">
-			This is my DIV element. Question 4
+			Refer 1st Question & Answer. or <a href="/AnswerScript/WP/5CSE/AVD_JAVA/AS_AVD_JAVA_1.html">Click Here...</a>
 			</div><br/>
 <!-- Answer Script -->
 
-			<div class="QAS"><a onclick="show('ANScript5')">Question 5</a></div>
+			<div class="QAS"><a onclick="show('ANScript5')">Question 5  (June/July 2018)</a></div>
 			<div class="ansclass" id="ANScript5">
 			This is my DIV element. Question 5
 			</div><br/>
@@ -167,8 +225,8 @@ alt="Loading Image" class="resIMG"/><br/>Fig 1.1: Demonstration of Auto-Boxing a
 
 <center>
 <div id="showPGE">
-  <button class="btn active" onclick="window.location.href='/AnswerScript/WP/5CSE/AVD_JAVA/AS_AVD_JAVA_1.html'">1</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/AVD_JAVA/AS_AVD_JAVA_2.html'">2</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/AVD_JAVA/AS_AVD_JAVA_1.html'">1</button>
+  <button class="btn active" onclick="window.location.href='/AnswerScript/WP/5CSE/AVD_JAVA/AS_AVD_JAVA_2.html'">2</button>
   <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/AVD_JAVA/AS_AVD_JAVA_3.html'">3</button>
   <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/AVD_JAVA/AS_AVD_JAVA_4.html'">4</button>
   
