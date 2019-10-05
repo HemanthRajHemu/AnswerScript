@@ -118,9 +118,24 @@ Exam Marks 60<br/>
 <!-- Answer Script -->
 
 			<div class="ansCover">
-			<div class="QAS"><a onclick="show('ANScript1')">Question 1</a></div>
+			<div class="QAS"><a onclick="show('ANScript1')">6.	Explain different retention policies for annotations in Java. (6-Marks) (2c) (Dec.2018 / Jan.2019)</a></div>
 			<div class="ansclass" id="ANScript1">
-			This is my DIV element. Question 1
+			
+			</p><p>A retention policy determines at what point an annotation is discarded. Java defines three such policies, which are encapsulated within the <b>java.lang.annotation.RetentionPolicy</b> enumeration. They are <b>SOURCE, CLASS, and RUNTIME</b>. 
+			</p><p>An annotation with a retention policy of <b>SOURCE</b> is retained only in the source file and is discarded during compilation. 
+			</p><p>An annotation with a retention policy of <b>CLASS</b> is stored in the .class file during compilation. However, it is not available through the JVM during run time. 
+			</p><p>An annotation with a retention policy of <b>RUNTIME</b> is stored in the .class file during compilation and is available through the JVM during run time. Thus, <b>RUNTIME retention offers the greatest annotation persistence</b>.
+			</p><p>A retention policy is specified for an annotation by using one of Java’s built-in annotations: <b>@Retention</b>. Its general form is shown here: 
+			</p><p class="code">@Retention(retention-policy)
+			</p><p>Here, retention-policy must be one of the previously discussed enumeration constants. If no retention policy is specified for an annotation, then the default policy of CLASS is used. 
+			</p><p>The following version of MyAnno uses @Retention to specify the RUNTIME retention policy. Thus, MyAnno will be available to the JVM during program execution.
+			</p><p class="code">@Retention(RetentionPolicy.RUNTIME)
+			</p><p class="code" style="margin-left: 40px">@interface MyAnno { 
+			</p><p class="code" style="margin-left: 80px">String str();
+			</p><p class="code" style="margin-left: 80px">int val();
+			</p><p class="code" style="margin-left: 40px">}<br/>
+			</p>
+	
 			</div><br/>
 			
 <!-- Answer Script -->
