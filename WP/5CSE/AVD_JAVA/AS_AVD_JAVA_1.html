@@ -118,19 +118,26 @@ Exam Marks 60<br/>
 <!-- Answer Script -->
 
 			<div class="ansCover">
-			<div class="QAS"><a onclick="show('ANScript1')">1.	What is auto-boxing? Write a program to demonstrate auto-boxing/unboxing. (5-Marks) (1a) (Dec.2018/Jan.2019)</a></div>
+			<div class="QAS"><a onclick="show('ANScript1')">1.	What is auto-boxing? Write a program to demonstrate auto-boxing/unboxing. (5-Marks) (1a) (Dec.2018 / Jan.2019)</a></div>
 			<div class="ansclass" id="ANScript1">
 			<p>Beginning with JDK 5, Java added two important features: <b>Autoboxing</b> and <b>auto-unboxing.</b></p>
 			
-			Autoboxing is the process by which a primitive type is automatically encapsulated (boxed) into its equivalent type wrapper whenever an object of that type is needed. There is no need to explicitly construct an object. 
-			Auto-unboxing is the process by which the value of a boxed object is automatically extracted (unboxed) from a type wrapper when its value is needed. There is no need to call a method such as intValue( ) or doubleValue( ).
-
+			<p><b>Autoboxing</b> is the process by which a primitive type is automatically encapsulated (boxed) into its equivalent type wrapper whenever an object of that type is needed. There is no need to explicitly construct an object. </p>
+			<p><b>Auto-unboxing</b> is the process by which the value of a boxed object is automatically extracted (unboxed) from a type wrapper when its value is needed. There is no need to call a method such as intValue( ) or doubleValue( ).</p>
+			<p>With Autoboxing it is no longer necessary to manually construct an object in order to wrap a primitive type. You need only assign that value to a type-wrapper reference. Java automatically constructs the object for you. For example, here is the modern way to construct an Integer object that has the value 100: </p>
 			<p class="code">
 			Integer iOb = 100; // autobox an int
 			</p>
+			<p>Notice that no object is explicitly created through the use of new. Java handles this for you, automatically.
+			</p><p>To unbox an object, simply assign that object reference to a primitive-type variable.
+			</p><p>For example, to unbox iOb, you can use this line:</p>
+			<p class="code">int i = iOb; // auto-unbox.</p>
+			<p>Java handles the details for you.
+			</p><p>Here is the preceding program rewritten to use Autoboxing/unboxing:
+			</p>
 			
-			
-			
+			<center><img src="/AnswerScript/WP/5CSE/AVD_JAVA/IMG/M1/1.1.png" 
+alt="Nature" class="resIMG"/>Fig 1.1: Demonstration of Auto-Boxing and Auto-Unboxing.</center>
 			</div><br/>
 
 			<div class="QAS"><a onclick="show('ANScript2')">Question 2</a></div>
