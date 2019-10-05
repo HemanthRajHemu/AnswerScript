@@ -113,7 +113,9 @@ Exam Marks 60<br/>
 
  
 <!-- trying now--->
-  
+  <p> <h1 style="color:#eb0c2d; font-family:courier; font-size:25px; text-align:center;">
+ Mobile User: Use the Mobile on LANDSCAPE MODE to better view of Images<br/></h1>
+ </p>
 
 <!-- Answer Script -->
 
@@ -137,26 +139,82 @@ Exam Marks 60<br/>
 			</p>
 			
 			<center><img src="/AnswerScript/WP/5CSE/AVD_JAVA/IMG/M1/1.1.png" 
-alt="Nature" class="resIMG"/>Fig 1.1: Demonstration of Auto-Boxing and Auto-Unboxing.</center>
-			</div><br/>
+alt="Loading Image" class="resIMG"/><br/>Fig 1.1: Demonstration of Auto-Boxing and Auto-Unboxing.</center>
 
-			<div class="QAS"><a onclick="show('ANScript2')">Question 2</a></div>
+			</div><br/>
+<!-- Answer Script -->
+			<div class="QAS"><a onclick="show('ANScript2')">2.	What do you mean by type wrapper? Explain numeric type wrapper with an example program in JAVA. (5-Marks) (1b) (Dec.2018 / Jan.2019)</a></div>
 			<div class="ansclass" id="ANScript2">
-			This is my DIV element. Question 2
-			</div><br/>
+			<p>Java provides type wrappers, which are classes that encapsulate a primitive type within an object.
+			</p><p>The type wrappers are <b>Double, Float, Long, Integer, Short, Byte, Character, and Boolean</b>. These classes offer a wide array of methods that allow you to fully integrate the primitive types into Java's object hierarchy. Each is briefly examined next.
+			</p><p> <b>2.1 Character</b>
+			</p><p>Character is a wrapper around a char. The constructor for Character is
+			</p><p class="code">Character(char ch)
+			</p><p>Here, ch specifies the character that will be wrapped by the Character object being created. To obtain the char value contained in a Character object, call charValue( ), shown here:
+			</p><p class="code">char charValue( )
+			</p><p>It returns the encapsulated character.
+			</p><p><b>2.2 The Numeric Type Wrappers</b>
+			</p><p>By far, the most commonly used type wrappers are those that represent numeric values. These are <b>Byte, Short, Integer, Long, Float, and Double</b>. All of the numeric type wrappers inherit the abstract class Number. Number declares methods that return the value of an object in each of the different number formats. These methods are shown here:
+			</p><p class="code">byte byteValue( )<br/>
+			double doubleValue( )<br/>
+			float floatValue( )<br/>
+			int intValue( )<br/>
+			long longValue( )<br/>
+			short shortValue( )<br/>
+			</p><p>For example, doubleValue( ) returns the value of an object as a double, floatValue( ) returns the value as a float, and so on. These methods are implemented by each of the numeric type wrappers.
+			</p><p>All of the numeric type wrappers define constructors that allow an object to be constructed from a given value, or a string representation of that value. For example, here are the constructors defined for <b>Integer</b>:
+			</p><p class="code">Integer(int num)<br/>
+			Integer(String str)
+			</p><p>If str does not contain a valid numeric value, then a <b>NumberFormatException</b> is thrown.
+			</p><p>All of the type wrappers override <b>toString( )</b>. It returns the human-readable form of the value contained within the wrapper. This allows you to output the value by passing a type wrapper object to <b>println( )</b>, for example, without having to convert it into its primitive type.
+			</p><p>The following program demonstrates how to use a numeric type wrapper to encapsulate a value and then extract that value.
+			
+			<center><img src="/AnswerScript/WP/5CSE/AVD_JAVA/IMG/M1/2.1.png" 
+alt="Loading Image" class="resIMG"/><br/>Fig 1.1: Demonstration of numeric type wrapper .</center>
 
-			<div class="QAS"><a onclick="show('ANScript3')">Question 3</a></div>
+			</p><p>This program wraps the integer value 100 inside an Integer object called iOb. The program then obtains this value by calling intValue( ) and stores the result in i.
+</p><p>The process of encapsulating a value within an object is called boxing. Thus, in the program, this line boxes the value 100 into an Integer:
+</p><p class="code">Integer iOb = new Integer(100); 	//boxing
+</p><p>The process of extracting a value from a type wrapper is called unboxing. For example, the program unboxes the value in iOb with this statement:
+</p><p class="code">int i = iOb.intValue(); 	//unboxing
+</p>
+			
+			</div><br/>
+			
+<!-- Answer Script -->
+			<div class="QAS"><a onclick="show('ANScript3')">
+			3.	Explain the following methods of java.lang.Enum with an example:<br/>
+			i.	ordinal( )<br/>
+			ii.	compareTo( )<br/>
+			iii.	equals( )		(6-Marks) (1c) (Dec.2018 / Jan.2019)
+			</a></div>
 			<div class="ansclass" id="ANScript3">
-			<P>This is my DIV element. Question 3 </P>
-			<center><img src="https://hemanthrajhemu.github.io/FutureVisionBIE/owner.jpg" 
-alt="Nature" class="resIMG"/></center>
+			</p><p>Although you can't inherit a superclass when declaring an enum, all enumerations automatically inherit one: java.lang.Enum. This class defines several methods that are available for use by all enumerations.
+			</p><p> <b>i.	Ordinal( ):</b>
+			</p><p>We can obtain a value that indicates an enumeration constant's position in the list of constants. This is called its ordinal value, and it is retrieved by calling the ordinal( ) method, shown here:
+			</p><p class="code">final int ordinal( )
+			</p><p>It returns the ordinal value of the invoking constant. Ordinal values begin at zero. Thus, in the Apple enumeration, <b>Jonathan</b> has an <b>ordinal</b> value of <b>zero</b>,<b> GoldenDel</b> has an ordinal value of <b>1</b>, <b>RedDel</b> has an ordinal value of <b>2</b>, and so on.
+			</p><p><b>ii.	compareTo( ):</b>
+			</p><p>You can compare the ordinal value of two constants of the same enumeration by using the compareTo( ) method. It has this general form:
+			</p><p class="code">final int compareTo(enum-type e)
+			</p><p>Here, enum-type is the type of the enumeration, and e is the constant being compared to the invoking constant. Remember, both the invoking constant and e must be of the same enumeration. If the invoking constant has an ordinal value less than e's, then <b>compareTo( )</b> returns a negative value. If the 
+					two ordinal values are the same, then zero is returned. If the invoking constant has an ordinal value greater than e's, then a positive value is returned.
+			</p><p>
+			
+			
+			
+			
 			</div><br/>
-
-			<div class="QAS"><a onclick="show('ANScript4')">Question 4</a></div>
+			
+<!-- Answer Script -->
+			<div class="QAS"><a onclick="show('ANScript4')">
+			Question 4
+			</a></div>
 			<div class="ansclass" id="ANScript4">
 			This is my DIV element. Question 4
 			</div><br/>
-
+			
+<!-- Answer Script -->
 			<div class="QAS"><a onclick="show('ANScript5')">Question 5</a></div>
 			<div class="ansclass" id="ANScript5">
 			This is my DIV element. Question 5
