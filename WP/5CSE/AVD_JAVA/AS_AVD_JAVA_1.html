@@ -138,7 +138,7 @@ Exam Marks 60<br/>
 			</p><p>Here is the preceding program rewritten to use Autoboxing/unboxing:
 			</p>
 			
-			<center><img src="/AnswerScript/WP/5CSE/AVD_JAVA/IMG/M1/1.1.png" 
+			<center><img src="http://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/AVD_JAVA/IMG/M1/1.1.png" 
 alt="Loading Image" class="resIMG"/><br/>Fig 1.1: Demonstration of Auto-Boxing and Auto-Unboxing.</center>
 
 			</div><br/>
@@ -169,15 +169,15 @@ alt="Loading Image" class="resIMG"/><br/>Fig 1.1: Demonstration of Auto-Boxing a
 			</p><p>All of the type wrappers override <b>toString( )</b>. It returns the human-readable form of the value contained within the wrapper. This allows you to output the value by passing a type wrapper object to <b>println( )</b>, for example, without having to convert it into its primitive type.
 			</p><p>The following program demonstrates how to use a numeric type wrapper to encapsulate a value and then extract that value.
 			
-			<center><img src="/AnswerScript/WP/5CSE/AVD_JAVA/IMG/M1/2.1.png" 
-alt="Loading Image" class="resIMG"/><br/>Fig 1.1: Demonstration of numeric type wrapper .</center>
+			<center><img src="http://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/AVD_JAVA/IMG/M1/2.1.png" 
+alt="Loading Image" class="resIMG"/><br/>Fig 2.1: Demonstration of numeric type wrapper .</center>
 
 			</p><p>This program wraps the integer value 100 inside an Integer object called iOb. The program then obtains this value by calling intValue( ) and stores the result in i.
-</p><p>The process of encapsulating a value within an object is called boxing. Thus, in the program, this line boxes the value 100 into an Integer:
-</p><p class="code">Integer iOb = new Integer(100); 	//boxing
-</p><p>The process of extracting a value from a type wrapper is called unboxing. For example, the program unboxes the value in iOb with this statement:
-</p><p class="code">int i = iOb.intValue(); 	//unboxing
-</p>
+			</p><p>The process of encapsulating a value within an object is called boxing. Thus, in the program, this line boxes the value 100 into an Integer:
+			</p><p class="code">Integer iOb = new Integer(100); 	//boxing
+			</p><p>The process of extracting a value from a type wrapper is called unboxing. For example, the program unboxes the value in iOb with this statement:
+			</p><p class="code">int i = iOb.intValue(); 	//unboxing
+			</p>
 			
 			</div><br/>
 			
@@ -199,25 +199,86 @@ alt="Loading Image" class="resIMG"/><br/>Fig 1.1: Demonstration of numeric type 
 			</p><p class="code">final int compareTo(enum-type e)
 			</p><p>Here, enum-type is the type of the enumeration, and e is the constant being compared to the invoking constant. Remember, both the invoking constant and e must be of the same enumeration. If the invoking constant has an ordinal value less than e's, then <b>compareTo( )</b> returns a negative value. If the 
 					two ordinal values are the same, then zero is returned. If the invoking constant has an ordinal value greater than e's, then a positive value is returned.
-			</p><p>
-			
-			
-			
-			
+			</p><p><b>iii.	equals( ):</b>
+			</p><p>You can compare for equality an enumeration constant with any other object by using equals( ), which overrides the equals( ) method defined by Object. Although equals( ) can compare an enumeration constant to any other object, those two objects will only be equal if they both refer to the same constant, within the same enumeration. Simply having ordinal values in common will not cause equals( ) to return true if the two constants are from different enumerations.
+			</p><p>Remember, you can compare two enumeration references for equality by using = =. The following program demonstrates the ordinal( ), compareTo( ), and equals( ) methods:
+			</p>
+			<center><img src="http://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/AVD_JAVA/IMG/M1/3.1.png" 
+alt="Loading Image" class="resIMG"/><br/>Fig 3.1: Demonstrations of ordinal( ), compareTo( ), and equals( ) methods.</center>
+
 			</div><br/>
 			
 <!-- Answer Script -->
 			<div class="QAS"><a onclick="show('ANScript4')">
-			Question 4
+			4.	Demonstrate single annotation with an example. (4-Marks) (2a) (Dec.2018 / Jan.2019)
 			</a></div>
 			<div class="ansclass" id="ANScript4">
-			This is my DIV element. Question 4
+			
+			</p><p>A single-member annotation contains only one member. It works like a normal annotation except that it allows a shorthand form of specifying the value of the member. When only one member is present, you can simply specify the value for that member when the annotation is applied—you don’t need to specify the name of the member. However, in order to use this shorthand, the name of the member must be value.
+			</p><p>Here is an example that creates and uses a single-member annotation:
+			</p>
+			<center><img src="http://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/AVD_JAVA/IMG/M1/4.1.png" 
+alt="Loading Image" class="resIMG"/><br/>Fig 4.1: Demonstrations to creates and uses a single-member annotation</center>
+
 			</div><br/>
 			
 <!-- Answer Script -->
-			<div class="QAS"><a onclick="show('ANScript5')">Question 5</a></div>
+			<div class="QAS"><a onclick="show('ANScript5')">5.	Explain following built-in annotations with a program in Java:
+<br/>i.	@Override<br/>
+ii.	@Inherited<br/>
+iii.	@Retention 		(6-Marks) (2b)
+ (Dec.2018 / Jan.2019)</a></div>
 			<div class="ansclass" id="ANScript5">
-			This is my DIV element. Question 5
+			
+			</p><p>Beginning with JDK 5, a new facility was added to Java that enables you to embed supplemental information into a source file. This information, called an annotation, does not change the actions of a program. Thus, an annotation leaves the semantics of a program unchanged. However, this information can be used by various tools during both development and deployment. For example, an annotation might be processed by a source-code generator. The term metadata is also used to refer to this feature, but the term annotation is the most descriptive and more commonly used.
+			</p><p><b>5.1 The Built-In Annotations</b>
+			</p><p>Java defines many built-in annotations. Most are specialized, but seven are general purpose. Of these, four are imported from <b>java.lang.annotation: @Retention, @Documented, @Target</b>, and <b>@Inherited</b>. Three - <b>@Override, @Deprecated, and @SuppressWarnings</b> - are included in java.lang. Each is described here.
+			</p><p><b>5.1.1 @Retention</b>
+			</p><p><b>@Retention</b> is designed to be used only as an annotation to another annotation. It specifies the retention policy as described earlier in this chapter.
+			</p><p><b>5.1.2 @Documented</b>
+			</p><p>The <b>@Documented</b> annotation is a marker interface that tells a tool that an annotation is to be documented. It is designed to be used only as an annotation to an annotation declaration.
+			</p><p><b>5.1.3 @Target</b>
+			</p><p>The <b>@Target</b> annotation specifies the types of declarations to which an annotation can be applied. It is designed to be used only as an annotation to another annotation. @Target takes <b>one argument</b>, which must be a constant from the ElementType enumeration. This argument specifies the types of declarations to which the annotation can be applied. The constants are shown here along with the type of declaration to which they correspond.
+</p>
+			<center><img src="http://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/AVD_JAVA/IMG/M1/5.1.png" 
+alt="Loading Image" class="resIMG"/><br/>Fig 5.1: @Target Constants with Declaration </center>
+
+			</p><p>You can specify one or more of these values in a <b>@Target annotation</b>. To specify multiple values, you must specify them within a <b>braces-delimited list</b>. For example, to specify that an annotation applies only to fields and local variables, you can use this @Target annotation: 
+			</p><p class="code">@Target( { ElementType.FIELD, ElementType.LOCAL_VARIABLE } )
+			</p>
+			
+			<p><b>5.1.4 @Inherited</b>
+			</p><p><b>@Inherited</b> is a marker annotation that can be used only on another annotation declaration. Furthermore, it affects only annotations that will be used on class declarations. @Inherited causes the annotation for a superclass to be inherited by a subclass. Therefore, when a request for a specific annotation is made to the subclass, if that annotation is not present in the subclass, then its superclass is checked. If that annotation is present in the superclass, and if it is annotated with @Inherited, then that annotation will be returned.
+			</p>
+			<center><img src="http://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/AVD_JAVA/IMG/M1/5.6.png" 
+alt="Loading Image" class="resIMG"/><br/>Fig 5.2: Demonstration of @Inherited Marker Annotation</center>
+			
+			
+			<p><b>5.1.5 @Override</b>
+			</p><p><b>@Override</b> is a marker annotation that can be used only on methods. A method annotated with @Override must override a method from a superclass. If it doesn’t, a compile-timeerror will result. It is used to ensure that a superclass method is actually overridden, and not simply overloaded.
+			</p>
+			<center><img src="http://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/AVD_JAVA/IMG/M1/5.3.png" 
+alt="Loading Image" class="resIMG"/><br/>Fig 5.3: Demonstration of @Override Marker Annotation</center>
+			
+			
+			<p><b>5.1.6 @Deprecated</b>
+			</p><p><b>@Deprecated</b> is a marker annotation. It indicates that a declaration is obsolete and has been replaced by a newer form.
+			</p>
+			<center><img src="http://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/AVD_JAVA/IMG/M1/5.2.png" 
+alt="Loading Image" class="resIMG"/><br/>Fig 5.4: Demonstration of @Deprecated Marker Annotation</center>
+			
+			<p><b>5.1.7 @SuppressWarnings</b>
+			</p><p><b>@SuppressWarnings</b> specifies that one or more warnings that might be issued by the compiler are to be suppressed. The warnings to suppress are specified by name, in string form. This annotation can be applied to any type of declaration.
+			</p>
+			<center><img src="http://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/AVD_JAVA/IMG/M1/5.4.png" 
+alt="Loading Image" class="resIMG"/><br/>Fig 5.5: Demonstration of @SuppressWarnings Marker Annotation</center>
+			<br/>
+			<center><img src="http://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/AVD_JAVA/IMG/M1/5.5.png" 
+alt="Loading Image" class="resIMG"/><br/>Fig 5.6: Demonstration of User Defined Annotation</center>
+			
+			
+			
+			
 			</div><br/>
 			</div>
 
