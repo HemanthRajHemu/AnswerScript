@@ -142,37 +142,315 @@
 <!-- Answer Script -->
 
 			<div class="ansCover">
-			<div class="QAS"><a onclick="show('ANScript1')">Question 6.1<h1>6.	Suppose that two measured sample RTT values are 106ms and 120ms, Compute:
+			<div class="QAS"><a onclick="show('ANScript1')">Question 6.1<h1>Suppose that two measured sample RTT values are 106ms and 120ms, Compute:<br/>
 i)	Estimate RTT after each of these sample RTT value is obtained. Assume α=0.125 and estimate RTT is 100msec just before first of the samples obtained.
 </h1></a></div>
 			<div class="ansclass" id="ANScript1">
-			This is my DIV element. Question 1
+			
+						
+							<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M2/CN_M2/6.1.png" 
+alt="Loading Image" class="resIMG"/><br/></center>
+			
 			</div><br/>
 			
 <!-- Answer Script -->
-			<div class="QAS"><a onclick="show('ANScript2')">Question 7<h1>Question 2</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript2')">Question 6.2<h1>ii)	Compute DevRTT<br/>
+Assume β = 0.25 and DevRTT was 5 msec before first of these samples are obtained. (4-Marks) (4c)
+</h1></a></div>
 			<div class="ansclass" id="ANScript2">
-			This is my DIV element. Question 2
+							
+							<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M2/CN_M2/6.2.png" 
+alt="Loading Image" class="resIMG"/><br/></center><br/>
+			
+							<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M2/CN_M2/6.3.png" 
+alt="Loading Image" class="resIMG"/><br/></center><br/>
 			</div><br/>
 			
 <!-- Answer Script -->
-			<div class="QAS"><a onclick="show('ANScript3')">Question 8<h1>Question 3</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript3')">Question 7<h1>Describe the various field of UDP segment. Explain how Checksum is calculated. (8-Marks) (3a)</h1>(June/July 2018)</a></div>
 			<div class="ansclass" id="ANScript3">
-			<P>This is my DIV element. Question 3 </P>
-			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/M&E/IMG/M1/1.1.png" 
-alt="Loading Image" class="resIMG"/><br/>Fig 1.1: Demonstration of Auto-Boxing and Auto-Unboxing.</center>
+			
+			<h2>
+    1.1 UDP Segment Structure
+</h2>
+			
+							<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M2/CN_M2/7.1.jpg" 
+alt="Loading Image" class="resIMG"/><br/></center>
+<h2 align="center">
+    Fig 7.1: UDP segment structure
+</h2>
+<p>
+	&#8226; UDP Segment contains following fields (Figure 7.1):
+</p>
+<p>
+	<strong> i. </strong>
+	<strong>Application Data: </strong>
+	This field occupies the data-field of the segment.
+</p>
+<p>
+	<strong> ii. </strong>
+	<strong>Destination Port No: </strong>
+	This field is used to deliver the data to correct process running on the
+	destination-host. (i.e. demultiplexing function).
+</p>
+<p>
+	<strong> iii. </strong>
+	<strong>Length: </strong>
+	This field specifies the number of bytes in the segment (header plus data).
+</p>
+<p>
+	<strong> iv. </strong>
+	<strong>Checksum: </strong>
+	This field is used for error-detection.
+</p>
+<h2>
+	7.2 UDP Checksum
+</h2>
+<p>
+	&#8226; The checksum is used for error-detection.
+</p>
+<p>
+	&#8226; The checksum is used to determine whether bits within the segment
+	have been altered.
+</p>
+<p>
+	&#8226; How to calculate checksum on the sender:
+</p>
+<p>
+	i. All the 16-bit words in the segment are added to get a sum.
+</p>
+<p>
+	ii. Then, the 1's complement of the sum is obtained to get a result.
+</p>
+<p>
+	iii. Finally, the result is added to the checksum-field inside the segment.
+</p>
+<p>
+	&#8226; How to check for error on the receiver:
+</p>
+<p>
+	1) All the 16-bit words in the segment (including the checksum) are added
+	to get a sum.
+</p>
+<p>
+	i) For no errors: In the sum, all the bits are 1. (Ex: 1111111)
+</p>
+<p>
+	ii) For any error: In the sum, at least one of the bits is a 0. (Ex:
+	1011111)
+</p>
+<p>
+	Example:
+</p>
+<p>
+	&#8226; On the sender:
+</p>
+<p>
+	&#216; Suppose that we have the following three 16-bit words:
+	0110011001100000
+</p>
+<p>
+	0101010101010101 &#8594; three 16 bits words
+</p>
+<p>
+	1000111100001100
+</p>
+<p>
+&#216; The sum of first two 16-bit words is: 0110011001100000	<u> 0101010101010101</u> 1011101110110101
+</p>
+<p>
+	&#216; Adding the third word to the above sum gives:
+</p>
+<p>
+	1011101110110101 &#8594; sum of 1<sup>st</sup> two 16 bit words
+</p>
+<p>
+	<u>1000111100001100</u>
+	&#8594; third 16 bit word
+</p>
+<p>
+	0100101011000010 &#8594; sum of all three 16 bit words
+</p>
+<p>
+	&#216; Taking 1's complement for the final sum:
+</p>
+<p>
+	0100101011000010 &#8594; sum of all three 16 bit words
+</p>
+<p>
+	1011010100111101 &#8594; 1's complement for the final sum
+</p>
+<p>
+	&#8226; The 1's complement value is called as checksum which is added
+	inside the segment.
+</p>
+<p>
+	&#8226; On the receiver
+</p>
+<p>
+	&#216; All four 16-bit words are added, including the checksum.
+</p>
+<p>
+	i) If no errors are introduced into the packet, then clearly the sum will
+	be 1111111111111111.
+</p>
+<p>
+	ii) If one of the bits is a 0, then errors have been introduced into the
+	packet.
+</p>
+
+			
 			</div><br/>
 <!-- Answer Script -->
 
-			<div class="QAS"><a onclick="show('ANScript4')">Question 9<h1>Question 4</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript4')">Question 8<h1>Describe rdt 2.0 protocol. (8-Marks) (3b)</h1>(June/July 2018)</a></div>
 			<div class="ansclass" id="ANScript4">
-			This is my DIV element. Question 4
+				
+				<h2>
+	1.1 Reliable Data Transfer over a Channel with Bit Errors: rdt2.0
+</h2>
+<p>
+	&#8226; Consider data transfer over an unreliable channel in which bits in
+	a packet may be corrupted.
+</p>
+<p>
+	&#8226; We call this protocol as rdt2.0.
+</p>
+<p>
+	&#8226; The message dictation protocol uses both
+</p>
+<p>
+	&#8594; positive acknowledgements (ACK) and
+</p>
+<p>
+	&#8594; negative acknowledgements (NAK).
+</p>
+<p>
+	&#8226; The receiver uses these control messages to inform the sender about
+</p>
+<p>
+	&#8594; what has been received correctly and
+</p>
+<p>
+	&#8594; what has been received in error and thus requires retransmission.
+</p>
+<p>
+	&#8226; Reliable data transfer protocols based on the retransmission are
+	known as ARQ protocols.
+</p>
+<p>
+	&#8226; Three additional protocol capabilities are required in ARQ
+	protocols:
+</p>
+<h2>
+	1) Error Detection
+</h2>
+<p>
+	&#216; A mechanism is needed to allow the receiver to detect when
+	bit-errors have occurred.
+</p>
+<p>
+	&#216; UDP uses the checksum field for error-detection.
+</p>
+<p>
+	&#216; Error-correction techniques allow the receiver to detect and correct
+	packet bit-errors.
+</p>
+<h2>
+	2) Receiver Feedback
+</h2>
+<p>
+	&#216; Since the sender and receiver are typically executing on different
+	end-systems.
+</p>
+<p>
+	&#216; The only way for the sender to learn about status of the receiver is
+	by the receiver providing explicit feedback to the sender.
+</p>
+<p>
+	&#216; For example: ACK &amp; NAK
+</p>
+<h2>
+	3) Retransmission
+</h2>
+<p>
+	&#216; A packet that is received in error at the receiver will be
+	retransmitted by the sender.
+</p>
+<p>
+	&#8226; Figure 8.1 shows the FSM representation of rdt2.0.
+</p>
+			
+							<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M2/CN_M2/8.1.jpg" 
+alt="Loading Image" class="resIMG"/><br/></center>
+
+			
+							<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M2/CN_M2/8.2.jpg" 
+alt="Loading Image" class="resIMG"/><br/></center>
+<p align="center">
+	Fig 8.1: rdt2.0-A protocol for a channel with bit-errors
+</p>
+<h2>
+	Sender FSM
+</h2>
+<p>
+	&#8226; The sender of rdt2.0 has 2 states:
+</p>
+<p>
+	1) In one state, the protocol is waiting for data to be passed down from
+	the upper layer.
+</p>
+<p>
+	2) In other state, the protocol is waiting for an ACK or a NAK from the
+	receiver.
+</p>
+<p>
+	i) If an ACK is received, the protocol
+</p>
+<p>
+	&#8594; knows that the most recently transmitted packet has been received
+	correctly
+</p>
+<p>
+	&#8594; returns to the state of waiting for data from the upper layer.
+</p>
+<p>
+	ii) If a NAK is received, the protocol
+</p>
+<p>
+	&#8594; retransmits the last packet and
+</p>
+<p>
+	&#8594; waits for an ACK or NAK to be returned by the receiver.
+</p>
+<p>
+	&#8226; The sender will not send a new data until it is sure that the
+	receiver has correctly received the current packet.
+</p>
+<p>
+	&#8226; Because of this behaviour, protocol rdt2.0 is known as
+	stop-and-wait protocols.
+</p>
+<h2>
+	Receiver FSM
+</h2>
+<p>
+	&#8226; The receiver of rdt2.0 has a single state.
+</p>
+<p>
+	&#8226; On packet arrival, the receiver replies with either an ACK or a
+	NAK, depending on the received packet is corrupted or not.
+</p>
+
+				
 			</div><br/>
 <!-- Answer Script -->
 
-			<div class="QAS"><a onclick="show('ANScript5')">Question 10<h1>Question 5</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript5')">Question 9<h1>With a neat sketch, explain the TCP segment and its services. (8-Marks) (4a)</h1>(June/July 2018)</a></div>
 			<div class="ansclass" id="ANScript5">
-			This is my DIV element. Question 5
+				<br/><br/>
+				Refer 5<sup>th</sup> Question & Answer OR <a href="/AnswerScript/WP/5CSE/CN/M2/AS_CN_M2_P1.html">Click HERE</a>
+				<br/><br/>
 			</div><br/>
 			</div>
 
@@ -186,15 +464,10 @@ alt="Loading Image" class="resIMG"/><br/>Fig 1.1: Demonstration of Auto-Boxing a
 
 <center>
 <div id="showPGE">
-  <button class="btn active" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P1.html'">1</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P2.html'">2</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P3.html'">3</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P4.html'">4</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P5.html'">5</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P6.html'">6</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P7.html'">7</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P8.html'">8</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P9.html'">9</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/CN/M2/AS_CN_M2_P1.html'">1</button>
+  <button class="btn active" onclick="window.location.href='/AnswerScript/WP/5CSE/CN/M2/AS_CN_M2_P2.html'">2</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/CN/M2/AS_CN_M2_P3.html'">3</button>
+  
   
 </div>
 </center>
