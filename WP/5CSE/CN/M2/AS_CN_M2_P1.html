@@ -142,35 +142,759 @@
 <!-- Answer Script -->
 
 			<div class="ansCover">
-			<div class="QAS"><a onclick="show('ANScript1')">Question 1<h1>Elaborate the three-way handshaking in TCP. (5-Marks) (3a)</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript1')">Question 1<h1>Elaborate the three-way handshaking in TCP. (5-Marks) (3a)</h1>(Dec.2017/Jan.2018)</a></div>
 			<div class="ansclass" id="ANScript1">
-			This is my DIV element. Question 1
+				<p>
+    <strong>1.0 TCP Connection Management</strong>
+</p>
+<p>
+    <strong>1.1 Connection Setup &amp; Data Transfer</strong>
+</p>
+<p>
+    To setup the connection, three segments are sent between the two hosts.
+    Therefore, this process is referred to as a three-way handshake.
+</p>
+<p>
+    Suppose a client-process wants to initiate a connection with a
+    server-process.
+</p>
+<p>
+    The Below Figure Represents the TCP Three-Way Handshake.
+</p>
+<p>
+    <strong>
+        Step 1: Client sends a connection-request segment to the Server
+    </strong>
+</p>
+<p>
+    a. The client first sends a connection-request segment to the server.
+</p>
+<p>
+    b. The connection-request segment contains:
+</p>
+<p>
+    i. SYN bit is set to 1.
+</p>
+<p>
+    ii. Initial sequence-number (client_isn).
+</p>
+<p>
+    c. The SYN segment is encapsulated within an IP datagram and sent to the
+    server.
+</p>
+<h2>
+    Step 2: Server sends a connection-granted segment to the Client
+</h2>
+<p>
+    a. Then, the server
+</p>
+<p>
+    i. extracts the SYN segment from the datagram
+</p>
+<p>
+    ii. allocates the buffers and variables to the connection and
+</p>
+<p>
+    iii. sends a connection-granted segment to the client.
+</p>
+<p>
+    b. The connection-granted segment contains:
+</p>
+<p>
+    i. SYN bit is set to 1.
+</p>
+<p>
+    ii. Acknowledgment field is set to client_isn+1.
+</p>
+<p>
+    iii. Initial sequence-number (server_isn).
+</p>
+<h2>
+    Step 3: Client sends an ACK segment to the Server
+</h2>
+<p>
+    a. Finally, the client
+</p>
+<p>
+    i. allocates buffers and variables to the connection and
+</p>
+<p>
+    ii. sends an ACK segment to the server
+</p>
+<p>
+    b. The ACK segment acknowledges the server.
+</p>
+<p>
+    c. SYN bit is set to zero, since the connection is established.
+</p>
+			
+							<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M2/CN_M2/1.1.jpg" 
+alt="Loading Image" class="resIMG"/><br/></center>
+<p align="center">
+    Fig 1.1: TCP three-way handshake: segment exchange
+</p>
+<p>
+    <strong>1.2 Connection Release</strong>
+</p>
+<p>
+    a. Either of the two processes in a connection can end the connection.
+</p>
+<p>
+    b. When a connection ends, the "resources" in the hosts are de-allocated.
+</p>
+<p>
+    c. Suppose the client decides to close the connection.
+</p>
+<p>
+    d. Figure 1.2 illustrates the steps involved:
+</p>
+<p>
+    i. The client-process issues a close command.
+</p>
+<p>
+    v Then, the client sends a shutdown-segment to the server.
+</p>
+<p>
+    v This segment has a FIN bit set to 1.
+</p>
+<p>
+    ii. The server responds with an acknowledgment to the client.
+</p>
+<p>
+    iii. The server then sends its own shutdown-segment.
+</p>
+<p>
+    v This segment has a FIN bit set to 1.
+</p>
+<p>
+    iv. Finally, the client acknowledges the server's shutdown-segment.
+</p>
+			
+							<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M2/CN_M2/1.2.jpg" 
+alt="Loading Image" class="resIMG"/><br/></center>
+<p align="center">
+    Fig 1.2: Closing a TCP connection
+</p>
+
 			</div><br/>
 			
 <!-- Answer Script -->
-			<div class="QAS"><a onclick="show('ANScript2')">Question 2<h1>Question 2</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript2')">Question 2<h1>Discuss Go-Back N protocol. (6-Marks) (3b)</h1>(Dec.2017/Jan.2018)</a></div>
 			<div class="ansclass" id="ANScript2">
-			This is my DIV element. Question 2
+			
+				
+				<p>
+	<strong>2.1 Go-Back N Protocol (GBN)</strong>
+</p>
+<p>
+	a. The sender is allowed to transmit multiple packets without waiting for
+	an acknowledgment.
+</p>
+<p>
+	b. But, the sender is constrained to have at most N unacknowledged packets
+	in the pipeline.
+</p>
+<p>
+	a. Where N = window-size which refers maximum no. of unacknowledged packets
+	in the pipeline
+</p>
+<p>
+	c. GBN protocol is called a sliding-window protocol.
+</p>
+<p>
+	d. Figure 2.1 shows the sender's view of the range of sequence-numbers.
+</p>
+			
+							<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M2/CN_M2/2.1.png" 
+alt="Loading Image" class="resIMG"/><br/></center>
+<p align="center">
+	Fig: 2.1 Sender's view of sequence-numbers in Go-Back-N
+</p>
+<p>
+	&#8226; Figure 2.2 and 2.3 give a FSM description of the sender and
+	receivers of a GBN protocol.
+</p>
+			
+							<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M2/CN_M2/2.2.jpg" 
+alt="Loading Image" class="resIMG"/><br/></center>
+<p align="center">
+	Fig 2.2: Extended FSM description of GBN sender
+</p>
+			
+							<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M2/CN_M2/2.3.jpg" 
+alt="Loading Image" class="resIMG"/><br/></center>
+<p align="center">
+	Fig 2.3: Extended FSM description of GBN receiver
+</p>
+<p>
+	<strong>2.2 GBN Sender</strong>
+</p>
+<p>
+	The sender must respond to 3 types of events:
+</p>
+<h2>
+	1) Invocation from above.
+</h2>
+<p>
+	When rdt_send() is called from above, the sender first checks to see if the
+	window is full
+</p>
+<p>
+	i.e. whether there are N outstanding, unacknowledged packets.
+</p>
+<p>
+	i. If the window is not full, the sender creates and sends a packet.
+</p>
+<p>
+	ii. If the window is full, the sender simply returns the data back to the
+	upper layer. This is an implicit indication that the window is full.
+</p>
+<h2>
+	2) Receipt of an ACK.
+</h2>
+<p>
+	a. An acknowledgment for a packet with sequence-number n will be taken to
+	be a cumulative acknowledgment.
+</p>
+<p>
+	b. All packets with a sequence-number up to n have been correctly received
+	at the receiver.
+</p>
+<h2>
+	3) A Timeout Event.
+</h2>
+<p>
+	A timer will be used to recover from lost data or acknowledgment packets.
+</p>
+<p>
+	i. If a timeout occurs, the sender resends all packets that have been
+	previously sent but that have not yet been acknowledged.
+</p>
+<p>
+	ii. If an ACK is received but there are still additional transmitted but
+	not yet acknowledged packets, the timer is restarted.
+</p>
+<p>
+	iii. If there are no outstanding unacknowledged packets, the timer is
+	stopped.
+</p>
+<p>
+	<strong>2.3 GBN Receiver</strong>
+</p>
+<p>
+	a. If a packet with sequence-number n is received correctly and is in
+	order, the receiver
+</p>
+<p>
+	i. sends an ACK for packet n and
+</p>
+<p>
+	ii. delivers the packet to the upper layer.
+</p>
+<p>
+	b. In all other cases, the receiver
+</p>
+<p>
+	i. discards the packet and
+</p>
+<p>
+	ii. resends an ACK for the most recently received in-order packet.
+</p>
+<p>
+	<strong>2.4 Operation of the GBN Protocol</strong>
+</p>
+			
+							<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M2/CN_M2/2.4.jpg" 
+alt="Loading Image" class="resIMG"/><br/></center>
+<p align="center">
+	Fig 2.4: Go-Back-N in operation
+</p>
+<p>
+	a. Figure 2.4 shows the operation of the GBN protocol for the case of a
+	window-size of four packets.
+</p>
+<p>
+	b. The sender sends packets 0 through 3.
+</p>
+<p>
+	c. The sender then must wait for one or more of these packets to be
+	acknowledged before proceeding.
+</p>
+<p>
+	d. As each successive ACK (for ex, ACK0 and ACK1) is received, the window
+	slides forward and the sender transmits one new packet (pkt4 and pkt5,
+	respectively).
+</p>
+<p>
+	e. On the receiver, packet 2 is lost and thus packets 3, 4, and 5 are found
+	to be out of order and are discarded.
+</p>
+
+				
 			</div><br/>
 			
 <!-- Answer Script -->
-			<div class="QAS"><a onclick="show('ANScript3')">Question 3<h1>Question 3</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript3')">Question 3<h1>Explain the connection-oriented multiplexing and de-multiplexing. (5-Marks) (3c)</h1>(Dec.2017/Jan.2018)</a></div>
 			<div class="ansclass" id="ANScript3">
-			<P>This is my DIV element. Question 3 </P>
-			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/M&E/IMG/M1/1.1.png" 
-alt="Loading Image" class="resIMG"/><br/>Fig 1.1: Demonstration of Auto-Boxing and Auto-Unboxing.</center>
+				<p>
+	a. Each TCP connection has exactly 2 end-points.
+</p>
+<p>
+	b. Thus, 2 arriving TCP segments with different source-port-nos will be
+	directed to 2 different sockets, even if they have the same
+	destination-port-no.
+</p>
+<p>
+	c. A TCP socket is identified by a four-tuple:
+</p>
+<p>
+	i. Source IP address
+</p>
+<p>
+	ii. Source-port-no
+</p>
+<p>
+	iii. Destination IP address &amp;
+</p>
+<p>
+	iv. Destination-port-no.
+</p>
+			
+							<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M2/CN_M2/3.1.jpg" 
+alt="Loading Image" class="resIMG"/><br/></center>
+<p align="center">
+	Fig 3.1 : The inversion of source and destination-port-nos
+</p>
+<p>
+	a. The server-host may support many simultaneous connection-sockets.
+</p>
+<p>
+	b. Each socket will be
+</p>
+<p>
+	i. attached to a process.
+</p>
+<p>
+	ii. identified by its own four tuple.
+</p>
+<p>
+	c. When a segment arrives at the host, all 4 fields are used to direct the
+	segment to the appropriate socket. (i.e. Demultiplexing).
+</p>
+<p>
+	The situation is illustrated in Figure 3.1, in which Host C initiates two
+	HTTP sessions to server B, and Host A initiates one HTTP session to B.
+	Hosts A and C and server B each have their own unique IP address-A, C, and
+	B, respectively. Host C assigns two different source port numbers (26145
+	and 7532) to its two HTTP connections. Because Host A is choosing source
+	port numbers independently of C, it might also assign a source port of
+	26145 to its HTTP connection. But this is not a problem-server B will still
+	be able to correctly demultiplex the two connections having the same source
+	port number, since the two connections have different source IP addresses.
+</p>
+				
 			</div><br/>
 <!-- Answer Script -->
 
-			<div class="QAS"><a onclick="show('ANScript4')">Question 4<h1>Question 4</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript4')">Question 4<h1>State congestion and discuss the cause of congestion. (4-Marks) (4a)</h1>(Dec.2017/Jan.2018)</a></div>
 			<div class="ansclass" id="ANScript4">
-			This is my DIV element. Question 4
+				<p>
+	<strong>4.1 Definition</strong>
+</p>
+<p>
+	A state occurring in network layer when the message traffic is so heavy
+	that it slows down network response time.
+</p>
+<p>
+	<strong>Effects</strong>
+	of Congestion
+</p>
+<ul>
+	<li>
+		As delay increases, performance decreases.
+	</li>
+</ul>
+<p>
+	&#183; If delay increases, retransmission occurs, making situation worse.
+</p>
+<p>
+	<strong>4.2 Cause of congestion</strong>
+</p>
+<p>
+	<strong>
+		The Causes and the Costs of Congestion Scenario are as follows:
+	</strong>
+</p>
+<p>
+	<strong>Scenario 1: Two Senders, a Router with Infinite Buffers</strong>
+</p>
+<p>
+	a. Two hosts (A &amp; B) have a connection that shares a single-hop b/w
+	source &amp; destination.
+</p>
+<p>
+	b. This is illustrated in Figure 4.1.
+</p>
+<p>
+	<strong></strong>
+</p>
+			
+							<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M2/CN_M2/4.1.jpg" 
+alt="Loading Image" class="resIMG"/><br/></center>
+<p align="center">
+	Fig 4.1 Congestion scenario 1: Two connections sharing a single hop with
+	infinite buffers
+</p>
+<p>
+	Let
+</p>
+<p>
+	Sending-rate of Host-A = &#955;in bytes/sec
+</p>
+<p>
+	Outgoing Link's capacity = R
+</p>
+<p>
+	a. Packets from Hosts A and B pass through a router and over a shared
+	outgoing link.
+</p>
+<p>
+	b. The router has buffers.
+</p>
+<p>
+	c. The buffers stores incoming packets when packet-arrival rate exceeds the
+	outgoing link's capacity.
+</p>
+			
+							<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M2/CN_M2/4.2.jpg" 
+alt="Loading Image" class="resIMG"/><br/></center>
+<p>
+	Fig 4.2: Congestion scenario 1: Throughput and delay as a
+	function of host sending-rate
+</p>
+<h2>
+	Left Hand Graph
+</h2>
+<p>
+	a. The left graph plots the per-connection throughput as a function of the
+	connection-sending-rate.
+</p>
+<p>
+	b. For a sending-rate b/w 0 and R/2, the throughput at the receiver equals
+	the sender's sending-rate. However, for a sending-rate above R/2, the
+	throughput at the receiver is only R/2. (Figure 4.2a)
+</p>
+<p>
+	c. Conclusion: The link cannot deliver packets to a receiver at a
+	steady-state rate that exceeds R/2.
+</p>
+<h2>
+	Right Hand Graph
+</h2>
+<p>
+	a. The right graph plots the average delay as a function of the
+	connection-sending-rate (Figure 4.2b).
+</p>
+<p>
+	b. As the sending-rate approaches R/2, the average delay becomes larger and
+	larger. However, for a sending-rate above R/2, the average delay becomes
+	infinite.
+</p>
+<p>
+	c. Conclusion: Large queuing delays are experienced as the packet arrival
+	rate nears the link capacity.
+</p>
+<h2>
+	Scenario 2: Two Senders and a Router with Finite Buffers
+</h2>
+<p>
+	&#8226; Here, we have 2 assumptions (Figure 2.37):
+</p>
+<p>
+	<strong>1) </strong>
+	The amount of router buffering is finite.
+</p>
+<p>
+	&#216; Packets will be dropped when arriving to an already full buffer.
+</p>
+<p>
+	<strong>2) </strong>
+	Each connection is reliable.
+</p>
+<p>
+	&#216; If a packet is dropped at the router, the sender will eventually
+	retransmit it.
+</p>
+<p>
+	&#8226; Let
+</p>
+<p>
+	Application's sending-rate of Host-A = &#955;in bytes/sec
+</p>
+<p>
+	Transport-layer's sending-rate of Host-A = &#955;in' bytes/sec (also called
+	offered-load to network)
+</p>
+<p>
+	Outgoing Link's capacity = R
+</p>
+			
+							<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M2/CN_M2/4.3.jpg" 
+alt="Loading Image" class="resIMG"/><br/></center>
+<p align="center">
+	Fig 4.3: Scenario 2: Two hosts (with retransmissions) and a router with
+	finite buffers
+</p>
+<h2>
+	Case 1 (Figure 4.4(a)):
+</h2>
+<p>
+	&#216; Host-A sends a packet only when a buffer is free.
+</p>
+<p>
+	&#216; In this case,
+</p>
+<p>
+	i. no loss occurs
+</p>
+<p>
+	ii. &#955;in will be equal to &#955;in', and
+</p>
+<p>
+	iii. throughput of the connection will be equal to &#955;in.
+</p>
+<p>
+	&#216; The sender retransmits only when a packet is lost.
+</p>
+<p>
+	&#216; Consider the offered-load &#955;in= R/2.
+</p>
+<p>
+	&#216; The rate at which data are delivered to the receiver application is
+	R/3.
+</p>
+<p>
+	&#216; The sender must perform retransmissions to compensate for lost
+	packets due to buffer overflow.
+</p>
+			
+							<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M2/CN_M2/4.4.jpg" 
+alt="Loading Image" class="resIMG"/><br/></center>
+<p align="center">
+	Fig 4.4: Scenario 2 performance with finite buffers
+</p>
+<h2>
+	Case 2 (Figure 4.4(c)):
+</h2>
+<p>
+	a. The sender may time out &amp; retransmit a packet that has been delayed
+	in the queue but not yet lost.
+</p>
+<p>
+	b. Both the original data packet and the retransmission may reach the
+	receiver.
+</p>
+<p>
+	c. The receiver needs one copy of this packet and will discard the
+	retransmission.
+</p>
+<p>
+	d. The work done by the router in forwarding the retransmitted copy of the
+	original packet was wasted.
+</p>
+<h2>
+	Scenario 3: Four Senders, Routers with Finite Buffers, and Multi-hop Paths
+</h2>
+<p>
+	&#8226; Four hosts transmit packets, each over overlapping two-hop paths.
+</p>
+<p>
+	&#8226; This is illustrated in Figure 4.5.
+</p>
+			
+							<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M2/CN_M2/4.5.png" 
+alt="Loading Image" class="resIMG"/><br/></center>
+<p align="center">
+	Fig 4.5: Four senders, routers with finite buffers, and multihop paths
+</p>
+<p>
+	&#216; Consider the connection from Host-A to Host C, passing through
+	routers R1 and R2.
+</p>
+<p>
+	&#216; The A-C connection
+</p>
+<p>
+	o shares router R1 with the D-B connection and
+</p>
+<p>
+	o shares router R2 with the B-D connection.
+</p>
+<p>
+	&#216; <strong>Case-1:</strong> For extremely small values of &#955;in,
+</p>
+<p>
+	o buffer overflows are rare (as in congestion scenarios 1 and 2) and
+</p>
+<p>
+	o the throughput approximately equals the offered-load.
+</p>
+<p>
+	&#216; <strong>Case-2:</strong> For slightly larger values of &#955;in, the
+	corresponding throughput is also larger. This is because
+</p>
+<p>
+	o more original data is transmitted into the network
+</p>
+<p>
+	o data is delivered to the destination and
+</p>
+<p>
+	o &#8594; overflows are still rare.
+</p>
+<p>
+	&#216; <strong>Case-3:</strong> For extremely larger values of &#955;in.
+</p>
+<p>
+	o Consider router R2.
+</p>
+<p>
+	o The A-C traffic arriving to router R2 can have an arrival rate of at most
+	R regardless of the value of &#955;in.
+</p>
+<p>
+	&#167; where R = the capacity of the link from R1 to R2,.
+</p>
+<p>
+	o If &#955;in' is extremely large for all connections, then the arrival
+	rate of B-D traffic at R2 can be much larger than that of the A-C traffic.
+</p>
+<p>
+	o The A-C and B-D traffic must compete at router R2 for the limited amount
+	of buffer-space.
+</p>
+<p>
+	o Thus, the amount of A-C traffic that successfully gets through R2 becomes
+	smaller and smaller as the offered-load from B-D gets larger and larger.
+</p>
+<p>
+	o In the limit, as the offered-load approaches infinity, an empty buffer at
+	R2 is immediately filled by a B-D packet, and the throughput of the A-C
+	connection at R2 goes to zero.
+</p>
+<p>
+	o When a packet is dropped along a path, the transmission capacity ends up
+	having been wasted.
+</p>
+
+
 			</div><br/>
 <!-- Answer Script -->
 
-			<div class="QAS"><a onclick="show('ANScript5')">Question 5<h1>Question 5</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript5')">Question 5<h1>With a neat diagram, explain the TCP segment structure. (8-Marks) (4b)</h1>(Dec.2017/Jan.2018)</a></div>
 			<div class="ansclass" id="ANScript5">
-			This is my DIV element. Question 5
+				
+				<p>
+	a. The segment consists of header-fields and a data-field.
+</p>
+<p>
+	b. The data-field contains a chunk-of-data.
+</p>
+<p>
+	c. When TCP sends a large file, it breaks the file into chunks of size MSS.
+</p>
+<p>
+	d. Figure 5.1 shows the structure of the TCP segment.
+</p>
+			
+							<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M2/CN_M2/5.1.jpg" 
+alt="Loading Image" class="resIMG"/><br/></center>
+<p align="center">
+	Fig 5.1: TCP segment structure
+</p>
+<p>
+	The fields of TCP segment are as follows:
+</p>
+<h2>
+	1) Source and Destination Port Numbers
+</h2>
+<p>
+	i. These fields are used for multiplexing/demultiplexing data from/to
+	upper-layer applications.
+</p>
+<h2>
+	2) Sequence Number &amp; Acknowledgment Number
+</h2>
+<p>
+	i. These fields are used by sender &amp; receiver in implementing a
+	reliable data-transfer-service.
+</p>
+<h2>
+	3) Header Length
+</h2>
+<p>
+	i. This field specifies the length of the TCP header.
+</p>
+<h2>
+	4) Flag
+</h2>
+<p>
+	i. This field contains 6 bits.
+</p>
+<h2>
+	i) ACK
+</h2>
+<p>
+	&#164; This bit indicates that value of acknowledgment field is valid.
+</p>
+<h2>
+	ii) RST, SYN &amp; FIN
+</h2>
+<p>
+	&#164; These bits are used for connection setup and teardown.
+</p>
+<h2>
+	iii) PSH
+</h2>
+<p>
+	&#164; This bit indicates the sender has invoked the push operation.
+</p>
+<h2>
+	iv) URG
+</h2>
+<p>
+	&#164; This bit indicates the segment contains urgent-data.
+</p>
+<h2>
+	5) Receive Window
+</h2>
+<p>
+	i. This field defines receiver's window size
+</p>
+<p>
+	ii. This field is used for flow control.
+</p>
+<h2>
+	6) Checksum
+</h2>
+<p>
+	i. This field is used for error-detection.
+</p>
+<h2>
+	7) Urgent Data Pointer
+</h2>
+<p>
+	i. This field indicates the location of the last byte of the urgent data.
+</p>
+<h2>
+	8) Options
+</h2>
+<p>
+	i. This field is used when a sender &amp; receiver negotiate the MSS for
+	use in high-speed networks.
+</p>
+
+				
 			</div><br/>
 			</div>
 
