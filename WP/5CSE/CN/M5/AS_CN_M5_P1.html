@@ -152,30 +152,30 @@ var infolinks_wsid = 0;
 			<div class="ansclass" id="ANScript1">
 			
 			<p>
-	&#252; The underlying medium is pre-recorded video. For example: a movie.
+	&#9635; The underlying medium is pre-recorded video. For example: a movie.
 </p>
 <p>
-	&#252; These pre-recorded videos are placed on servers.
+	&#9635; These pre-recorded videos are placed on servers.
 </p>
 <p>
-	&#252; The users send requests to the servers to view the videos on-demand.
+	&#9635; The users send requests to the servers to view the videos on-demand.
 </p>
 <p>
-	&#252; Nowadays, many Internet companies provide streaming video. For
+	&#9635; Nowadays, many Internet companies provide streaming video. For
 	example: YouTube.
 </p>
 <p>
-	&#252; Three key distinguishing features of streaming stored video:
+	&#9635; Three key distinguishing features of streaming stored video:
 </p>
 <h2>
 	1) Streaming
 </h2>
 <p>
-	&#216; The client begins video playout within few seconds after it begins
+	&#9641; The client begins video playout within few seconds after it begins
 	receiving the video from the server.
 </p>
 <p>
-	&#216; At the same time,
+	&#9641; At the same time,
 </p>
 <p>
 	i. The client will be playing out from one location in the video.
@@ -184,28 +184,28 @@ var infolinks_wsid = 0;
 	ii. The client will be receiving later parts of the video from the server.
 </p>
 <p>
-	&#216; This technique avoids having to download the entire video-file
+	&#9641; This technique avoids having to download the entire video-file
 	before playout begins.
 </p>
 <h2>
 	2) Interactivity
 </h2>
 <p>
-	&#216; The media is pre-recorded, so the user may pause, reposition or
+	&#9641; The media is pre-recorded, so the user may pause, reposition or
 	fast-forward through video-content.
 </p>
 <p>
-	&#216; The response time should be less than a few seconds.
+	&#9641; The response time should be less than a few seconds.
 </p>
 <h2>
 	3) Continuous Playout
 </h2>
 <p>
-	&#216; Once playout of the video begins, it should proceed according to the
+	&#9641; Once playout of the video begins, it should proceed according to the
 	original timing of the recording.
 </p>
 <p>
-	&#216; The data must be received from the server in time for its playout at
+	&#9641; The data must be received from the server in time for its playout at
 	the client. Otherwise, users experience video-frame skipping (or freezing).
 </p>
 
@@ -217,11 +217,11 @@ var infolinks_wsid = 0;
 			<div class="ansclass" id="ANScript2">
 			
 			<p>
-	&#252; When a browser wants to retrieve a specific video, the CDN
+	&#9635; When a browser wants to retrieve a specific video, the CDN
 	intercepts the request.
 </p>
 <p>
-	&#252; Then, the CDN
+	&#9635; Then, the CDN
 </p>
 <p>
 	i. determines a suitable server-cluster for the client and
@@ -230,10 +230,10 @@ var infolinks_wsid = 0;
 	ii. redirects the client's request to the desired server.
 </p>
 <p>
-	&#252; Most CDNs take advantage of DNS to intercept and redirect requests.
+	&#9635; Most CDNs take advantage of DNS to intercept and redirect requests.
 </p>
 <p>
-	&#252; CDN operation is illustrated in Figure 2.1.
+	&#9635; CDN operation is illustrated in Figure 2.1.
 </p>
 			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M5/CN_M5/2.1.jpg" 
 alt="Loading Image" class="resIMG"/></center>
@@ -241,17 +241,17 @@ alt="Loading Image" class="resIMG"/></center>
 	Fig 2.1: DNS redirects a use's request to a CDN server
 </p>
 <p>
-	&#252; Suppose a content provider "NetCinema" employs the CDN company
+	&#9635; Suppose a content provider "NetCinema" employs the CDN company
 	"KingCDN" to distribute videos.
 </p>
 <p>
-	&#252; Let URL =
+	&#9635; Let URL =
 	<a href="http://video.netcinema.com/6Y7B23V">
 		http://video.netcinema.com/6Y7B23V
 	</a>
 </p>
 <p>
-	&#252; Six events occur as shown in Figure 2.1:
+	&#9635; Six events occur as shown in Figure 2.1:
 </p>
 <p>
 	i.The user visits the Web page at NetCinema.
@@ -265,7 +265,7 @@ alt="Loading Image" class="resIMG"/></center>
 	</a>
 </p>
 <p>
-	&#216; Then, the user's host sends a DNS query for "video.netcinema.com".
+	&#9641; Then, the user's host sends a DNS query for "video.netcinema.com".
 </p>
 <p>
 	iii.The user's local-DNS-server (LDNS) forwards the DNS-query to an
@@ -275,17 +275,17 @@ alt="Loading Image" class="resIMG"/></center>
 	iv."NetCinema".
 </p>
 <p>
-	&#216; The server "NetCinema" returns to the LDNS a hostname in the
+	&#9641; The server "NetCinema" returns to the LDNS a hostname in the
 	KingCDN's domain.
 </p>
 <p>
-	&#216; For example: "a1105.kingcdn.com".
+	&#9641; For example: "a1105.kingcdn.com".
 </p>
 <p>
 	v.The user's LDNS then sends a second query, now for "a1105.kingcdn.com".
 </p>
 <p>
-	&#216; Eventually, KingCDN's DNS system returns the IP addresses of a
+	&#9641; Eventually, KingCDN's DNS system returns the IP addresses of a
 	"KingCDN" server to LDNS.
 </p>
 <p>
@@ -322,18 +322,18 @@ alt="Loading Image" class="resIMG"/></center>
 	3.1 Limitations of the Best-Effort IP Service
 </h2>
 <p>
-	&#252; The Internet's network-layer protocol IP provides best-effort
+	&#9635; The Internet's network-layer protocol IP provides best-effort
 	service.
 </p>
 <p>
-	&#252; The IP makes best effort to move each datagram from source to
+	&#9635; The IP makes best effort to move each datagram from source to
 	destination.
 </p>
 <p>
-	&#252; But IP does not guarantee deliver of the packet to the destination.
+	&#9635; But IP does not guarantee deliver of the packet to the destination.
 </p>
 <p>
-	&#252; Three main challenges to the design of real-time applications:
+	&#9635; Three main challenges to the design of real-time applications:
 </p>
 <p>
 	i. Packet-loss
@@ -348,44 +348,44 @@ alt="Loading Image" class="resIMG"/></center>
 	3.1.1 Packet Loss
 </h2>
 <p>
-	&#252; By default, most existing VoIP applications run over UDP.
+	&#9635; By default, most existing VoIP applications run over UDP.
 </p>
 <p>
-	&#252; The UDP segment is encapsulated in an IP datagram.
+	&#9635; The UDP segment is encapsulated in an IP datagram.
 </p>
 <p>
-	&#252; The datagram passes through router buffers in the path from sender
+	&#9635; The datagram passes through router buffers in the path from sender
 	to receiver
 </p>
 <p>
-	&#252; Problem:
+	&#9635; Problem:
 </p>
 <p>
-	&#216; There is possibility that one or more buffers are full.
+	&#9641; There is possibility that one or more buffers are full.
 </p>
 <p>
-	&#216; In this case, the arriving IP datagram may be discarded.
+	&#9641; In this case, the arriving IP datagram may be discarded.
 </p>
 <p>
-	&#252; Possible solution:
+	&#9635; Possible solution:
 </p>
 <p>
-	&#216; Loss can be eliminated by sending the packets over TCP rather than
+	&#9641; Loss can be eliminated by sending the packets over TCP rather than
 	over UDP.
 </p>
 <p>
-	&#216; However, retransmissions are unacceptable for real-time
+	&#9641; However, retransmissions are unacceptable for real-time
 	applications, they increase delay.
 </p>
 <p>
-	&#216; Packet-loss results in a reduction of sender's transmission-rate,
+	&#9641; Packet-loss results in a reduction of sender's transmission-rate,
 	leading to buffer starvation.
 </p>
 <h2>
 	3.1.2 End-to-End Delay
 </h2>
 <p>
-	&#252; End-to-end delay is the sum of following delays:
+	&#9635; End-to-end delay is the sum of following delays:
 </p>
 <p>
 	i. Transmission, processing, and queuing delays in routers.
@@ -397,7 +397,7 @@ alt="Loading Image" class="resIMG"/></center>
 	iii. Processing delays in end-systems.
 </p>
 <p>
-	&#252; For VoIP application,
+	&#9635; For VoIP application,
 </p>
 <p>
 	i. delays smaller than 150 m secs are not perceived by a human listener.
@@ -411,21 +411,21 @@ alt="Loading Image" class="resIMG"/></center>
 	voice conversations.
 </p>
 <p>
-	&#252; Typically, the receiving-side will discard any packets that are
+	&#9635; Typically, the receiving-side will discard any packets that are
 	delayed more than a certain threshold.
 </p>
 <p>
-	&#252; For example: more than 400 m secs.
+	&#9635; For example: more than 400 m secs.
 </p>
 <h2>
 	3.1.3 Packet Jitter
 </h2>
 <p>
-	&#252; Jitter refers to varying queuing delays that a packet experiences in
+	&#9635; Jitter refers to varying queuing delays that a packet experiences in
 	the network's routers.
 </p>
 <p>
-	&#252; If the receiver
+	&#9635; If the receiver
 </p>
 <p>
 	i. ignores the presence of jitter and
@@ -437,7 +437,7 @@ alt="Loading Image" class="resIMG"/></center>
 	then the resulting audio-quality can easily become unintelligible.
 </p>
 <p>
-	&#252; Jitter can often be removed by using sequence numbers, timestamps,
+	&#9635; Jitter can often be removed by using sequence numbers, timestamps,
 	and a playout delay
 </p>
 
@@ -448,8 +448,8 @@ alt="Loading Image" class="resIMG"/></center>
 			<div class="QAS"><a onclick="show('ANScript4')">Question 4<h1>Explain the different internet architecture. (5-Marks) (10a)</h1>(Dec.2017/Jan.2018)</a></div>
 			<div class="ansclass" id="ANScript4">
 			
-			&#252;Client-Server Architecture<br/>
-			&#252;Peer to Peer Architecture<br/>
+			&#9635;Client-Server Architecture<br/>
+			&#9635;Peer to Peer Architecture<br/>
 			Refer 1st Module 1st Question & Answer.<br/>
 			</div><br/>
 			
@@ -471,58 +471,58 @@ alt="Loading Image" class="resIMG"/></center>
 	5.1 Policing: The Leaky Bucket
 </h2>
 <p>
-	&#252; Policing is an important QoS mechanism
+	&#9635; Policing is an important QoS mechanism
 </p>
 <p>
-	&#252; Policing means the regulation of the rate at which a flow is allowed
+	&#9635; Policing means the regulation of the rate at which a flow is allowed
 	to inject packets into the network.
 </p>
 <p>
-	&#252; Three important policing criteria:
+	&#9635; Three important policing criteria:
 </p>
 <h2>
 	i. Average Rate
 </h2>
 <p>
-	&#216; This constraint limits amount of traffic that can be sent into n/w
+	&#9641; This constraint limits amount of traffic that can be sent into n/w
 	over a long period of time.
 </p>
 <h2>
 	ii. Peak Rate
 </h2>
 <p>
-	&#216; This constraint limits maximum no. of packets that can be sent over
+	&#9641; This constraint limits maximum no. of packets that can be sent over
 	a short period of time
 </p>
 <h2>
 	iii. Burst Size
 </h2>
 <p>
-	&#216; This constraint limits the maximum no. of packets that can be sent
+	&#9641; This constraint limits the maximum no. of packets that can be sent
 	into n/w over a very short period of time.
 </p>
 <h2>
 	5.2 Leaky Bucket Operation
 </h2>
 <p>
-	&#252; Policing-device can be implemented based on the concept of a leaky
+	&#9635; Policing-device can be implemented based on the concept of a leaky
 	bucket.
 </p>
 <p>
-	&#252; Tokens are generated periodically at a constant rate.
+	&#9635; Tokens are generated periodically at a constant rate.
 </p>
 <p>
-	&#252; Tokens are stored in a bucket.
+	&#9635; Tokens are stored in a bucket.
 </p>
 <p>
-	&#252; A packet from the buffer can be taken out only if a token in the
+	&#9635; A packet from the buffer can be taken out only if a token in the
 	bucket can be drawn.
 </p>
 <p>
-	&#252; If the bucket is full of tokens, additional tokens are discarded.
+	&#9635; If the bucket is full of tokens, additional tokens are discarded.
 </p>
 <p>
-	&#252; If the bucket is empty, arriving packets have to wait in the buffer
+	&#9635; If the bucket is empty, arriving packets have to wait in the buffer
 	until a sufficient no. of tokens is generated.
 </p>
 			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/CN/M5/CN_M5/5.1.jpg" 
