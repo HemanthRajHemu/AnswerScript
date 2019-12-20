@@ -149,15 +149,54 @@ DATABASE MANAGEMENT SYSTEM
 <!-- Answer Script -->
 
 			<div class="ansCover">
-			<div class="QAS"><a onclick="show('ANScript1')">Question <h1>Question 1</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript1')">Question 26<h1>Illustrate recursive relationship. (4-Marks) (2c)</h1>(June/July.2018|10-scheme)</a></div>
 			<div class="ansclass" id="ANScript1">
-			This is my DIV element. Question 1
+			
+			<p>
+	Role names are not technically necessary in relationship types where all
+	the participating entity types are distinct, since each participating
+	entity type name can be used as the role name. However, in some cases the
+	same entity type participates more than once in a relationship type in
+	different roles. In such cases the role name becomes essential for
+	distinguishing the meaning of the role that each participating entity
+plays. Such relationship types are called	<strong>recursive relationships or self-referencing relationships</strong>.
+</p>
+<p>
+	Figure 26.1 shows an example. The SUPERVISION relationship type relates an
+	employee to a supervisor, where both employee and supervisor entities are
+	members of the same EMPLOYEE entity set. Hence, the EMPLOYEE entity type
+	participates twice in SUPERVISION: once in the role of supervisor (or
+	boss), and once in the role of supervisee (or subordinate). Each
+	relationship instance r<sub>i</sub> in SUPERVISION associates two different
+	employee entities e<sub>j</sub> and e<sub>k</sub>, one of which plays the
+	role of supervisor and the other the role of supervisee.
+</p>
+<p>
+	In Figure 26.1, the lines marked '1' represent the supervisor role, and
+	those marked '2' represent the supervisee role; hence, e<sub>1</sub>
+supervises e<sub>2</sub> and e<sub>3</sub>, e<sub>4</sub> supervises e	<sub>6</sub> and e<sub>7</sub>, and e<sub>5</sub> supervises e<sub>1</sub>
+	and e<sub>4</sub>. In this example, each relationship instance must be
+	connected with two lines, one marked with '1' (supervisor) and the other
+	with '2' (supervisee).
+</p>
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/DBMS/M1/M1IMG/26.1.png" 
+alt="Loading Image" class="resIMG"/></center>
+<p align="center">
+	Fig 26.1: A recursive relationship SUPERVISION between EMPLOYEE in the
+	supervisor role (1) and EMPLOYEE in the subordinate role (2).
+</p>
+
+			
 			</div><br/>
 			
 <!-- Answer Script -->
-			<div class="QAS"><a onclick="show('ANScript2')">Question <h1>Question 2</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript2')">Question 27<h1>Discuss the main characteristics of the database approach. How does it differ from traditional file system? (8-Marks) (1a)</h1>(Dec.2016/Jan.2017|10-scheme)</a></div>
 			<div class="ansclass" id="ANScript2">
-			This is my DIV element. Question 2
+			
+			<br/><br/>
+			Refer 1<sup>st</sup> Question & Answer OR <a href="/AnswerScript/WP/5CSE/DBMS/M1/AS_DBMS_M1_P1.html">CLICK HERE</a>
+			<br/><br/>	
+			
 			</div><br/>
 			
 			
@@ -170,17 +209,74 @@ DATABASE MANAGEMENT SYSTEM
 			
 			
 <!-- Answer Script -->
-			<div class="QAS"><a onclick="show('ANScript3')">Question <h1>Question 3</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript3')">Question 28<h1>With a neat diagram, explain the component modules of DBMS and their interactions. (8-Marks) (1b)</h1>(Dec.2016/Jan.2017|10-scheme)</a></div>
 			<div class="ansclass" id="ANScript3">
-			<P>This is my DIV element. Question 3 </P>
-			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/M&E/IMG/M1/1.1.png" 
-alt="Loading Image" class="resIMG"/><br/>Fig 1.1: Demonstration of Auto-Boxing and Auto-Unboxing.</center>
+			<br/><br/>
+			Refer 7<sup>th</sup> Question & Answer OR <a href="/AnswerScript/WP/5CSE/DBMS/M1/AS_DBMS_M1_P2.html">CLICK HERE</a>
+			<br/><br/>	
 			</div><br/>
 <!-- Answer Script -->
 
-			<div class="QAS"><a onclick="show('ANScript4')">Question <h1>Question 4</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript4')">Question 29<h1>
+			<p>
+	Define
+</p>
+<p>
+	i. Snapshot
+</p>
+<p>
+	ii. Metadata
+</p>
+<p>
+	iii. Intention
+</p>
+<p>
+	iv. Database. (4-Marks) (1c)
+</p>
+
+			</h1>(Dec.2016/Jan.2017|10-scheme)</a></div>
 			<div class="ansclass" id="ANScript4">
-			This is my DIV element. Question 4
+			
+			<p>
+	<strong>i. </strong>
+	<strong>Snapshot</strong>
+</p>
+<p>
+	Refer 20<sup>th</sup> iii Question &amp; Answer.
+</p>
+<p>
+	<strong>ii. </strong>
+	<strong>Metadata</strong>
+</p>
+<p>
+	<strong>metadata</strong>
+	refers to information on their schema and all the other information
+	regarding access, storage, built in programs or any other information about
+	database elements or usage.
+</p>
+<p>
+	<strong>iii. </strong>
+	<strong>Intention</strong>
+</p>
+<p>
+	The <strong>intension</strong> of a given relation is independent of time.
+	It is the permanent part of the relation. It corresponds to what is
+	specified in the relational schema. The <strong>intension</strong> thus
+	defines all permissible extensions. The <strong>intension</strong> is a
+	combination of two things: a structure and a set of integrity constraints.
+</p>
+<p>
+	<strong>iv. </strong>
+	<strong>Database</strong>
+</p>
+<p>
+	A <strong>database</strong> is a data structure that stores organized
+	information. Most <strong>databases</strong> contain multiple tables, which
+may each include several different fields. For example, a company	<strong>database</strong> may include tables for products, employees, and
+	financial records.
+</p>
+
+			
 			</div><br/>
 			
 			
@@ -196,9 +292,13 @@ alt="Loading Image" class="resIMG"/><br/>Fig 1.1: Demonstration of Auto-Boxing a
 			
 <!-- Answer Script -->
 
-			<div class="QAS"><a onclick="show('ANScript5')">Question <h1>Question 5</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript5')">Question 30<h1>Design an ER diagram for an EMPLOYEE database with at least four entities considering all the constraints. (8-Marks) (2a)</h1>(Dec.2016/Jan.2017|10-scheme)</a></div>
 			<div class="ansclass" id="ANScript5">
-			This is my DIV element. Question 5
+			
+			<br/><br/>
+			Refer 25<sup>th</sup> Question & Answer OR <a href="/AnswerScript/WP/5CSE/DBMS/M1/AS_DBMS_M1_P5.html">CLICK HERE</a>
+			<br/><br/>	
+			
 			</div><br/>
 			</div>
 
@@ -212,15 +312,15 @@ alt="Loading Image" class="resIMG"/><br/>Fig 1.1: Demonstration of Auto-Boxing a
 
 <center>
 <div id="showPGE">
-  <button class="btn active" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P1.html'">1</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P2.html'">2</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P3.html'">3</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P4.html'">4</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P5.html'">5</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P6.html'">6</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P7.html'">7</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P8.html'">8</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P9.html'">9</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/DBMS/M1/AS_DBMS_M1_P1.html'">1</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/DBMS/M1/AS_DBMS_M1_P2.html'">2</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/DBMS/M1/AS_DBMS_M1_P3.html'">3</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/DBMS/M1/AS_DBMS_M1_P4.html'">4</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/DBMS/M1/AS_DBMS_M1_P5.html'">5</button>
+  <button class="btn active" onclick="window.location.href='/AnswerScript/WP/5CSE/DBMS/M1/AS_DBMS_M1_P6.html'">6</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/DBMS/M1/AS_DBMS_M1_P7.html'">7</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/DBMS/M1/AS_DBMS_M1_P8.html'">8</button>
+ 
   
 </div>
 </center>
