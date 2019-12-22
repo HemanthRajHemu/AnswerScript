@@ -149,15 +149,87 @@ DATABASE MANAGEMENT SYSTEM
 <!-- Answer Script -->
 
 			<div class="ansCover">
-			<div class="QAS"><a onclick="show('ANScript1')">Question <h1>Question 1</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript1')">Question 6<h1>Define Multivalued dependency. Explain fourth normal form, with an example. (6-Marks) (7b)</h1></a></div>
 			<div class="ansclass" id="ANScript1">
-			This is my DIV element. Question 1
+			
+			<p>
+	4<sup>th</sup> NF - Refer 2<sup>nd</sup> Question &amp; Answer.
+</p>
+<p>
+	Some relations have constraints that cannot be specified as functional
+	dependencies and hence are not in violation of BCNF. To address this
+	situation, the concept of multivalued dependency (MVD) was proposed and,
+	based on this dependency, the fourth normal form was defined.
+</p>
+<p>
+	Multivalued dependencies are a consequence of first normal form (1NF),
+	which disallows an attribute in a tuple to have a set of values. If more
+	than one multivalued attribute is present, the second option of normalizing
+	the relation introduces a multivalued dependency. Informally, whenever two
+	independent 1:N relationships A:B and A:C are mixed in the same relation,
+	R(A, B, C), an MVD may arise.
+</p>
+<p>
+	Definition. A multivalued dependency X &#8594; Y specified on relation
+	schema R, where X and Y are both subsets of R, specifies the following
+	constraint on any relation state r of R: If two tuples t1 and t2 exist in r
+	such that t1[X] = t2[X], then two tuples t3 and t4 should also exist in r
+	with the following properties, where we use Z to denote (R &#8722; (X
+	&#8746; Y)):
+</p>
+<p align="center">
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/DBMS/M4/M4IMG/6.1.png" 
+alt="Loading Image" class="resIMG"/></center>
+</p>
+<p>
+	Whenever X &#8594;&#8594; Y holds, we say that X multidetermines Y. Because
+	of the symmetry in the definition, whenever X &#8594;&#8594; Y holds in R,
+	so does X &#8594;&#8594; Z. Hence, X &#8594;&#8594; Y implies X
+	&#8594;&#8594; Z and therefore it is sometimes written as X &#8594;&#8594;
+	Y|Z.
+</p>
+<p>
+	An MVD X &#8594;&#8594; Y in R is called a trivial MVD if (a) Y is a subset
+	of X, or (b) X &#8746; Y = R. For example, the relation EMP_PROJECTS in
+	Figure 14.15(b) has the trivial MVD Ename &#8594;&#8594; Pname and the
+	relation EMP_DEPENDENTS has the trivial MVD Ename &#8594;&#8594; Dname. An
+	MVD that satisfies neither (a) nor (b) is called a nontrivial MVD. A
+	trivial MVD will hold in any relation state r of R; it is called trivial
+	because it does not specify any significant or meaningful constraint on R
+</p>
+<p>
+	If we have a nontrivial MVD in a relation, we may have to repeat values
+	redundantly in the tuples. In the EMP relation of Figure 14.15(a), the
+	values 'X' and 'Y' of Pname are repeated with each value of Dname (or, by
+	symmetry, the values 'John' and 'Anna' of Dname are repeated with each
+	value of Pname). This redundancy is clearly undesirable. However, the EMP
+	schema is in BCNF because no functional dependencies hold in EMP.
+</p>
+<p>
+	Therefore, we need to define a fourth normal form that is stronger than
+	BCNF and disallows relation schemas such as EMP. Notice that relations
+	containing nontrivial MVDs tend to be all-key relations-that is, their key
+	is all their attributes taken together. Furthermore, it is rare that such
+	all-key relations with a combinatorial occurrence of repeated values would
+	be designed in practice. However, recognition of MVDs as a potential
+	problematic dependency is essential in relational design.
+</p>
+
+			
 			</div><br/>
 			
 <!-- Answer Script -->
-			<div class="QAS"><a onclick="show('ANScript2')">Question <h1>Question 2</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript2')">Question 7<h1>Let R = { Ssn, Fname, Pnumber, Pname, Plocation, hours} and D = { R1, R2, R3}, where 
+<br/>R1=EMP={ Ssn, Fname}<br/>
+R2 = PROJ = {Pnumber, Pname, Plocation}<br/>
+R3 = WORKS_ON = {Ssn, Pnumber, hours}<br/>
+The following functional dependencies hold on relation R.<br/>
+F = {Ssn→Ename : Pnumber→ {Pname, Plocation} : {Ssn, Pnumber} → hours }<br/>
+Prove that the above decomposition of relation R has the lossless join property. (10-Marks) (7b)<br/>
+</h1></a></div>
 			<div class="ansclass" id="ANScript2">
-			This is my DIV element. Question 2
+						<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/DBMS/M4/M4IMG/23.1.png" 
+alt="Loading Image" class="resIMG"/></center>
 			</div><br/>
 			
 			
@@ -170,17 +242,72 @@ DATABASE MANAGEMENT SYSTEM
 			
 			
 <!-- Answer Script -->
-			<div class="QAS"><a onclick="show('ANScript3')">Question <h1>Question 3</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript3')">Question 8<h1>Define Non – additive join property of a decomposition and write an algorithm of testing for non – additive join property. (4-Marks) (8a)</h1></a></div>
 			<div class="ansclass" id="ANScript3">
-			<P>This is my DIV element. Question 3 </P>
-			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/M&E/IMG/M1/1.1.png" 
-alt="Loading Image" class="resIMG"/><br/>Fig 1.1: Demonstration of Auto-Boxing and Auto-Unboxing.</center>
+			
+			<p>
+	the nonadditive join property, which ensures that no spurious tuples are
+	generated when a NATURAL JOIN operation is applied to the relations
+	resulting from the decomposition.
+</p>
+<p>
+	Because this is a property of a decomposition of relation schemas, the
+	condition of no spurious tuples should hold on every legal relation
+	state-that is, every relation state that satisfies the functional
+	dependencies in F. Hence, the lossless join property is always defined with
+	respect to a specific set F of dependencies.
+</p>
+<p>
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/DBMS/M4/M4IMG/8.1.png" 
+alt="Loading Image" class="resIMG"/></center>
+</p>
+<p>
+	The word loss in lossless refers to loss of information, not to loss of
+	tuples. If a decomposition does not have the lossless join property, we may
+	get additional spurious tuples after the PROJECT (&#960;) and NATURAL JOIN
+	(*) operations are applied; these additional tuples represent erroneous or
+	invalid information. We prefer the term nonadditive join because it
+	describes the situation more accurately.
+</p>
+<p>
+	Although the term lossless join has been popular in the literature, we used
+	the term nonadditive join in describing the NJB property. We will
+	henceforth use the term nonadditive join, which is self-explanatory and
+	unambiguous. The nonadditive join property ensures that no spurious tuples
+	result after the application of PROJECT and JOIN operations.
+</p>
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/DBMS/M4/M4IMG/8.2.png" 
+alt="Loading Image" class="resIMG"/></center>
+			
 			</div><br/>
 <!-- Answer Script -->
 
-			<div class="QAS"><a onclick="show('ANScript4')">Question <h1>Question 4</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript4')">Question 9<h1>What is functional dependency? Write an algorithm to find the minimal cover for a set of dependencies? Calculate the minimal cover of F = { A →BC, B→C, AB→D} ?</h1></a></div>
 			<div class="ansclass" id="ANScript4">
-			This is my DIV element. Question 4
+			
+			<p>
+	Definition. A functional dependency, denoted by X &#8594; Y, between two
+	sets of attributes X and Y that are subsets of R specifies a constraint on
+	the possible tuples that can form a relation state r of R. The constraint
+	is that, for any two tuples t1 and t2 in r that have t1[X] = t2[X], they
+	must also have t1[Y] = t2[Y].
+</p>
+<p>
+	This means that the values of the Y component of a tuple in r depend on, or
+	are determined by, the values of the X component; alternatively, the values
+	of the X component of a tuple uniquely (or functionally) determine the
+	values of the Y component. We also say that there is a functional
+	dependency from X to Y, or that Y is functionally dependent on X. The
+	abbreviation for functional dependency is FD or f.d. The set of attributes
+	X is called the left-hand side of the FD, and Y is called the right-hand
+	side
+</p>
+<p>
+	Refer 3<sup>rd</sup> Question &amp; Answer.
+</p>
+
+			
+			
 			</div><br/>
 			
 			
@@ -196,9 +323,65 @@ alt="Loading Image" class="resIMG"/><br/>Fig 1.1: Demonstration of Auto-Boxing a
 			
 <!-- Answer Script -->
 
-			<div class="QAS"><a onclick="show('ANScript5')">Question <h1>Question 5</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript5')">Question 10<h1>Discuss the null value and dangling tuple problems. (8-Marks) (7b)</h1></a></div>
 			<div class="ansclass" id="ANScript5">
-			This is my DIV element. Question 5
+			
+			<p>
+	We must carefully consider the problems associated with NULLs when
+	designing a relational database schema. There is no fully satisfactory
+	relational design theory as yet that includes NULL values. One problem
+	occurs when some tuples have NULL values for attributes that will be used
+	to join individual relations in the decomposition.
+</p>
+<p>
+	To illustrate this, consider the database shown in Figure 15.2(a), where
+	two relations EMPLOYEE and DEPARTMENT are shown. The last two employee
+	tuples- 'Berger' and 'Benitez'-represent newly hired employees who have not
+	yet been assigned to a department (assume that this does not violate any
+	integrity constraints).
+</p>
+<p>
+	Now suppose that we want to retrieve a list of (Ename, Dname) values for
+	all the employees. If we apply the NATURAL JOIN operation on EMPLOYEE and
+	DEPARTMENT (Figure 15.2(b)), the two aforementioned tuples will not appear
+	in the result.
+</p>
+<p>
+	In general, whenever a relational database schema is designed in which two
+	or more relations are interrelated via foreign keys, particular care must
+	be devoted to watching for potential NULL values in foreign keys. This can
+	cause unexpected loss of information in queries that involve joins on that
+	foreign key. Moreover, if NULLs occur in other attributes, such as Salary,
+	their effect on built-in functions such as SUM and AVERAGE must be
+	carefully evaluated.
+</p>
+<p>
+	A related problem is that of dangling tuples, which may occur if we carry a
+	decomposition too far. Suppose that we decompose the EMPLOYEE relation in
+	Figure 15.2(a) further into EMPLOYEE_1 and EMPLOYEE_2, shown in Figures
+	15.3(a) and 15.3(b).
+</p>
+<p>
+	If we apply the NATURAL JOIN operation to EMPLOYEE_1 and EMPLOYEE_2, we get
+	the original EMPLOYEE relation. However, we may use the alternative
+	representation, shown in Figure 15.3(c), where we do not include a tuple in
+	EMPLOYEE_3 if the employee has not been assigned a department (instead of
+	including a tuple with NULL for Dnum as in EMPLOYEE_2).
+</p>
+<p>
+	If we use EMPLOYEE_3 instead of EMPLOYEE_2 and apply a NATURAL JOIN on
+	EMPLOYEE_1 and EMPLOYEE_3, the tuples for Berger and Benitez will not
+	appear in the result; these are called dangling tuples in EMPLOYEE_1
+	because they are represented in only one of the two relations that
+	represent employees, and hence they are lost if we apply an (INNER) JOIN
+	operation.
+</p>
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/DBMS/M4/M4IMG/19.1.png" 
+alt="Loading Image" class="resIMG"/></center><br/>
+
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/DBMS/M4/M4IMG/19.2.png" 
+alt="Loading Image" class="resIMG"/></center><br/>
+			
 			</div><br/>
 			</div>
 
@@ -212,15 +395,10 @@ alt="Loading Image" class="resIMG"/><br/>Fig 1.1: Demonstration of Auto-Boxing a
 
 <center>
 <div id="showPGE">
-  <button class="btn active" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P1.html'">1</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P2.html'">2</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P3.html'">3</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P4.html'">4</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P5.html'">5</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P6.html'">6</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P7.html'">7</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P8.html'">8</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/M&E/AS_M&E_M1_P9.html'">9</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/DBMS/M4/AS_DBMS_M4_P1.html'">1</button>
+  <button class="btn active" onclick="window.location.href='/AnswerScript/WP/5CSE/DBMS/M4/AS_DBMS_M4_P2.html'">2</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/DBMS/M4/AS_DBMS_M4_P3.html'">3</button>
+  
   
 </div>
 </center>
