@@ -149,21 +149,194 @@ AUTOMATA THEORY AND COMPUTABILITY
 
 			<div class="ansCover">
 			<div class="QAS"><a onclick="show('ANScript1')">Question 1 A<h1>Write short notes on: <br/>
-			
+			Multi-tape Turing machine.
 			</h1></a></div>
 			<div class="ansclass" id="ANScript1">
 			
-			
+			<p>
+	A multi-tape Turing Machine is nothing but a standard Turing Machine with
+	more number of tapes. Each tape is controlled independently with
+	independent read-write head. The pictorial representation of mulu-tape
+	Turing machine is shown in figure below:
+</p>
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/ATC/M5/ATC_M5_IMG/1.1.png" 
+alt="Loading Image" class="resIMG"/></center>
+<p>
+	The various components of multi-tape Turing Machine are:
+</p>
+<p>
+	a) Finite control.
+</p>
+<p>
+	b) Each tape having its own symbols and read/write head.
+</p>
+<p>
+	Each tape is divided into cells which can hold any symbol from the given
+	alphabet. To start with the TM should be in start state q<sub>0</sub>. If
+	the read/write head pointing to tape 1 moves towards night, the read/write
+	head pointing to tape 2 and tape 3 may move towards right or left depending
+	on the transition. The formal definition of Multi-tape Turing machine can
+	be defined as follows.
+</p>
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/ATC/M5/ATC_M5_IMG/1.2.png" 
+alt="Loading Image" class="resIMG"/></center>
+<p>
+	Where q is the current state. The transition can be interpreted as follows.
+	The TM instate q will be moved to state p only when the first read/write
+	head points to a, the second read-write head points to b and third
+	read/write head points to c and the read/write head will be moved to left
+	in the first case and right in the second case. But, the read/write head
+	with respect to third tape will not be altered. At the same time, the
+	symbols a, b and c will be replaced by x, y and z. It can be easily shown
+	that the n-tape TM in fact is equivalent to the single tape Standard Turing
+	Machine as shown below.
+</p>
+<p>
+	1.a.1 Equivalence of Single Tape and Multi-tape TM's
+</p>
+<p>
+	Theorem: Every language accepted by a multi-tape TM Is recursively
+	enumerable.
+</p>
+<p>
+	Note: The theorem clearly indicates that every language accepted by a
+	multi-tape TM is also accepted by a standard TM.
+</p>
+<p>
+	Proof: This can be shown by simulation. For example, consider a TM with two
+	tapes as shown below:
+</p>
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/ATC/M5/ATC_M5_IMG/1.3.png" 
+alt="Loading Image" class="resIMG"/></center>
+<p>
+	The above 2-tape TMcan be simulated using single tape TM which hasfour
+	tracks as shown in figure below:
+</p>
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/ATC/M5/ATC_M5_IMG/1.4.png" 
+alt="Loading Image" class="resIMG"/></center>
+<p>
+	The first and third tracks consist of symbols from first and second tape
+	respectively. The second and fourth track consists of the positions of the
+	read/write head with respect to first and second tape respectively. The
+	value 1 indicates the position of the read/write head. It is clear from the
+	above figure that, the machine in state q and when the first read/write
+	head points to the symbol c, the second read/write head points to the
+	symbol z, then the machine enters into state p, if and only if this
+	transition is defined for TM with multi-tapes. So, whatever transitions
+	have been applied for multi-tape TM, if we apply the same transitions for
+	the new machine that we have constructed, then the two machines are
+	equivalent.
+</p>
+
 			
 			</div><br/>
 			
 <!-- Answer Script -->
 			<div class="QAS"><a onclick="show('ANScript2')">Question 1 B<h1>Write short notes on: <br/>
-			
+			Non-deterministic Turing machine.
 			</h1></a></div>
 			<div class="ansclass" id="ANScript2">
 			
-			
+			<p>
+	The difference between nondeterministic TM and deterministic TM lies only
+	in the definition of &#61700;. The formal definition of nondeterministic TM
+	is shown below:
+</p>
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/ATC/M5/ATC_M5_IMG/1.5.png" 
+alt="Loading Image" class="resIMG"/></center>
+<p>
+	The language is thus set of all those words w in &#931; which causes M to
+	move from start state q<sub>0</sub> to the final state p.
+</p>
+<p>
+	A nondeterministic TM may have many moves that does not lead to a final
+	state. But, we are interested in only those moves that leads to the final
+	states. The nondeterministic TM in fact is no more powerful than the
+	deterministic TM. Any language accepted by nondeterministic TM can be
+	accepted by deterministic and both are equivalent. We can simulate a
+	deterministic TM from a nondeterministic TM as shown below:
+</p>
+<p>
+	<strong>Theorem:</strong>
+	For every nondeterministic TM (NTM)there exists a deterministic TM (DTM)
+	such that LO(NTM) = L(DTM).
+</p>
+<p>
+	<strong>Proof:</strong>
+	Given a string w, NTM starts at the initial configuration (initial ID) and
+	goes through a sequence of configurations(IDs) until it reaches one of the
+	conditions:
+</p>
+<p>
+	i. Final state is reached and the machine halts
+</p>
+<p>
+	ii. The transition is not defined and the machine halts
+</p>
+<p>
+	iii. Goes into an infinite loop
+</p>
+<p>
+	To go to the next configuration (ID), the NTM has to choose from finite set
+	of configurations (IDs). All these configurations (IDs) which can be
+	obtained by NTM fora given string w can be represented by a tree. The way
+	NTM is simulated by DTM is shown using the figure shown below:
+</p>
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/ATC/M5/ATC_M5_IMG/1.6.png" 
+alt="Loading Image" class="resIMG"/></center>
+<p>
+	It is clear from the figure that all the IDs of NTM (represented by the
+	nodes of the tree) are placed in the queue one after the other. Each ID
+	inserted into the queue is also associated with the state and the next
+	input symbol to be scanned. The first ID to be explored and examined will
+	be at the front end of the queue. Given any ID in the queue, all IDs to the
+	left of designated ID are assumed to be deleted (marked) and the IDs
+	towards right are assumed to be explored or to be examined. For example, if
+	current ID is ID3 then JD1 and [D2 are already explored and we need not
+	consider them whereas the ID4, IDS, etc., are the nodes to be explored
+	later. The steps carried by DTM are shown below:
+</p>
+<p>
+	<strong>Step 1:</strong>
+	The current ID is examined (For the first time current ID is [D1 and is
+	marked/deleted) based on the state and the scanned symbol. If the state in
+	the current ID is final state then DTM accepts the string and the machine
+	halts.
+</p>
+<p>
+	<strong>Step 2:</strong>
+	If the state is non final state, the current ID(configuration) is explored
+	and various IDs(configurations) obtained are inserted at the end of the
+	queue.
+</p>
+<p>
+	<strong>Step 3:</strong>
+	Steps 1 and 2 are repeated until no more ID is examined or queue is empty.
+</p>
+<p>
+	The above steps can be clearly explained using the tree representation. The
+	root node corresponds to the initial configuration (initial ID) and it is
+	the only vertex of level 0. All the configurations (IDs) that are obtained
+	by applying the transition function of NTM only once will be the children
+	of the initial configuration (ID), These new vertices which are derived
+	from the root are at level 1. In general, from the configurations (IDs) at
+	level &#233;, the configurations at level i+1 can be obtained. Since the
+	configurations are finite, the number of children at various levels is
+	finite.
+</p>
+<p>
+	The easiest way to simulate NTM using DTM is to traverse this tree using
+	BFS (Breadth First-Search) from the root until the halt state (the string w
+	is accepted or rejected) is reached. At each level of the tree, the DTM
+	applies the transition function corresponding to the NTM to each
+	configuration (ID) at that level and computes its children (new IDs). These
+	new IDs are the configurations of the next level and they are stored on the
+	tape (if necessary a second tape may be used). If there is a halting state
+	among these children, then DTM accepts the string and halts. It can be
+	easily seen that DTM accepts a string if and only if NTM accepts it. Thus
+	any language accepted by a NTM is also accepted by a DTM.
+</p>
+
 			
 			</div><br/>
 			
@@ -178,20 +351,61 @@ AUTOMATA THEORY AND COMPUTABILITY
 			
 <!-- Answer Script -->
 			<div class="QAS"><a onclick="show('ANScript3')">Question 1 C<h1>Write short notes on: <br/>
-			
+			Linear Bounded automata.
 			</h1></a></div>
 			<div class="ansclass" id="ANScript3">
 			
-			
+						<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/ATC/M5/ATC_M5_IMG/1.7.png" 
+alt="Loading Image" class="resIMG"/></center>
 			
 			
 			</div><br/>
 <!-- Answer Script -->
 
-			<div class="QAS"><a onclick="show('ANScript4')">Question <h1>Question 4</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript4')">Question 2 A<h1>Write short notes on: <br/>
+			a.	Undecidable Languages.
+			</h1></a></div>
 			<div class="ansclass" id="ANScript4">
 			
-			
+			<p>
+	<strong>Definition:</strong>
+	The problems that run forever on a Turing machine are not solvable. In
+	other words, there are some problem input instances for which Turing
+	machines will not halt on inputs that they do not accept. Those problems
+	are called <strong>unsolvable or undecidable problems</strong>.
+</p>
+<p>
+	In general, if there is no general algorithm capable of solving every
+instance of the problem, then the decision problem is	<strong>unsolvable</strong>. More precisely, if there is no Turing machine
+	recognizing the language of all strings for various instances of the
+	problems input for which the answer is yes or no, then the decision problem
+	is unsolvable.
+</p>
+<p>
+	Let us assume M is a Turing machine with input alphabets {0, 1}, w is a
+	string of 0's and 1's and M accepts w. If this problem with inputs
+	restricted to binary alphabets {0, 1} is undecidable, then the general
+	problem is undecidable and cannot be solved with a Turing machine with any
+	alphabet.
+</p>
+<p>
+	<strong>Note:</strong>
+	The term unsolvable and undecidable are used interchangeably.
+</p>
+<p>
+	<strong>Note:</strong>
+	Even though we are able to answer the question in many specific instances,
+	a problem may be undecidable. It means that there is no single algorithm
+	guaranteed to provide an answer for every case.
+</p>
+<p>
+	<strong>Note:</strong>
+	If a language L is not accepted by a Turing machine, then the language is
+	not recursively enumerable. One important problem which is not recursively
+	enumerable that is unsolvable/undecidable decision problem is "Halting
+	problem".
+</p>
+
 			
 			
 			</div><br/>
@@ -209,12 +423,40 @@ AUTOMATA THEORY AND COMPUTABILITY
 			
 <!-- Answer Script -->
 
-			<div class="QAS"><a onclick="show('ANScript5')">Question <h1>Question 5</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript5')">Question 2 B<h1>Write short notes on: <br/>
+			b.	Halting problem of Turing machine.
+			</h1></a></div>
 			<div class="ansclass" id="ANScript5">
 			
+			<p>
+	The "<strong>Halting Problem</strong>" can informally be stated as "Given a
+Turing machine M and an input string w with the initial configuration q	<sub>0</sub>, after some (or all) computations do the machine M halts?" In
+	other words, we have to identify whether (M, w) where M is the Turing
+	machine, halts or does not halt when w is applied as the input. The domain
+	of this problem is to be taken as the set of all Turing machines and all w
+	i.e., Given the description of an arbitrary Turing machine M and the input
+	string w, we are looking for a single Turing machine that will predict
+	whether or not the computation of M applied to w will halt.
+</p>
+<p>
+	When we state decidability or undecidability results, we must always know
+	what the domain is, because this may affect the conclusion. The problems
+	may be decidable on some domain but not on another.
+</p>
+<p>
+	It is not possible to find the answer for Halting problem by simulating the
+	action of M on w by a universal Turing machine, because there is no limit
+	on the length of the computation. If M enters into an infinite loop, then
+	no matter how long we wait, we can never be sure that M is in fact in a
+	loop. The machine may be in a loop because of a very long computation. What
+	is required is an algorithm that can determine the correct answer for any M
+	and w by performing some analysis on the machine's description and the
+	input.
+</p>
+
 			
-			
-			
+						<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/ATC/M5/ATC_M5_IMG/2.1.png" 
+alt="Loading Image" class="resIMG"/></center>
 			</div><br/>
 			</div>
 
