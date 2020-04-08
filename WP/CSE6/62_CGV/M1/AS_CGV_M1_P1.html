@@ -331,7 +331,7 @@ alt="A character defined as a rectangular grid of pixel positions" class="resIMG
 </p>
 <p align="center">
 
-			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/CSE6/62_CGV/M1/SS/2.2.png" 
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/CSE6/62_CGV/M1/SS/2.3.png" 
 alt="A character defined as an outline shape." class="resIMG"/></center><br/>
 </p>
 <p align="center">
@@ -387,7 +387,7 @@ raster when many short runs are involved. Moreover, the	<strong>size of the fram
 			
 			
 <!-- Answer Script -->
-			<div class="QAS"><a onclick="show('ANScript3')">Question 3<h1>With necessary steps explain Bresenham’s line drawing algorithm. Consider the line from (5, 5) to (13, 9), use the Bresenham’s algorithm to rasterize the line. (08 Marks)</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript3')">Question 3<h1>With necessary steps explain Bresenham's line drawing algorithm. Consider the line from (5, 5) to (13, 9), use the Bresenham's algorithm to rasterize the line. (08 Marks)</h1></a></div>
 			<div class="ansclass  animate-bottom" id="ANScript3">
 <p>
 An accurate and efficient raster line-generating algorithm, developed by	<strong>Bresenham</strong>, that uses only incremental integer
@@ -432,20 +432,120 @@ alt="Loading Image" class="resIMG"/></center><br/>
 <p>
 	<strong>3.3 More Examples</strong>
 </p>
-<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/CSE6/62_CGV/M1/SS/3.2.png" 
+<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/CSE6/62_CGV/M1/SS/3.3.png" 
 alt="Loading Image" class="resIMG"/></center><br/>
 
 
 			</div><br/>
 <!-- Answer Script -->
 
-			<div class="QAS"><a onclick="show('ANScript4')">Question 4<h1>Question 4</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript4')">Question 4<h1>Explain with diagram the different Cartesian reference frames are used in the process of constructing and displaying a scene. (08 Marks)</h1></a></div>
 			<div class="ansclass  animate-bottom" id="ANScript4">
-			
-			ANSWER 4
-			
-			
-			
+			<p>
+	In general, several different <strong>Cartesian reference frames</strong>
+	are used in the process of constructing and displaying a scene.
+</p>
+<p>
+	First, we can define the shapes of individual objects, such as trees or
+	furniture, within a separate reference frame for each object. These
+	reference frames are called <strong>modelling coordinates</strong>, or
+sometimes <strong>local coordinates</strong> or	<strong>master coordinates</strong>.
+</p>
+<p>
+	Once the individual object shapes have been specified, we can construct
+	("model") a scene by placing the objects into appropriate locations within
+	a scene reference frame called <strong>world coordinates</strong>.
+</p>
+<p>
+	This step involves the transformation of the individual modeling-coordinate
+	frames to specified positions and orientations within the world-coordinate
+	frame.
+</p>
+<p>
+	As an example, we could construct a bicycle by defining each of its parts
+(wheels, frame, seat, handlebars, gears, chain, pedals) in a separate	<strong> modeling coordinate frame</strong>. Then, the component parts are
+	fitted together in world coordinates. If both bicycle wheels are the same
+	size, we need to describe only one wheel in a local-coordinate frame. Then
+	the wheel description is fitted into the world-coordinate bicycle
+	description in two places.
+</p>
+<p>
+	After all parts of a scene have been specified, the overall
+	world-coordinate description is processed through various routines onto one
+	or more output-device reference frames for display. This process is called
+	the <strong>viewing pipeline</strong>.
+</p>
+<p>
+	<strong>World coordinate</strong>
+	positions are first converted to <strong>viewing coordinates</strong>
+	corresponding to the view we want of a scene, based on the position and
+	orientation of a hypothetical camera. Then object locations are transformed
+	to a two-dimensional (2D) projection of the scene, which corresponds to
+what we will see on the output device. The scene is then stored in	<strong>normalized coordinates</strong>, where each coordinate value is in
+	the range from &#8722;1 to 1 or in the range from 0 to 1, depending on the
+	system.
+</p>
+<p align="center">
+
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/CSE6/62_CGV/M1/SS/4.1.png" 
+alt="Loading Image" class="resIMG"/></center><br/>
+</p>
+<p>
+	Fig 4.1 The transformation sequence from modeling coordinates to device
+	coordinates for a three-dimensional scene. Object shapes can be
+	individually defined in modeling-coordinate reference systems. Then the
+	shapes are positioned within the world-coordinate scene. Next,
+	world-coordinate specifications are transformed through the viewing
+	pipeline to viewing and projection coordinates and then to normalized
+	coordinates. At the final step, individual device drivers transfer the
+	normalized-coordinate representation of the scene to the output devices for
+	display
+</p>
+<p>
+	<strong>Normalized coordinates</strong>
+	are also referred to as <strong>normalized device coordinates</strong>,
+	since using this representation makes a graphics package independent of the
+	coordinate range for any specific output device. We also need to identify
+	visible surfaces and eliminate picture parts outside the bounds for the
+	view we want to show on the display device.
+</p>
+<p>
+	Finally, the picture is scan-converted into the refresh buffer of a raster
+	system for display. The coordinate systems for display devices are
+generally called <strong>device coordinates</strong>,	<strong>or screen coordinates</strong> in the case of a video monitor.
+</p>
+<p>
+	Often, both normalized coordinates and screen coordinates are specified in
+	a left handed coordinate reference frame so that increasing positive
+	distances from the <em>xy</em> plane (the screen, or viewing plane) can be
+	interpreted as being farther from the viewing position.
+</p>
+<p>
+	Figure 4.1 briefly illustrates the sequence of coordinate transformations
+	from modeling coordinates to device coordinates for a display that is to
+	contain a view of two three-dimensional (3D) objects. An initial
+modeling-coordinate position (x<sub>mc</sub> , y<sub>mc</sub> , z	<sub>mc</sub> ) in this illustration is transferred to world coordinates,
+	then to viewing and projection coordinates, then to left-handed normalized
+	coordinates, and finally to a device-coordinate position (x<sub>dc</sub> ,
+	y<sub>dc</sub> ) with the sequence:
+</p>
+<p>
+	(x<sub>mc</sub> , y<sub>mc</sub> , z<sub>mc</sub> ) &#8594; (x<sub>wc</sub>
+, y<sub>wc</sub> , z<sub>wc</sub> ) &#8594; (x<sub>vc</sub> , y	<sub>vc</sub> , z<sub>vc</sub> ) &#8594; (x<sub>pc</sub> , y<sub>pc</sub> ,
+	z<sub>pc</sub> )
+</p>
+<p style="padding-left:170px;">
+&#8594; (x<sub>nc</sub> , y<sub>nc</sub> , z<sub>nc</sub> ) &#8594; (x	<sub>dc</sub> , y<sub>dc</sub> )
+</p>
+<p>
+	Device coordinates (x<sub>dc</sub> , y<sub>dc</sub> ) are integers within
+	the range (0, 0) to (x<sub>max</sub>, y<sub>max</sub>) for a particular
+	output device. In addition to the two-dimensional positions (x<sub>dc</sub>
+	, y<sub>dc</sub> ) on the viewing surface, depth information for each
+	device-coordinate position is stored for use in various visibility and
+	surface-processing algorithms.
+</p>
+
 			</div><br/>
 			
 			
@@ -459,12 +559,150 @@ alt="Loading Image" class="resIMG"/></center><br/>
 			
 <!-- Answer Script -->
 
-			<div class="QAS"><a onclick="show('ANScript5')">Question 5<h1>Question 5</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript5')">Question 5<h1>Compare random scan display with raster scan display and list the applications of computer graphics. (04 Marks)</h1></a></div>
 			<div class="ansclass  animate-bottom" id="ANScript5">
-			
-			ANSWER
-			
-			
+			<p>
+	<strong>
+		5.1 Difference Between Raster Scan Display &amp; Random Scan display:
+	</strong>
+</p>
+<p align="center">
+	<strong>
+		
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/CSE6/62_CGV/M1/SS/5.1.jpg" 
+alt="Loading Image" class="resIMG"/></center><br/>
+
+	</strong>
+	<strong></strong>
+</p>
+<p align="center">
+	<strong>
+		
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/CSE6/62_CGV/M1/SS/5.2.jpg" 
+alt="Loading Image" class="resIMG"/></center><br/>
+
+	</strong>
+	<strong></strong>
+</p>
+<center>
+<table cellspacing="auto" cellpadding="auto" border="10">
+	<tbody>
+		<tr>
+			<td width="200">
+				<p align="center">
+					<strong>BASIS FOR COMPARISON</strong>
+				</p>
+			</td>
+			<td width="200">
+				<p align="center">
+					<strong>RASTER SCAN</strong>
+				</p>
+			</td>
+			<td width="200">
+				<p align="center">
+					<strong>RANDOM SCAN</strong>
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="200" valign="top">
+				<p>
+					<strong>Electron beam</strong>
+				</p>
+			</td>
+			<td width="200" valign="top">
+				<p>
+					Swept across the screen and handles one row at a time and
+					in downward direction.
+				</p>
+			</td>
+			<td width="200" valign="top">
+				<p>
+					Directed to the portions of the screen where a picture is
+					to be rendered.
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="200" valign="top">
+				<p>
+					<strong>Resolution</strong>
+				</p>
+			</td>
+			<td width="200" valign="top">
+				<p>
+					Poor, since it generates meander lines which are organized
+					as distinct point sets.
+				</p>
+			</td>
+			<td width="200" valign="top">
+				<p>
+					Good, as this produces even lines drawing.
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="200" valign="top">
+				<p>
+					<strong>Picture definition</strong>
+				</p>
+			</td>
+			<td width="200" valign="top">
+				<p>
+					Stored as the combination of intensity values for all
+					screen points.
+				</p>
+			</td>
+			<td width="200" valign="top">
+				<p>
+					Stored as a group of line drawing instructions in a display
+					file.
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="200" valign="top">
+				<p>
+					<strong>Realistic display</strong>
+				</p>
+			</td>
+			<td width="200" valign="top">
+				<p>
+					Effectively displays realistic scenes.
+				</p>
+			</td>
+			<td width="200" valign="top">
+				<p>
+					Unable to display realistic shaded scenes.
+				</p>
+			</td>
+		</tr>
+		<tr>
+			<td width="200" valign="top">
+				<p>
+					<strong>Picture rendering</strong>
+				</p>
+			</td>
+			<td width="200" valign="top">
+				<p>
+					Using pixels
+				</p>
+			</td>
+			<td width="200" valign="top">
+				<p>
+					With the help of mathematical functions
+				</p>
+			</td>
+		</tr>
+	</tbody>
+</table></center>
+<p>
+	<strong>5.2 Application:</strong>
+</p>
+
+<p><strong>Refer 1<sup>st</sup> 
+Question & Answer or <a href="/AnswerScript/WP/CSE6/62_CGV/M1/AS_CGV_M1_P1.html">Click Here</a></strong></p>
+
 			</div><br/>
 			</div>
 
@@ -478,10 +716,12 @@ alt="Loading Image" class="resIMG"/></center><br/>
 <br/>
 <center>
 <div id="showPGE">
-  <button class="btn active" onclick="window.location.href='/AnswerScript/WP/5CSE/AI/M1/AS_AI_M1_P1.html'">1</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/AI/M1/AS_AI_M1_P2.html'">2</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/AI/M1/AS_AI_M1_P3.html'">3</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/AI/M1/AS_AI_M1_P4.html'">4</button>
+  <button class="btn active" onclick="window.location.href='/AnswerScript/WP/CSE6/62_CGV/M1/AS_CGV_M1_P1.html'">1</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/CSE6/62_CGV/M1/AS_CGV_M1_P2.html'">2</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/CSE6/62_CGV/M1/AS_CGV_M1_P3.html'">3</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/CSE6/62_CGV/M1/AS_CGV_M1_P4.html'">4</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/CSE6/62_CGV/M1/AS_CGV_M1_P5.html'">5</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/CSE6/62_CGV/M1/AS_CGV_M1_P6.html'">6</button>
   
   
 </div>
