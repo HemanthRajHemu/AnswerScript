@@ -86,7 +86,7 @@
 
 	<div class="alertA1">
 	  <span class="closebtnA1" onclick="this.parentElement.style.display='none';">&times;</span> 
-	  <strong>NOTE!</strong>
+	  <strong><h2>NOTE!</h2></strong>
 	  Click on MENU to Browse between Subjects...
 	</div>
 
@@ -198,22 +198,22 @@ Number of Lecture Hours/Week 3</h1><h1> Exam Marks 60 </h1>
 			<div class="QAS"><a onclick="show('ANScript1')">Question 6<h1>What is openGL? With the help of block diagram explain Library organization of openGL program and give the general structure of openGL program. (04 Marks)</h1></a></div>
 			<div class="ansclass  animate-bottom" id="ANScript1">
 			<p>
-	<strong>6.1 openGL:</strong>
+	<strong><h2>6.1 openGL:</h2></strong>
 </p>
 <p>
-	A basic library of functions is provided in <strong>OpenGL</strong> for
+	A basic library of functions is provided in <strong><h2>OpenGL</h2></strong> for
 	specifying graphics primitives, attributes, geometric transformations,
 	viewing transformations, and many other operations.
 </p>
 <p>
-	<strong>OpenGL</strong>
+	<strong><h2>OpenGL</h2></strong>
 	is designed to be hardware independent, so many operations, such as input
 	and output routines, are not included in the basic library. However, input
 	and output routines and many additional functions are available in
-auxiliary libraries that have been developed for	<strong>OpenGL programs</strong>.
+auxiliary libraries that have been developed for	<strong><h2>OpenGL programs</h2></strong>.
 </p>
 <p>
-	<strong>6.2 Library:</strong>
+	<strong><h2>6.2 Library:</h2></strong>
 </p>
 <p align="center">
 
@@ -222,13 +222,13 @@ alt="Loading Image" class="resIMG"/></center><br/>
 
 </p>
 <p>
-	Function names in the <strong>OpenGL basic library</strong> (also called
+	Function names in the <strong><h2>OpenGL basic library</h2></strong> (also called
 	the OpenGL core library) are prefixed with gl, and each component word
 	within a function name has its first letter capitalized. The following
 	examples illustrate this naming convention:
 </p>
 <p>
-	<strong>glBegin, glClear, glCopyPixels, glPolygonMode</strong>
+	<strong><h2>glBegin, glClear, glCopyPixels, glPolygonMode</h2></strong>
 </p>
 <p>
 	Certain functions require that one (or more) of their arguments be assigned
@@ -243,7 +243,7 @@ alt="Loading Image" class="resIMG"/></center><br/>
 	several hundred symbolic constants available for use with OpenGL functions:
 </p>
 <p>
-	<strong>GL_2D, GL_RGB, GL_CCW, GL_POLYGON, GL_AMBIENT_AND_DIFFUSE</strong>
+	<strong><h2>GL_2D, GL_RGB, GL_CCW, GL_POLYGON, GL_AMBIENT_AND_DIFFUSE</h2></strong>
 </p>
 <p>
 	The OpenGL functions also expect specific data types. For example, an
@@ -253,14 +253,14 @@ alt="Loading Image" class="resIMG"/></center><br/>
 	special built-in, data-type names, such as
 </p>
 <p>
-	<strong>GLbyte, GLshort, GLint, GLfloat, GLdouble, GLboolean</strong>
+	<strong><h2>GLbyte, GLshort, GLint, GLfloat, GLdouble, GLboolean</h2></strong>
 </p>
 <p>
 	In addition to the OpenGL basic (core) library, there are a number of
 	associated libraries for handling special operations.
 </p>
 <p>
-	The <strong>OpenGL Utility (GLU)</strong> provides routines for setting up
+	The <strong><h2>OpenGL Utility (GLU)</h2></strong> provides routines for setting up
 	viewing and projection matrices, describing complex objects with line and
 	polygon approximations, displaying quadrics and B-splines using linear
 	approximations, processing the surface-rendering operations, and other
@@ -269,27 +269,27 @@ alt="Loading Image" class="resIMG"/></center><br/>
 <p>
 	Every OpenGL implementation includes the GLU library, and all GLU function
 	names start with the prefix glu. There is also an objectoriented toolkit
-	based on OpenGL, called <strong>Open Inventor</strong>, which provides
+	based on OpenGL, called <strong><h2>Open Inventor</h2></strong>, which provides
 	routines and predefined object shapes for interactive three-dimensional
 	applications. This toolkit is written in C++.
 </p>
 <p>
-	The <strong>OpenGL Extension to the X Window System (GLX)</strong> provides
+	The <strong><h2>OpenGL Extension to the X Window System (GLX)</h2></strong> provides
 	a set of routines that are prefixed with the letters glX. Apple systems can
 	use the Apple GL (AGL) interface for window-management operations.
 </p>
 <p>
 	Function names for this library are prefixed with agl. For Microsoft
-Windows systems, the <strong>WGL</strong> routines provide a	<strong>Windows-to-OpenGL interface</strong>. These routines are prefixed
+Windows systems, the <strong><h2>WGL</h2></strong> routines provide a	<strong><h2>Windows-to-OpenGL interface</h2></strong>. These routines are prefixed
 	with the letters wgl. The Presentation Manager to OpenGL (PGL) is an
 	interface for the IBM OS/2, which uses the prefix pgl for the library
 	routines.
 </p>
 <p>
-	The <strong>OpenGL Utility Toolkit (GLUT)</strong> provides a
-	<strong>
+	The <strong><h2>OpenGL Utility Toolkit (GLUT)</h2></strong> provides a
+	<strong><h2>
 		library of functions for interacting with any screen-windowing system
-	</strong>
+	</h2></strong>
 	. The GLUT library functions are prefixed with glut, and this library also
 	contains methods for describing and rendering quadric curves and surfaces.
 </p>
@@ -299,10 +299,10 @@ Windows systems, the <strong>WGL</strong> routines provide a	<strong>Windows-to-
 	regarding the latest version of GLUT
 </p>
 <p>
-	<strong>6.3 Structure of a program:</strong>
+	<strong><h2>6.3 Structure of a program:</h2></strong>
 </p>
 <p>
-	<strong>6.3.1 Header Files:</strong>
+	<strong><h2>6.3.1 Header Files:</h2></strong>
 </p>
 <p>
 	we will need to include the header file for the OpenGL core library. For
@@ -319,7 +319,7 @@ Windows systems, the <strong>WGL</strong> routines provide a	<strong>Windows-to-
 	#include &lt;GL/glu.h&gt;
 </p>
 <p>
-	<strong>6.3.2 Creating a window:</strong>
+	<strong><h2>6.3.2 Creating a window:</h2></strong>
 </p>
 <p>
 	Now that we have our library, we can begin to design our interface by
@@ -336,9 +336,9 @@ Windows systems, the <strong>WGL</strong> routines provide a	<strong>Windows-to-
 		#include &lt;GL/glu.h&gt;
 	</p>
 	<p>
-		<strong>
+		<strong><h2>
 			void display() { /* empty function required as of glut 3.0 */ }
-		</strong>
+		</h2></strong>
 	</p>
 	<p>
 		int main(int argc, char *argv[])
@@ -347,24 +347,24 @@ Windows systems, the <strong>WGL</strong> routines provide a	<strong>Windows-to-
 		{
 	</p>
 	<p style="padding-left:50px;">
-		<strong>glutInit(&amp;argc, argv);</strong>
+		<strong><h2>glutInit(&amp;argc, argv);</h2></strong>
 	</p>
 	<p style="padding-left:50px;">
-		<strong>
+		<strong><h2>
 			glutInitDisplayMode(GLUT_RGB | GLUT_DEPTH | GLUT_DOUBLE);
-		</strong>
+		</h2></strong>
 	</p>
 	<p style="padding-left:50px;">
-		<strong>glutInitWindowSize(800,600);</strong>
+		<strong><h2>glutInitWindowSize(800,600);</h2></strong>
 	</p>
 	<p style="padding-left:50px;">
-		<strong>glutCreateWindow("Hello World");</strong>
+		<strong><h2>glutCreateWindow("Hello World");</h2></strong>
 	</p>
 	<p style="padding-left:50px;">
-		<strong>glutDisplayFunc(display);</strong>
+		<strong><h2>glutDisplayFunc(display);</h2></strong>
 	</p>
 	<p style="padding-left:50px;">
-		<strong>glutMainLoop();</strong>
+		<strong><h2>glutMainLoop();</h2></strong>
 	</p>
 	<p style="padding-left:50px;">
 		return 0;
@@ -409,24 +409,24 @@ glutMainLoop().	<em>Never forget to call glutMainLoop() when you use GLUT!</em>
 			<div class="QAS"><a onclick="show('ANScript2')">Question 7<h1>What is DDA? With the help of a suitable example demonstrate the working principle of Breseham's Line drawing algorithm for different slopes of a line. (08 Marks)</h1></a></div>
 			<div class="ansclass  animate-bottom" id="ANScript2">
 			<p>
-	<strong>1.1 </strong>
-	<strong>DDA:</strong>
+	<strong><h2>1.1 </h2></strong>
+	<strong><h2>DDA:</h2></strong>
 </p>
 <p>
-	The <strong>digital differential analyser</strong> (DDA) is a
+	The <strong><h2>digital differential analyser</h2></strong> (DDA) is a
 	scan-conversion line algorithm based on calculating either &#948;y or
-	&#948;x, using Equation <strong>"&#948;y = m &#183; &#948;x" </strong>or
-	Equation "<strong>&#948;x = &#948;y / m</strong>". A line is sampled at
+	&#948;x, using Equation <strong><h2>"&#948;y = m &#183; &#948;x" </h2></strong>or
+	Equation "<strong><h2>&#948;x = &#948;y / m</h2></strong>". A line is sampled at
 	unit intervals in one coordinate and the corresponding integer values
-nearest the line path are determined for the other coordinate.	<strong></strong>
+nearest the line path are determined for the other coordinate.	<strong><h2></h2></strong>
 </p>
 <p>
-	<strong>1.2 </strong>
-	<strong>Breseham's Line Drawing Algorithm:</strong>
+	<strong><h2>1.2 </h2></strong>
+	<strong><h2>Breseham's Line Drawing Algorithm:</h2></strong>
 </p>
 
-<p><strong>Refer 3<sup>rd</sup> 
-Question & Answer or <a href="/AnswerScript/WP/CSE6/62_CGV/M1/AS_CGV_M1_P1.html">Click Here</a></strong></p>
+<p><strong><h2>Refer 3<sup>rd</sup> 
+Question & Answer or <a href="/AnswerScript/WP/CSE6/62_CGV/M1/AS_CGV_M1_P1.html">Click Here</a></h2></strong></p>
 
 			</div><br/>
 			
@@ -438,29 +438,29 @@ Question & Answer or <a href="/AnswerScript/WP/CSE6/62_CGV/M1/AS_CGV_M1_P1.html"
 			<div class="QAS"><a onclick="show('ANScript3')">Question 8<h1>Define the following terms with respect to computer graphics. i) Bitmap ii) Pixmap iii) aspect ratio iv) Framebuffer (04 Marks)</h1></a></div>
 			<div class="ansclass  animate-bottom" id="ANScript3">
 <p>
-	<strong>1.1 </strong>
-	<strong>BitMap:</strong>
+	<strong><h2>1.1 </h2></strong>
+	<strong><h2>BitMap:</h2></strong>
 </p>
 <p>
-A frame buffer with one bit per pixel is commonly called a	<strong>bitmap.</strong><strong></strong>
+A frame buffer with one bit per pixel is commonly called a	<strong><h2>bitmap.</h2></strong><strong><h2></h2></strong>
 </p>
 <p>
-	<strong>1.2 </strong>
-	<strong>Pixmap:</strong>
+	<strong><h2>1.2 </h2></strong>
+	<strong><h2>Pixmap:</h2></strong>
 </p>
 <p>
-A frame buffer with multiple bits per pixel is a <strong>pixmap.</strong>	<strong></strong>
+A frame buffer with multiple bits per pixel is a <strong><h2>pixmap.</h2></strong>	<strong><h2></h2></strong>
 </p>
 <p>
-	<strong>1.3 </strong>
-	<strong>aspect Ratio:</strong>
+	<strong><h2>1.3 </h2></strong>
+	<strong><h2>aspect Ratio:</h2></strong>
 </p>
 <p>
 	The number of pixel columns divided by the number of scan lines that can be
-	displayed by the system is called as <strong>Aspect Ratio</strong>.
+	displayed by the system is called as <strong><h2>Aspect Ratio</h2></strong>.
 </p>
 <p>
-	<strong>Aspect ratio</strong>
+	<strong><h2>Aspect ratio</h2></strong>
 	can also be described as the number of horizontal points to vertical points
 	(or vice versa) necessary to produce equal-length lines in both directions
 	on the screen. Thus, an aspect ratio of 4/3, for example, means that a
@@ -469,14 +469,14 @@ A frame buffer with multiple bits per pixel is a <strong>pixmap.</strong>	<stron
 	physical nits such as centimetres
 </p>
 <p>
-	<strong>1.4 </strong>
-	<strong>Framebuffer:</strong>
+	<strong><h2>1.4 </h2></strong>
+	<strong><h2>Framebuffer:</h2></strong>
 </p>
 <p>
-Picture definition is stored in a memory area called the	<strong>refresh buffer</strong> or <strong>frame buffer</strong>, where the
+Picture definition is stored in a memory area called the	<strong><h2>refresh buffer</h2></strong> or <strong><h2>frame buffer</h2></strong>, where the
 	term frame refers to the total screen area. This memory area holds the set
-of color values for the <strong>screen points</strong>. These stored<strong>color values</strong> are then retrieved from the<strong>refresh buffer</strong> and used to	<strong>control the intensity of the electron beam</strong> as it moves
-	from spot to spot across the screen.<strong></strong>
+of color values for the <strong><h2>screen points</h2></strong>. These stored<strong><h2>color values</h2></strong> are then retrieved from the<strong><h2>refresh buffer</h2></strong> and used to	<strong><h2>control the intensity of the electron beam</h2></strong> as it moves
+	from spot to spot across the screen.<strong><h2></h2></strong>
 </p>
 
 			</div><br/>
@@ -505,8 +505,8 @@ of color values for the <strong>screen points</strong>. These stored<strong>colo
 			<div class="QAS"><a onclick="show('ANScript4')">Question 9<h1>List and explain various openGL primitive and its attribute functions. Develop an openGL program to create human face like structure using suitable openGL primitive functions. (06 Marks)</h1></a></div>
 			<div class="ansclass  animate-bottom" id="ANScript4">
 			<p>
-	<strong>1.1 </strong>
-	<strong>Primitives: </strong>
+	<strong><h2>1.1 </h2></strong>
+	<strong><h2>Primitives: </h2></strong>
 </p>
 <p>
 	In OpenGL, an object is made up of geometric primitives such as triangle,
@@ -526,71 +526,71 @@ alt="Loading Image" class="resIMG"/></center><br/>
 
 </p>
 <p>
-	<strong>1.2 </strong>
-	<strong>Program:</strong>
+	<strong><h2>1.2 </h2></strong>
+	<strong><h2>Program:</h2></strong>
 </p>
 <p>
-	<strong>9.2.1 points:</strong>
+	<strong><h2>9.2.1 points:</h2></strong>
 </p>
 <p align="center">
-	<strong>
+	<strong><h2>
 		
 			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/CSE6/62_CGV/M1/SS/9.3.png" 
 alt="Loading Image" class="resIMG"/></center><br/>
 
-	</strong>
-	<strong></strong>
+	</h2></strong>
+	<strong><h2></h2></strong>
 </p>
 <p align="center">
-	<strong>
+	<strong><h2>
 		
 			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/CSE6/62_CGV/M1/SS/9.4.png" 
 alt="Loading Image" class="resIMG"/></center><br/>
 
-	</strong>
-	<strong></strong>
+	</h2></strong>
+	<strong><h2></h2></strong>
 </p>
 <p>
-	<strong>9.2.2 Lines:</strong>
+	<strong><h2>9.2.2 Lines:</h2></strong>
 </p>
 <p align="center">
-	<strong>
+	<strong><h2>
 		
 			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/CSE6/62_CGV/M1/SS/9.5.png" 
 alt="Loading Image" class="resIMG"/></center><br/>
 
-	</strong>
-	<strong></strong>
+	</h2></strong>
+	<strong><h2></h2></strong>
 </p>
 <p align="center">
-	<strong>
+	<strong><h2>
 		
 			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/CSE6/62_CGV/M1/SS/9.6.png" 
 alt="Loading Image" class="resIMG"/></center><br/>
 
-	</strong>
-	<strong></strong>
+	</h2></strong>
+	<strong><h2></h2></strong>
 </p>
 <p>
-	<strong>9.2.3 Quad:</strong>
+	<strong><h2>9.2.3 Quad:</h2></strong>
 </p>
 <p align="center">
-	<strong>
+	<strong><h2>
 		
 			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/CSE6/62_CGV/M1/SS/9.7.png" 
 alt="Loading Image" class="resIMG"/></center><br/>
 
-	</strong>
-	<strong></strong>
+	</h2></strong>
+	<strong><h2></h2></strong>
 </p>
 <p align="center">
-	<strong>
+	<strong><h2>
 		
 			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/CSE6/62_CGV/M1/SS/9.8.png" 
 alt="Loading Image" class="resIMG"/></center><br/>
 
-	</strong>
-	<strong></strong>
+	</h2></strong>
+	<strong><h2></h2></strong>
 </p>
 
 			

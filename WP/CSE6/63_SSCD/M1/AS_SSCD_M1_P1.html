@@ -86,7 +86,7 @@
 
 	<div class="alertA1">
 	  <span class="closebtnA1" onclick="this.parentElement.style.display='none';">&times;</span> 
-	  <strong>NOTE!</strong>
+	  <strong><h2>NOTE!</h2></strong>
 	  Click on MENU to Browse between Subjects...
 	</div>
 
@@ -198,7 +198,7 @@
 			<div class="QAS"><a onclick="show('ANScript1')">Question 1<h1>Explain the various instruction formats used in SIC/XE machine. (04 Marks) </h1></a></div>
 			<div class="ansclass  animate-bottom" id="ANScript1">
 			<p>
-	<strong>1.1 General Instruction Format:</strong>
+	<strong><h2>1.1 General Instruction Format:</h2></strong>
 </p>
 <p>
 	All machine instructions on the standard version of SIC have the following
@@ -214,10 +214,10 @@ alt="Loading Image" class="resIMG"/></center><br/>
 	The flag bit x is used to indicate indexed-addressing mode.
 </p>
 <p>
-	<strong>
+	<strong><h2>
 		1.2 SIC/XE Instruction Format: "SIC == Simplified Instructional
 		Computer"
-	</strong>
+	</h2></strong>
 </p>
 <p>
 	The larger memory available on SIC/XE means that an address will (in
@@ -244,37 +244,37 @@ alt="Loading Image" class="resIMG"/></center><br/>
 
 </p>
 <p>
-	<strong>Format-1:</strong>
+	<strong><h2>Format-1:</h2></strong>
 	8-bits - only opcode
 </p>
 <p>
-	<strong>Format-2:</strong>
+	<strong><h2>Format-2:</h2></strong>
 	16 bits - Register to Register operation
 </p>
 <p>
-	<strong>Format-3:</strong>
+	<strong><h2>Format-3:</h2></strong>
 	24 bits - (e=0) Relative Addressing
 </p>
 <p>
-	<strong>Format-4:</strong>
+	<strong><h2>Format-4:</h2></strong>
 	32 bits - (e=1) Extended Address
 </p>
 <p>
-	<strong>In-Detail:</strong>
+	<strong><h2>In-Detail:</h2></strong>
 </p>
 <p>
-	<strong>Format 1 (1 byte):</strong>
+	<strong><h2>Format 1 (1 byte):</h2></strong>
 	contains only operation code (straight from table).
 </p>
 <p>
-	<strong>Format 2 (2 bytes):</strong>
+	<strong><h2>Format 2 (2 bytes):</h2></strong>
 	first eight bits for operation code, next four for register 1 and following
 	four for register 2. The numbers for the registers go according to the
 	numbers indicated at the registers section (i.e, register T is replaced by
 	hex 5, F is replaced by hex 6).
 </p>
 <p>
-	<strong>Format 3 (3 bytes):</strong>
+	<strong><h2>Format 3 (3 bytes):</h2></strong>
 	First 6 bits contain operation code, next 6 bits contain flags, last 12
 	bits contain displacement for the address of the operand. Operation code
 	uses only 6 bits, thus the second hex digit will be affected by the values
@@ -283,7 +283,7 @@ alt="Loading Image" class="resIMG"/></center><br/>
 	indicates the instruction format (0 for 3 and 1 for 4).
 </p>
 <p>
-	<strong>Format 4 (4 bytes):</strong>
+	<strong><h2>Format 4 (4 bytes):</h2></strong>
 	same as format 3 with an extra 2 hex digits (8 bits) for addresses that
 	require more than 12 bits to be represented.
 </p>
@@ -331,7 +331,7 @@ alt="Loading Image" class="resIMG"/></center><br/>
 	object code.
 </p>
 <p>
-	<strong>Pass 1 - Definition pass</strong>
+	<strong><h2>Pass 1 - Definition pass</h2></strong>
 </p>
 <p>
 	i. Assign addresses to all statement in the program
@@ -346,7 +346,7 @@ alt="Loading Image" class="resIMG"/></center><br/>
 	iv. Perform processing of assembler directives
 </p>
 <p>
-	<strong>Pass 2 - Translation pass</strong>
+	<strong><h2>Pass 2 - Translation pass</h2></strong>
 </p>
 <p>
 	i. Assemble the instructions by converting mnemonics to op-code and
@@ -403,9 +403,9 @@ alt="Loading Image" class="resIMG"/></center><br/>
 			<div class="QAS"><a onclick="show('ANScript5')">Question 5<h1>List the various machine independent assembler features. Explain the control-sections, how the assembler converter them into object code. (08 Marks)</h1></a></div>
 			<div class="ansclass  animate-bottom" id="ANScript5">
 			<p>
-	<strong>
+	<strong><h2>
 		5.1 The Various Machine Independent assembler are as follows:
-	</strong>
+	</h2></strong>
 </p>
 <p>
 	i. Literals
@@ -423,24 +423,24 @@ alt="Loading Image" class="resIMG"/></center><br/>
 	v. Control sections and program linking
 </p>
 <p>
-	<strong>5.2 Control Sections:</strong>
+	<strong><h2>5.2 Control Sections:</h2></strong>
 </p>
 <p>
-	A <strong>control section</strong> is a part of the program that maintains
+	A <strong><h2>control section</h2></strong> is a part of the program that maintains
 	its identity after assembly; each such control section can be loaded and
 	relocated independently of the others.
 </p>
 <p>
-	Different <strong>control sections</strong> are most often used for
+	Different <strong><h2>control sections</h2></strong> are most often used for
 	subroutines or other logical subdivisions of a program. The programmer can
 	assemble, load, and manipulate each of these control sections separately.
 </p>
 <p>
-	<strong>5.3 </strong>
-	<strong>The Simple SIC Assembler</strong>
+	<strong><h2>5.3 </h2></strong>
+	<strong><h2>The Simple SIC Assembler</h2></strong>
 </p>
 <p>
-The assembler performs following functions to translate the	<strong>source program to object code</strong>:
+The assembler performs following functions to translate the	<strong><h2>source program to object code</h2></strong>:
 </p>
 <p>
 	i. To convert mnemonics to op-code
