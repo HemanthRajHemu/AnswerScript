@@ -86,7 +86,7 @@
 
 	<div class="alertA1">
 	  <span class="closebtnA1" onclick="this.parentElement.style.display='none';">&times;</span> 
-	  <strong>NOTE!</strong>
+	  <strong><h2>NOTE!</h2></strong>
 	  Click on MENU to Browse between Subjects...
 	</div>
 <hr/>
@@ -180,12 +180,12 @@
 			<div class="ansclass" id="ANScript1">
 			
 			 <p>
-    <strong>
+    <strong><h2>
       <span style='color: #FF0000'>
         The role of Tomcat server:
         <br/>
       </span>
-    </strong>
+    </h2></strong>
   </p>
   <p>
      To create servlets, you will need access to a servlet development
@@ -231,10 +231,10 @@
   </p>
   <p>
      contains 
-    <strong>servlet-api.jar</strong>
+    <strong><h2>servlet-api.jar</h2></strong>
     . This JAR file contains the classes and interfaces that are needed to build
     servlets. To make this file accessible, update your 
-    <strong>CLASSPATH</strong>
+    <strong><h2>CLASSPATH</h2></strong>
      environment variable so that it includes
     <br/>
   </p>
@@ -286,7 +286,7 @@
   </p>
   <p>
      For instance, assuming the first example, called 
-    <strong>HelloServlet</strong>
+    <strong><h2>HelloServlet</h2></strong>
     , you will add the following lines in the section that defines the servlets:
     <br/>
   </p>
@@ -377,30 +377,30 @@ alt="Loading Image" class="resIMG"/></center><br/>
     <br/>
   </p>
   <p>
-    <strong>Comment tag:</strong>
+    <strong><h2>Comment tag:</h2></strong>
      A comment tag opens with &lt;%-- and closes with --%&gt;, and is followed
     by a comment that usually describes the functionality of statements that
     follow the comment tag.
     <br/>
   </p>
   <p>
-    <strong>Declaration statement tags:</strong>
+    <strong><h2>Declaration statement tags:</h2></strong>
      A declaration statement tag opens with &lt;%! and is followed by a Java
     declaration statement(s) that define variables, objects, and methods that
     are available to other components of the JSP Program.
     <br/>
   </p>
   <p>
-    <strong>Directive Tag:</strong>
+    <strong><h2>Directive Tag:</h2></strong>
      A directive tag opens with &lt;%@ and commands the JSP virtual engine to
     perform a specific task, such as importing a Java package required by
     objects and methods used in a declaration statement. The directive tag
     closes with %&gt;. There are three commonly used directives. These are 
-    <strong>import, include, and taglib</strong>
+    <strong><h2>import, include, and taglib</h2></strong>
     . The 
-    <strong>import tag</strong>
+    <strong><h2>import tag</h2></strong>
      is used to import Java Program into the JSP Programs. The 
-    <strong>include tag</strong>
+    <strong><h2>include tag</h2></strong>
      inserts a specified file into the JSP program replacing the include tag.
     The taglib tag specifies a file that contains a tag library.
     <br/>
@@ -418,14 +418,14 @@ alt="Loading Image" class="resIMG"/></center><br/>
     <br/>
   </p>
   <p>
-    <strong>Expression Tag:</strong>
+    <strong><h2>Expression Tag:</h2></strong>
      An Expression tag opens with &lt;%= and is used for an expression statement
     whose result replaces the expression tag when the JSP virtual engine
     resolves JSP tags. An expression tags closes with %&gt;.
     <br/>
   </p>
   <p>
-    <strong>Scriptlet tags:</strong>
+    <strong><h2>Scriptlet tags:</h2></strong>
      A scriptlet tags opens with &lt;% and contains commonly used Java control
     statements and loops. A scriptlet tag closes with %&gt;.
     <br/>
@@ -489,11 +489,11 @@ alt="Loading Image" class="resIMG"/></center><br/> </p>
 			
 			 <p>
      Three methods are central to the life cycle of a servlet. These are 
-    <strong>init( )</strong>
+    <strong><h2>init( )</h2></strong>
     , 
-    <strong>service( )</strong>
+    <strong><h2>service( )</h2></strong>
     , and 
-    <strong>destroy( )</strong>
+    <strong><h2>destroy( )</h2></strong>
     .
     <br/>
   </p>
@@ -513,7 +513,7 @@ alt="Loading Image" class="resIMG"/></center><br/> </p>
   </p>
   <p>
      Third, the server invokes the 
-    <strong>init( ) </strong>
+    <strong><h2>init( ) </h2></strong>
     method of the servlet. This method is invoked only when the servlet is first
     loaded into memory. It is possible to pass initialization parameters to the
     servlet so it may configure itself.
@@ -521,13 +521,13 @@ alt="Loading Image" class="resIMG"/></center><br/> </p>
   </p>
   <p>
      Fourth, the server invokes the 
-    <strong>service( ) </strong>
+    <strong><h2>service( ) </h2></strong>
     method of the servlet. This method is called to process the HTTP request.
     You will see that it is possible for the servlet to read data that has been
     provided in the HTTP request. It may also formulate an HTTP response for the
     client. The servlet remains in the server’s address space and is available
     to process any other HTTP requests received from clients. The 
-    <strong>service() </strong>
+    <strong><h2>service() </h2></strong>
     method is called for each HTTP request.
     <br/>
   </p>

@@ -87,7 +87,7 @@
 
 	<div class="alertA1">
 	  <span class="closebtnA1" onclick="this.parentElement.style.display='none';">&times;</span> 
-	  <strong>NOTE!</strong>
+	  <strong><h2>NOTE!</h2></strong>
 	  Click on MENU to Browse between Subjects...
 	</div>
 
@@ -205,7 +205,7 @@ DATABASE MANAGEMENT SYSTEM
 	the access mode, the diagnostic area size, and the isolation level.
 </p>
 <p>
-	The <strong>access mode</strong> can be specified as READ ONLY or READ
+	The <strong><h2>access mode</h2></strong> can be specified as READ ONLY or READ
 	WRITE. The default is READ WRITE, unless the isolation level of READ
 	UNCOMMITTED is specified (see below), in which case READ ONLY is assumed. A
 	mode of READ WRITE allows select, update, insert, delete, and create
@@ -213,14 +213,14 @@ DATABASE MANAGEMENT SYSTEM
 	simply for data retrieval.
 </p>
 <p>
-	The <strong>diagnostic area</strong> size option, DIAGNOSTIC SIZE n,
+	The <strong><h2>diagnostic area</h2></strong> size option, DIAGNOSTIC SIZE n,
 	specifies an integer value n, which indicates the number of conditions that
 	can be held simultaneously in the diagnostic area. These conditions supply
 	feedback information (errors or exceptions) to the user or program on the n
 	most recently executed SQL statement.
 </p>
 <p>
-	<strong>The isolation level</strong>
+	<strong><h2>The isolation level</h2></strong>
 	option is specified using the statement ISOLATION LEVEL , where the value
 	for can be READ UNCOMMITTED, READ COMMITTED, REPEATABLE READ, or
 	SERIALIZABLE. 15 The default isolation level is SERIALIZABLE, although some
@@ -233,17 +233,17 @@ DATABASE MANAGEMENT SYSTEM
 	then one or more of the following three violations may occur:
 </p>
 <p>
-	a. <strong>Dirty read:</strong> A transaction T1 may read the update of a
+	a. <strong><h2>Dirty read:</h2></strong> A transaction T1 may read the update of a
 	transaction T2, which has not yet committed. If T2 fails and is aborted,
 	then T1 would have read a value that does not exist and is incorrect.
 </p>
 <p>
-	b. <strong>Non-repeatable read:</strong> A transaction T1 may read a given
+	b. <strong><h2>Non-repeatable read:</h2></strong> A transaction T1 may read a given
 	value from a table. If another transaction T2 later updates that value and
 	T1 reads that value again, T1 will see a different value.
 </p>
 <p>
-	c. <strong>Phantoms:</strong> A transaction T1 may read a set of rows from
+	c. <strong><h2>Phantoms:</h2></strong> A transaction T1 may read a set of rows from
 	a table, perhaps based on some condition specified in the SQL WHERE-clause.
 	Now suppose that a transaction T2 inserts a new row r that also satisfies
 	the WHERE-clause condition used in T1, into the table used by T1. The
@@ -313,7 +313,7 @@ alt="Loading Image" class="resIMG"/></center>
 			<div class="ansclass" id="ANScript2">
 			
 			<p>
-	In the <strong>immediate update techniques</strong>, the database may be
+	In the <strong><h2>immediate update techniques</h2></strong>, the database may be
 	updated by some operations of a transaction before the transaction reaches
 	its commit point. However, these operations must also be recorded in the
 	log on disk by force-writing before they are applied to the database on
@@ -324,15 +324,15 @@ alt="Loading Image" class="resIMG"/></center>
 </p>
 <p>
 	In the general case of immediate update, both undo and redo may be required
-during recovery. This technique, known as the	<strong>UNDO/REDO algorithm</strong>, requires both operations during
+during recovery. This technique, known as the	<strong><h2>UNDO/REDO algorithm</h2></strong>, requires both operations during
 	recovery and is used most often in practice.
 </p>
 <p>
 	A variation of the algorithm where all updates are required to be recorded
-in the database on disk <em>before</em> a transaction commits requires<em>undo</em> only, so it is known as the	<strong>UNDO/NO-REDO algorithm</strong>.
+in the database on disk <em>before</em> a transaction commits requires<em>undo</em> only, so it is known as the	<strong><h2>UNDO/NO-REDO algorithm</h2></strong>.
 </p>
 <p>
-	The UNDO and REDO operations are required to be <strong>idempotent</strong>
+	The UNDO and REDO operations are required to be <strong><h2>idempotent</h2></strong>
 	-that is, executing an operation multiple times is equivalent to executing
 	it just once. In fact, the whole recovery process should be idempotent
 	because if the system were to fail during the recovery process, the next
@@ -342,7 +342,7 @@ in the database on disk <em>before</em> a transaction commits requires<em>undo</
 	result of recovering when there is no crash during recovery!
 </p>
 <p>
-	<strong>7.1 Recovery Techniques Based on Immediate Update</strong>
+	<strong><h2>7.1 Recovery Techniques Based on Immediate Update</h2></strong>
 </p>
 <p>
 	In these techniques, when a transaction issues an update command, the
@@ -356,8 +356,8 @@ in the database on disk <em>before</em> a transaction commits requires<em>undo</
 	Provisions must be made for undoing the effect of update operations that
 	have been applied to the database by a failed transaction. This is
 	accomplished by rolling back the transaction and undoing the effect of the
-transaction's write_item operations. Therefore, the<strong>UNDO-type log entries</strong>, which include the	<strong>old value (BFIM</strong>) of the item, must be stored in the log.
-Because UNDO can be needed during recovery, these methods follow a	<strong>steal strategy</strong> for deciding when updated main memory
+transaction's write_item operations. Therefore, the<strong><h2>UNDO-type log entries</h2></strong>, which include the	<strong><h2>old value (BFIM</h2></strong>) of the item, must be stored in the log.
+Because UNDO can be needed during recovery, these methods follow a	<strong><h2>steal strategy</h2></strong> for deciding when updated main memory
 	buffers can be written back to disk
 </p>
 <p>
@@ -367,16 +367,16 @@ Because UNDO can be needed during recovery, these methods follow a	<strong>steal
 <p>
 	i. If the recovery technique ensures that all updates of a transaction are
 	recorded in the database on disk before the transaction commits, there is
-	never a need to <strong>REDO</strong> any operations of committed
-transactions. This is called the	<strong>UNDO/NO-REDO recovery algorithm</strong>. In this method, all
+	never a need to <strong><h2>REDO</h2></strong> any operations of committed
+transactions. This is called the	<strong><h2>UNDO/NO-REDO recovery algorithm</h2></strong>. In this method, all
 	updates by a transaction must be recorded on disk before the transaction
-	commits, so that <strong>REDO is never needed</strong>. Hence, this method
+	commits, so that <strong><h2>REDO is never needed</h2></strong>. Hence, this method
 	must utilize the steal/force strategy for deciding when updated main memory
 	buffers are written back to disk
 </p>
 <p>
 	ii. If the transaction is allowed to commit before all its changes are
-written to the database, we have the most general case, known as the	<strong>UNDO/REDO recovery algorithm</strong>. In this case, the
+written to the database, we have the most general case, known as the	<strong><h2>UNDO/REDO recovery algorithm</h2></strong>. In this case, the
 	steal/no-force strategy is applied. This is also the most complex
 	technique, but the most commonly used in practice. We will outline an
 	UNDO/REDO recovery algorithm and leave it as an exercise for the reader to
@@ -440,8 +440,8 @@ written to the database, we have the most general case, known as the	<strong>UND
 	the same n transactions.
 </p>
 <p>
-	<strong>9.1 How Serializability Is Used for Concurrency Control</strong>
-	<strong></strong>
+	<strong><h2>9.1 How Serializability Is Used for Concurrency Control</h2></strong>
+	<strong><h2></h2></strong>
 </p>
 <p>
 	A schedule S is (conflict) serializable-that is, S is (conflict) equivalent
@@ -465,7 +465,7 @@ written to the database, we have the most general case, known as the	<strong>UND
 	time of transaction submission, and priorities of processes contribute to
 	the ordering of operations in a schedule. Hence, it is difficult to
 	determine how the operations of a schedule will be interleaved beforehand
-	to <strong>ensure serializability</strong>.
+	to <strong><h2>ensure serializability</h2></strong>.
 </p>
 <p>
 	If transactions are executed at will and then the resulting schedule is
@@ -510,7 +510,7 @@ written to the database, we have the most general case, known as the	<strong>UND
 			<div class="ansclass" id="ANScript5">
 			
 			<p>
-	<strong>10.1 Introduction:</strong>
+	<strong><h2>10.1 Introduction:</h2></strong>
 </p>
 <p>
 	A timestamp is a unique identifier created by the DBMS to identify a
@@ -529,9 +529,9 @@ written to the database, we have the most general case, known as the	<strong>UND
 	executing for some short period of time.
 </p>
 <p>
-	<strong>
+	<strong><h2>
 		10.2 The Timestamp Ordering Algorithm for Concurrency Control:
-	</strong>
+	</h2></strong>
 </p>
 <p>
 	The idea for this scheme is to enforce the equivalent serial order on the
@@ -567,22 +567,22 @@ written to the database, we have the most general case, known as the	<strong>UND
 	to write item X.
 </p>
 <p>
-	<strong>10.2.1 </strong>
-	<strong>Basic Timestamp Ordering (TO):</strong>
+	<strong><h2>10.2.1 </h2></strong>
+	<strong><h2>Basic Timestamp Ordering (TO):</h2></strong>
 </p>
 <p>
 	Whenever some transaction T tries to issue a read_item(X) or a
-	write_item(X) operation, the <strong>basic TO</strong> algorithm compares
+	write_item(X) operation, the <strong><h2>basic TO</h2></strong> algorithm compares
 	the timestamp of T with read_TS(X) and write_TS(X) to ensure that the
 	timestamp order of transaction execution is not violated. If this order is
 	violated, then transaction T is aborted and resubmitted to the system as a
-	new transaction with <strong>a new timestamp</strong>.
+	new transaction with <strong><h2>a new timestamp</h2></strong>.
 </p>
 <p>
 	If T is aborted and rolled back, any transaction T1 that may have used a
 	value written by T must also be rolled back. Similarly, any transaction T2
 	that may have used a value written by T1 must also be rolled back, and so
-	on. This effect is known as <strong>cascading rollback</strong> and is one
+	on. This effect is known as <strong><h2>cascading rollback</h2></strong> and is one
 	of the problems associated with basic TO, since the schedules produced are
 	not guaranteed to be recoverable.
 </p>
@@ -594,11 +594,11 @@ written to the database, we have the most general case, known as the	<strong>UND
 	cases:
 </p>
 <p>
-	<strong>i. </strong>
-	<strong>
+	<strong><h2>i. </h2></strong>
+	<strong><h2>
 		Whenever a transaction T issues a write_item(X) operation, the
 		following check is performed:
-	</strong>
+	</h2></strong>
 </p>
 <p>
 	a. If read_TS(X) &gt; TS(T) or if write_TS(X) &gt; TS(T), then abort and
@@ -612,10 +612,10 @@ written to the database, we have the most general case, known as the	<strong>UND
 	write_item(X) operation of T and set write_TS(X) to TS(T).
 </p>
 <p>
-	<strong>
+	<strong><h2>
 		ii. Whenever a transaction T issues a read_item(X) operation, the
 		following check is performed:
-	</strong>
+	</h2></strong>
 </p>
 <p>
 	a. If write_TS(X) &gt; TS(T), then abort and roll back T and reject the
@@ -632,11 +632,11 @@ written to the database, we have the most general case, known as the	<strong>UND
 	Whenever the basic TO algorithm detects two conflicting operations that
 	occur in the incorrect order, it rejects the later of the two operations by
 	aborting the transaction that issued it. The schedules produced by basic TO
-	are hence guaranteed to be <strong>conflict serializable</strong>.
+	are hence guaranteed to be <strong><h2>conflict serializable</h2></strong>.
 </p>
 <p>
-	<strong>10.2.2 </strong>
-	<strong>Strict Timestamp Ordering (TO).</strong>
+	<strong><h2>10.2.2 </h2></strong>
+	<strong><h2>Strict Timestamp Ordering (TO).</h2></strong>
 </p>
 <p>
 	A variation of basic TO called strict TO ensures that the schedules are
@@ -653,7 +653,7 @@ written to the database, we have the most general case, known as the	<strong>UND
 	T waits for T&#8242; only if TS(T) &gt; TS(T&#8242;).
 </p>
 <p>
-	<strong>10.2.3 Thomas's Write Rule.</strong>
+	<strong><h2>10.2.3 Thomas's Write Rule.</h2></strong>
 </p>
 <p>
 	A modification of the basic TO algorithm, known as Thomas's write rule,

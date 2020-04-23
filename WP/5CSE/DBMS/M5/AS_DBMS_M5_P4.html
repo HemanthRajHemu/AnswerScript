@@ -87,7 +87,7 @@
 
 	<div class="alertA1">
 	  <span class="closebtnA1" onclick="this.parentElement.style.display='none';">&times;</span> 
-	  <strong>NOTE!</strong>
+	  <strong><h2>NOTE!</h2></strong>
 	  Click on MENU to Browse between Subjects...
 	</div>
 
@@ -250,11 +250,11 @@ DATABASE MANAGEMENT SYSTEM
 	changes during undo.
 </p>
 <p>
-	The second concept, <strong>repeating history</strong>, means that ARIES
+	The second concept, <strong><h2>repeating history</h2></strong>, means that ARIES
 	will retrace all actions of the database system prior to the crash to
 	reconstruct the database state when the crash occurred. Transactions that
 	were uncommitted at the time of the crash (active transactions) are undone.
-	The third concept,<strong> logging during undo</strong>, will prevent ARIES
+	The third concept,<strong><h2> logging during undo</h2></strong>, will prevent ARIES
 	from repeating the completed undo operations if a failure occurs during
 	recovery, which causes a restart of the recovery process.
 </p>
@@ -301,7 +301,7 @@ DATABASE MANAGEMENT SYSTEM
 	end log record is written.
 </p>
 <p>
-In addition to the log, two tables are needed for efficient recovery: the	<strong>Transaction Table and the Dirty Page Table</strong>, which are
+In addition to the log, two tables are needed for efficient recovery: the	<strong><h2>Transaction Table and the Dirty Page Table</h2></strong>, which are
 	maintained by the transaction manager. When a crash occurs, these tables
 	are rebuilt in the analysis phase of recovery. The Transaction Table
 	contains an entry for each active transaction, with information such as the
@@ -311,7 +311,7 @@ In addition to the log, two tables are needed for efficient recovery: the	<stron
 	corresponding to the earliest update to that page.
 </p>
 <p>
-	<strong>Checkpointing</strong>
+	<strong><h2>Checkpointing</h2></strong>
 	in ARIES consists of the following: writing a begin_checkpoint record to
 	the log, writing an end_checkpoint record to the log, and writing the LSN
 	of the begin_checkpoint record to a special file. This special file is
@@ -322,7 +322,7 @@ In addition to the log, two tables are needed for efficient recovery: the	<stron
 	transactions during checkpointing
 </p>
 <p>
-	The <strong>REDO phase</strong> follows next. To reduce the amount of
+	The <strong><h2>REDO phase</h2></strong> follows next. To reduce the amount of
 	unnecessary work, ARIES starts redoing at a point in the log where it knows
 	(for sure) that previous changes to dirty pages have already been applied
 	to the database on disk. It can determine this by finding the smallest LSN,

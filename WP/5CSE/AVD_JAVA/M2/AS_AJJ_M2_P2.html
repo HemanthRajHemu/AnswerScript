@@ -86,7 +86,7 @@
 
 	<div class="alertA1">
 	  <span class="closebtnA1" onclick="this.parentElement.style.display='none';">&times;</span> 
-	  <strong>NOTE!</strong>
+	  <strong><h2>NOTE!</h2></strong>
 	  Click on MENU to Browse between Subjects...
 	</div>
 <hr/>
@@ -181,20 +181,20 @@
 			
 			<p>
      The 
-    <strong>LinkedList </strong>
+    <strong><h2>LinkedList </h2></strong>
     class extends 
-    <strong>AbstractSequentialList </strong>
+    <strong><h2>AbstractSequentialList </h2></strong>
     and implements the 
-    <strong>List</strong>
+    <strong><h2>List</h2></strong>
     , 
-    <strong>Deque</strong>
+    <strong><h2>Deque</h2></strong>
     , and
     <br/>
   </p>
   <p>
-    <strong>Queue </strong>
+    <strong><h2>Queue </h2></strong>
     interfaces. It provides a linked-list data structure. 
-    <strong>LinkedList </strong>
+    <strong><h2>LinkedList </h2></strong>
     is a generic class that has this declaration:
     <br/>
   </p>
@@ -204,9 +204,9 @@
   </p>
   <p>
      Here, 
-    <strong>E </strong>
+    <strong><h2>E </h2></strong>
     specifies the type of objects that the list will hold. 
-    <strong>LinkedList </strong>
+    <strong><h2>LinkedList </h2></strong>
     has the two constructors
     <br/>
   </p>
@@ -235,39 +235,39 @@
   </p>
   <p>
      Because 
-    <strong>LinkedList </strong>
+    <strong><h2>LinkedList </h2></strong>
     implements the 
-    <strong>Deque </strong>
+    <strong><h2>Deque </h2></strong>
     interface, you have access to the methods defined by 
-    <strong>Deque</strong>
+    <strong><h2>Deque</h2></strong>
     . For example, to add elements to the start of a list you can use 
-    <strong>addFirst() </strong>
+    <strong><h2>addFirst() </h2></strong>
     or 
-    <strong>offerFirst()</strong>
+    <strong><h2>offerFirst()</h2></strong>
     . To add elements to the end of the list, use 
-    <strong>addLast() </strong>
+    <strong><h2>addLast() </h2></strong>
     or 
-    <strong>offerLast()</strong>
+    <strong><h2>offerLast()</h2></strong>
     . To obtain the first element, you can use 
-    <strong>getFirst() </strong>
+    <strong><h2>getFirst() </h2></strong>
     or 
-    <strong>peekFirst()</strong>
+    <strong><h2>peekFirst()</h2></strong>
     . To obtain the last element, use 
-    <strong>getLast() </strong>
+    <strong><h2>getLast() </h2></strong>
     or 
-    <strong>peekLast()</strong>
+    <strong><h2>peekLast()</h2></strong>
     . To remove the first element, use 
-    <strong>removeFirst( ) </strong>
+    <strong><h2>removeFirst( ) </h2></strong>
     or 
-    <strong>pollFirst()</strong>
+    <strong><h2>pollFirst()</h2></strong>
     .
     <br/>
   </p>
   <p>
      To remove the last element, use 
-    <strong>removeLast() </strong>
+    <strong><h2>removeLast() </h2></strong>
     or 
-    <strong>pollLast()</strong>
+    <strong><h2>pollLast()</h2></strong>
     .
     <br/>
 				<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/AVD_JAVA/M2/M2_IMG/6.1.png" 
@@ -283,7 +283,7 @@ alt="Loading Image" class="resIMG"/></center>
 			  <p>
      Before you can access a collection through an iterator, you must obtain
     one. Each of the collection classes provides an 
-    <strong>iterator() </strong>
+    <strong><h2>iterator() </h2></strong>
     method that returns an iterator to the start of the collection. By using
     this iterator object, you can access each element in the collection, one
     element at a time. In general, to use an iterator to cycle through the
@@ -297,52 +297,52 @@ alt="Loading Image" class="resIMG"/></center>
   <p>
      1. Obtain an iterator to the start of the collection by calling the
     collection’s 
-    <strong>iterator() </strong>
+    <strong><h2>iterator() </h2></strong>
     method.
     <br/>
   </p>
   <p>
      2. Set up a loop that makes a call to 
-    <strong>hasNext()</strong>
+    <strong><h2>hasNext()</h2></strong>
     . Have the loop iterate as long as 
-    <strong>hasNext() </strong>
+    <strong><h2>hasNext() </h2></strong>
     returns 
-    <strong>true</strong>
+    <strong><h2>true</h2></strong>
     .
     <br/>
   </p>
   <p>
      3. Within the loop, obtain each element by calling 
-    <strong>next()</strong>
+    <strong><h2>next()</h2></strong>
     .
     <br/>
   </p>
   <p>
      For collections that implement 
-    <strong>List</strong>
+    <strong><h2>List</h2></strong>
     , you can also obtain an iterator by calling 
-    <strong>listIterator()</strong>
+    <strong><h2>listIterator()</h2></strong>
     . As explained, a list iterator gives you the ability to access the
     collection in either the forward or backward direction and lets you modify
     an element. Otherwise, 
-    <strong>ListIterator </strong>
+    <strong><h2>ListIterator </h2></strong>
     is used just like 
-    <strong>Iterator</strong>
+    <strong><h2>Iterator</h2></strong>
     . 
     <br/>
   </p>
   <p>
      The following example implements these steps, demonstrating both the 
-    <strong>Iterator </strong>
+    <strong><h2>Iterator </h2></strong>
     and 
-    <strong>ListIterator </strong>
+    <strong><h2>ListIterator </h2></strong>
     interfaces. It uses an 
-    <strong>ArrayList </strong>
+    <strong><h2>ArrayList </h2></strong>
     object, but the general principles apply to any type of collection. Of
     course, 
-    <strong>ListIterator </strong>
+    <strong><h2>ListIterator </h2></strong>
     is available only to those collections that implement the 
-    <strong>List </strong>
+    <strong><h2>List </h2></strong>
     interface.
     <br/>
   </p>
@@ -382,78 +382,78 @@ i.	Hashtable<br/>
 			<div class="ansclass" id="ANScript3">
 			
 			  <p>
-    <strong>
+    <strong><h2>
       8.1 Hashtable 
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
      It was part of the original 
-    <strong>java.util </strong>
+    <strong><h2>java.util </h2></strong>
     and is a concrete implementation of a 
-    <strong>Dictionary</strong>
+    <strong><h2>Dictionary</h2></strong>
     . However, with the advent of collections, 
-    <strong>Hashtable </strong>
+    <strong><h2>Hashtable </h2></strong>
     was reengineered to also implement the 
-    <strong>Map </strong>
+    <strong><h2>Map </h2></strong>
     interface. Thus, 
-    <strong>Hashtable </strong>
+    <strong><h2>Hashtable </h2></strong>
     is now integrated into the Collections Framework. It is similar to 
-    <strong>HashMap</strong>
+    <strong><h2>HashMap</h2></strong>
     , but is synchronized. Like 
-    <strong>HashMap</strong>
+    <strong><h2>HashMap</h2></strong>
     , 
-    <strong>Hashtable </strong>
+    <strong><h2>Hashtable </h2></strong>
     stores key/value pairs in a hash table. However, neither keys nor values can
     be 
-    <strong>null</strong>
+    <strong><h2>null</h2></strong>
     . When using a 
-    <strong>Hashtable</strong>
+    <strong><h2>Hashtable</h2></strong>
     , you specify an object that is used as a key, and the value that you want
     linked to that key. The key is then hashed, and the resulting hash code is
     used as the index at which the value is stored within the table.
     <br/>
   </p>
   <p>
-    <strong>Hashtable </strong>
+    <strong><h2>Hashtable </h2></strong>
     was made generic by JDK 5. It is declared like this: class Hashtable&lt;K,
     V&gt; Here, 
-    <strong>K </strong>
+    <strong><h2>K </h2></strong>
     specifies the type of keys, and 
-    <strong>V </strong>
+    <strong><h2>V </h2></strong>
     specifies the type of values.
     <br/>
   </p>
   <p>
      A hash table can only store objects that override the 
-    <strong>hashCode() </strong>
+    <strong><h2>hashCode() </h2></strong>
     and 
-    <strong>equals() </strong>
+    <strong><h2>equals() </h2></strong>
     methods that are defined by 
-    <strong>Object</strong>
+    <strong><h2>Object</h2></strong>
     . The 
-    <strong>hashCode() </strong>
+    <strong><h2>hashCode() </h2></strong>
     method must compute and return the hash code for the object. Of course, 
-    <strong>equals() </strong>
+    <strong><h2>equals() </h2></strong>
     compares two objects. Fortunately, many of Java’s built-in classes already
     implement the 
-    <strong>hashCode() </strong>
+    <strong><h2>hashCode() </h2></strong>
     method. For example, the most common type of 
-    <strong>Hashtable </strong>
+    <strong><h2>Hashtable </h2></strong>
     uses a 
-    <strong>String </strong>
+    <strong><h2>String </h2></strong>
     object as the key. 
-    <strong>String </strong>
+    <strong><h2>String </h2></strong>
     implements both 
-    <strong>hashCode() </strong>
+    <strong><h2>hashCode() </h2></strong>
     and 
-    <strong>equals()</strong>
+    <strong><h2>equals()</h2></strong>
     .
     <br/>
   </p>
   <p>
      The 
-    <strong>Hashtable </strong>
+    <strong><h2>Hashtable </h2></strong>
     constructors are shown here:
     <br/>
   </p>
@@ -507,13 +507,13 @@ i.	Hashtable<br/>
   </p>
   <p>
      In addition to the methods defined by the 
-    <strong>Map </strong>
+    <strong><h2>Map </h2></strong>
     interface, which 
-    <strong>Hashtable </strong>
+    <strong><h2>Hashtable </h2></strong>
     now implements. Several methods throw 
-    <strong>NullPointerException </strong>
+    <strong><h2>NullPointerException </h2></strong>
     if an attempt is made to use a 
-    <strong>null </strong>
+    <strong><h2>null </h2></strong>
     key or value.
     <br/>
   </p>
@@ -531,50 +531,50 @@ ii.	Vector. 	(8-Marks) (4b)<br/>
 			<div class="ansclass" id="ANScript4">
 			
 			  <p>
-    <strong>
+    <strong><h2>
       8.2 Vector
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
-    <strong>Vector </strong>
+    <strong><h2>Vector </h2></strong>
     implements a dynamic array. It is similar to 
-    <strong>ArrayList</strong>
+    <strong><h2>ArrayList</h2></strong>
     , but with two differences: 
-    <strong>Vector </strong>
+    <strong><h2>Vector </h2></strong>
     is synchronized, and it contains many legacy methods that are not part of
     the Collections Framework.With the advent of collections, 
-    <strong>Vector </strong>
+    <strong><h2>Vector </h2></strong>
     was reengineered to extend 
-    <strong>AbstractList </strong>
+    <strong><h2>AbstractList </h2></strong>
     and to implement the 
-    <strong>List </strong>
+    <strong><h2>List </h2></strong>
     interface. With the release of JDK 5, it was retrofitted for generics and
     reengineered to implement 
-    <strong>Iterable</strong>
+    <strong><h2>Iterable</h2></strong>
     . This means that 
-    <strong>Vector </strong>
+    <strong><h2>Vector </h2></strong>
     is fully compatible with collections, and a 
-    <strong>Vector </strong>
+    <strong><h2>Vector </h2></strong>
     can have its contents iterated by the enhanced 
-    <strong>for </strong>
+    <strong><h2>for </h2></strong>
     loop.
     <br/>
   </p>
   <p>
-    <strong>Vector </strong>
+    <strong><h2>Vector </h2></strong>
     is declared like this: class Vector&lt;E&gt;
     <br/>
   </p>
   <p>
      Here, 
-    <strong>E </strong>
+    <strong><h2>E </h2></strong>
     specifies the type of element that will be stored.
     <br/>
   </p>
   <p>
      Here are the 
-    <strong>Vector </strong>
+    <strong><h2>Vector </h2></strong>
     constructors:
     <br/>
   </p>
@@ -631,7 +631,7 @@ ii.	Vector. 	(8-Marks) (4b)<br/>
     <br/>
   </p>
   <p>
-    <strong>Vector </strong>
+    <strong><h2>Vector </h2></strong>
     defines these protected data members:
     <br/>
   </p>
@@ -684,28 +684,28 @@ ii.	Vector. 	(8-Marks) (4b)<br/>
     objects are handled by your programs. Collections were not part of the
     original Java release, but were added by J2SE 1.2. Prior to the Collections
     Framework, Java provided ad hoc classes such as 
-    <strong>Dictionary</strong>
+    <strong><h2>Dictionary</h2></strong>
     , 
-    <strong>Vector</strong>
+    <strong><h2>Vector</h2></strong>
     , 
-    <strong>Stack</strong>
+    <strong><h2>Stack</h2></strong>
     , and 
-    <strong>Properties </strong>
+    <strong><h2>Properties </h2></strong>
     to store and manipulate groups of objects.
     <br/>
   </p>
   <p>
-    <strong>
+    <strong><h2>
       The Collection Interface
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
      The 
-    <strong>Collection </strong>
+    <strong><h2>Collection </h2></strong>
     interface is the foundation upon which the Collections Framework is built
     because it must be implemented by any class that defines a collection. 
-    <strong>Collection </strong>
+    <strong><h2>Collection </h2></strong>
     is a generic interface that has this declaration:
     <br/>
   </p>
@@ -715,82 +715,82 @@ ii.	Vector. 	(8-Marks) (4b)<br/>
   </p>
   <p>
      Here, 
-    <strong>E </strong>
+    <strong><h2>E </h2></strong>
     specifies the type of objects that the collection will hold. 
-    <strong>Collection </strong>
+    <strong><h2>Collection </h2></strong>
     extends the 
-    <strong>Iterable </strong>
+    <strong><h2>Iterable </h2></strong>
     interface. This means that all collections can be cycled through by use of
     the for-each style 
-    <strong>for </strong>
+    <strong><h2>for </h2></strong>
     loop. (Recall that only classes that implement 
-    <strong>Iterable </strong>
+    <strong><h2>Iterable </h2></strong>
     can be cycled through by the 
-    <strong>for</strong>
+    <strong><h2>for</h2></strong>
     .) 
-    <strong>Collection </strong>
+    <strong><h2>Collection </h2></strong>
     declares the core methods that all collections will have. These methods are
     summarized in Table 17-1. Because all collections implement 
-    <strong>Collection</strong>
+    <strong><h2>Collection</h2></strong>
     , familiarity with its methods is necessary for a clear understanding of the
     framework. Several of these methods can throw an 
-    <strong>UnsupportedOperationException</strong>
+    <strong><h2>UnsupportedOperationException</h2></strong>
     . As explained, this occurs if a collection cannot be modified. A
-    <strong>ClassCastException </strong>
+    <strong><h2>ClassCastException </h2></strong>
     is generated when one object is incompatible with another, such as when an
     attempt is made to add an incompatible object to a collection. A 
-    <strong>NullPointerException </strong>
+    <strong><h2>NullPointerException </h2></strong>
     is thrown if an attempt is made to store a 
-    <strong>null </strong>
+    <strong><h2>null </h2></strong>
     object and 
-    <strong>null </strong>
+    <strong><h2>null </h2></strong>
     elements are not allowed in the collection. An 
-    <strong>IllegalArgumentException </strong>
+    <strong><h2>IllegalArgumentException </h2></strong>
     is thrown if an invalid argument is used. An 
-    <strong>IllegalStateException </strong>
+    <strong><h2>IllegalStateException </h2></strong>
     is thrown if an attempt is made to add an element to a fixed-length
     collection that is full.
     <br/>
   </p>
   <p>
      Objects are added to a collection by calling 
-    <strong>add( )</strong>
+    <strong><h2>add( )</h2></strong>
     . Notice that 
-    <strong>add( ) </strong>
+    <strong><h2>add( ) </h2></strong>
     takes an argument of type 
-    <strong>E</strong>
+    <strong><h2>E</h2></strong>
     , which means that objects added to a collection must be compatible with the
     type of data expected by the collection. You can add the entire contents of
     one collection to another by calling 
-    <strong>addAll( )</strong>
+    <strong><h2>addAll( )</h2></strong>
     . You can remove an object by using 
-    <strong>remove( )</strong>
+    <strong><h2>remove( )</h2></strong>
     . To remove a group of objects, call 
-    <strong>removeAll( )</strong>
+    <strong><h2>removeAll( )</h2></strong>
     . You can remove all elements except those of a specified group by calling 
-    <strong>retainAll( )</strong>
+    <strong><h2>retainAll( )</h2></strong>
     . To empty a collection, call 
-    <strong>clear( )</strong>
+    <strong><h2>clear( )</h2></strong>
     .
     <br/>
   </p>
   <p>
      You can determine whether a collection contains a specific object by
     calling 
-    <strong>contains()</strong>
+    <strong><h2>contains()</h2></strong>
     . To determine whether one collection contains all the members of another,
     call 
-    <strong>containsAll( )</strong>
+    <strong><h2>containsAll( )</h2></strong>
     . You can determine when a collection is empty by calling 
-    <strong>isEmpty( )</strong>
+    <strong><h2>isEmpty( )</h2></strong>
     . The number of elements currently held in a collection can be determined by
     calling 
-    <strong>size( )</strong>
+    <strong><h2>size( )</h2></strong>
     . The 
-    <strong>toArray( ) </strong>
+    <strong><h2>toArray( ) </h2></strong>
     methods return an array that contains the elements stored in the invoking
     collection. The first returns an array of 
-    <strong>Object</strong>
+    <strong><h2>Object</h2></strong>
     . The second returns an array of elements that have the same type as the
     array specified as a parameter. Normally, the second form is more convenient
     because it returns the desired array type. These methods are more important
@@ -801,19 +801,19 @@ ii.	Vector. 	(8-Marks) (4b)<br/>
   </p>
   <p>
      Two collections can be compared for equality by calling 
-    <strong>equals( )</strong>
+    <strong><h2>equals( )</h2></strong>
     . The precise meaning of “equality” may differ from collection to
     collection. For example, you can implement 
-    <strong>equals() </strong>
+    <strong><h2>equals() </h2></strong>
     so that it compares the values of elements stored in the collection.
     Alternatively, 
-    <strong>equals() </strong>
+    <strong><h2>equals() </h2></strong>
     can compare references to those elements.
     <br/>
   </p>
   <p>
      One more very important method is 
-    <strong>iterator()</strong>
+    <strong><h2>iterator()</h2></strong>
     , which returns an iterator to a collection. Iterators are frequently used
     when working with collections.
     <br/>

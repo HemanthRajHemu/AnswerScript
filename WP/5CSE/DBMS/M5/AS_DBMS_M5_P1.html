@@ -87,7 +87,7 @@
 
 	<div class="alertA1">
 	  <span class="closebtnA1" onclick="this.parentElement.style.display='none';">&times;</span> 
-	  <strong>NOTE!</strong>
+	  <strong><h2>NOTE!</h2></strong>
 	  Click on MENU to Browse between Subjects...
 	</div>
 
@@ -191,7 +191,7 @@ DATABASE MANAGEMENT SYSTEM
 	The concurrency control is needed to overcome the following problems:
 </p>
 <p>
-	i. <strong>The Lost Update Problem:</strong> This problem occurs when two
+	i. <strong><h2>The Lost Update Problem:</h2></strong> This problem occurs when two
 	transactions that access the same database items have their operations
 	interleaved in a way that makes the value of some database items incorrect.
 	Suppose that transactions T1 and T2 are submitted at approximately the same
@@ -216,7 +216,7 @@ alt="Loading Image" class="resIMG"/></center>
 	problem. (c) The incorrect summary problem
 </p>
 <p>
-	ii. <strong>The Temporary Update (or Dirty Read) Problem:</strong> This
+	ii. <strong><h2>The Temporary Update (or Dirty Read) Problem:</h2></strong> This
 	problem occurs when one transaction updates a database item and then the
 	transaction fails for some reason. Meanwhile, the updated item is accessed
 	(read) by another transaction before it is changed back (or rolled back) to
@@ -230,7 +230,7 @@ alt="Loading Image" class="resIMG"/></center>
 	the dirty read problem.
 </p>
 <p>
-	iii. <strong>The Incorrect Summary Problem:</strong> If one transaction is
+	iii. <strong><h2>The Incorrect Summary Problem:</h2></strong> If one transaction is
 	calculating an aggregate summary function on a number of database items
 	while other transactions are updating some of these items, the aggregate
 	function may calculate some values before they are updated and others after
@@ -242,7 +242,7 @@ alt="Loading Image" class="resIMG"/></center>
 	of Y before those N seats have been added to it.
 </p>
 <p>
-	iv. <strong>The Unrepeatable Read Problem:</strong> Another problem that
+	iv. <strong><h2>The Unrepeatable Read Problem:</h2></strong> Another problem that
 	may occur is called unrepeatable read, where a transaction T reads the same
 	item twice and the item is changed by another transaction T&#8242; between
 	the two reads. Hence, T receives different values for its two reads of the
@@ -262,37 +262,37 @@ alt="Loading Image" class="resIMG"/></center>
 			<div class="ansclass" id="ANScript2">
 			
 			<p>
-	<strong>Desirable Properties of Transactions</strong>
+	<strong><h2>Desirable Properties of Transactions</h2></strong>
 </p>
 <p>
-Transactions should possess several properties, often called the	<strong>ACID properties</strong>; they should be enforced by the
-concurrency control and recovery methods of the DBMS. The following are the	<strong>ACID properties</strong>:
+Transactions should possess several properties, often called the	<strong><h2>ACID properties</h2></strong>; they should be enforced by the
+concurrency control and recovery methods of the DBMS. The following are the	<strong><h2>ACID properties</h2></strong>:
 </p>
 <p>
-	i. <strong>Atomicity:</strong> A transaction is an atomic unit of
+	i. <strong><h2>Atomicity:</h2></strong> A transaction is an atomic unit of
 	processing; it should either be performed in its entirety or not performed
 	at all.
 </p>
 <p>
-	ii. <strong>Consistency preservation:</strong> A transaction should be
+	ii. <strong><h2>Consistency preservation:</h2></strong> A transaction should be
 	consistency preserving, meaning that if it is completely executed from
 	beginning to end without interference from other transactions, it should
 	take the database from one consistent state to another.
 </p>
 <p>
-	iii. <strong>Isolation:</strong> A transaction should appear as though it
+	iii. <strong><h2>Isolation:</h2></strong> A transaction should appear as though it
 	is being executed in isolation from other transactions, even though many
 	transactions are executing concurrently. That is, the execution of a
 	transaction should not be interfered with by any other transactions
 	executing concurrently.
 </p>
 <p>
-	iv. <strong>Durability or permanency:</strong> The changes applied to the
+	iv. <strong><h2>Durability or permanency:</h2></strong> The changes applied to the
 	database by a committed transaction must persist in the database. These
 	changes must not be lost because of any failure.
 </p>
 <p>
-	The <strong><em>atomicity property</em></strong> requires that we execute a
+	The <strong><h2><em>atomicity property</em></h2></strong> requires that we execute a
 	transaction to completion. It is the responsibility of the transaction
 	recovery subsystem of a DBMS to ensure atomicity. If a transaction fails to
 	complete for some reason, such as a system crash in the midst of
@@ -301,12 +301,12 @@ concurrency control and recovery methods of the DBMS. The following are the	<str
 	committed transaction must be eventually written to disk.
 </p>
 <p>
-	The preservation of <strong><em>consistency</em></strong> is generally
+	The preservation of <strong><h2><em>consistency</em></h2></strong> is generally
 	considered to be the responsibility of the programmers who write the
 	database programs and of the DBMS module that enforces integrity
-	constraints. Recall that a <strong>database state</strong> is a collection
+	constraints. Recall that a <strong><h2>database state</h2></strong> is a collection
 	of all the stored data items (values) in the database at a given point in
-	time. A <strong>consistent state</strong> of the database satisfies the
+	time. A <strong><h2>consistent state</h2></strong> of the database satisfies the
 	constraints specified in the schema as well as any other constraints on the
 	database that should hold. A database program should be written in a way
 	that guarantees that, if the database is in a consistent state before
@@ -315,7 +315,7 @@ concurrency control and recovery methods of the DBMS. The following are the	<str
 	other transactions occurs.
 </p>
 <p>
-	The <strong><em>isolation property</em></strong> is enforced by the
+	The <strong><h2><em>isolation property</em></h2></strong> is enforced by the
 	concurrency control subsystem of the DBMS. If every transaction does not
 	make its updates (write operations) visible to other transactions until it
 	is committed, one form of isolation is enforced that solves the temporary
@@ -323,7 +323,7 @@ concurrency control and recovery methods of the DBMS. The following are the	<str
 	not eliminate all other problems.
 </p>
 <p>
-	The <strong><em>durability property</em></strong> is the responsibility of
+	The <strong><h2><em>durability property</em></h2></strong> is the responsibility of
 	the recovery subsystem of the DBMS.
 </p>
 
@@ -359,22 +359,22 @@ concurrency control and recovery methods of the DBMS. The following are the	<str
 			<div class="ansclass" id="ANScript3">
 			
 			<p>
-	<strong>
+	<strong><h2>
 		NOTE: This is Step wise elaboration Section 3.3 is the Answer. But
 		Section 3.1, 3.2 &amp; 3.3 Will together be the two face locking
 		Techniques for Concurrency Control.
-	</strong>
+	</h2></strong>
 </p>
 <p>
 	Some of the main techniques used to control concurrent execution of
-transactions are based on the concept of locking data items. A	<strong>lock</strong> is a variable associated with a data item that
+transactions are based on the concept of locking data items. A	<strong><h2>lock</h2></strong> is a variable associated with a data item that
 	describes the status of the item with respect to possible operations that
 	can be applied to it. Generally, there is one lock for each data item in
 	the database. Locks are used as a means of synchronizing the access by
 	concurrent transactions to the database items.
 </p>
 <p>
-	<strong>3.1 Types of Locks and System Lock Tables</strong>
+	<strong><h2>3.1 Types of Locks and System Lock Tables</h2></strong>
 </p>
 <p>
 	Several types of locks are used in concurrency control. To introduce
@@ -382,17 +382,17 @@ transactions are based on the concept of locking data items. A	<strong>lock</str
 	but are also too restrictive for database concurrency control purposes and
 	so are not used much. Then we discuss shared/exclusive locks-also known as
 	read/write locks-which provide more general locking capabilities and are
-	used in database locking schemes.<strong></strong>
+	used in database locking schemes.<strong><h2></h2></strong>
 </p>
 <p>
-	<strong>3.1.1 Binary Locks:</strong>
+	<strong><h2>3.1.1 Binary Locks:</h2></strong>
 	A binary lock can have two states or values: locked and unlocked (or 1 and
 	0, for simplicity). A distinct lock is associated with each database item
 	X. If the value of the lock on X is 1, item X cannot be accessed by a
 	database operation that requests the item. If the value of the lock on X is
 	0, the item can be accessed when requested, and the lock value is changed
 	to 1. We refer to the current value (or state) of the lock associated with
-	item X as lock(X).<strong></strong>
+	item X as lock(X).<strong><h2></h2></strong>
 </p>
 <p>
 	Two operations, lock_item and unlock_item, are used with binary locking. A
@@ -406,11 +406,11 @@ transactions are based on the concept of locking data items. A	<strong>lock</str
 	the lock_item(X) and unlock_item(X) operations is shown in Figure 3.1.
 </p>
 <p align="center">
-	<strong>
+	<strong><h2>
 			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/DBMS/M5/M5IMG/3.1.png" 
 alt="Loading Image" class="resIMG"/></center>
-	</strong>
-	<strong></strong>
+	</h2></strong>
+	<strong><h2></h2></strong>
 </p>
 <p align="center">
 	Fig 3.1: Lock and unlock operations for binary locks.
@@ -443,23 +443,23 @@ alt="Loading Image" class="resIMG"/></center>
 	concurrently.
 </p>
 <p>
-	<strong>3.1.2 Shared/Exclusive (or Read/Write) Locks:</strong>
+	<strong><h2>3.1.2 Shared/Exclusive (or Read/Write) Locks:</h2></strong>
 	The preceding binary locking scheme is too restrictive for database items
 	because at most one transaction can hold a lock on a given item. We should
 	allow several transactions to access the same item X if they all access X
 	for reading purposes only. This is because read operations on the same item
 	by different transactions are not conflicting. However, if a transaction is
 	to write an item X, it must have exclusive access to X. For this purpose, a
-	different type of lock, called a <strong>multiple-mode lock</strong>, is
-used. In this scheme-called	<strong>shared/exclusive or read/write locks</strong>-there are three
+	different type of lock, called a <strong><h2>multiple-mode lock</h2></strong>, is
+used. In this scheme-called	<strong><h2>shared/exclusive or read/write locks</h2></strong>-there are three
 	locking operations: read_lock(X), write_lock(X), and unlock(X). A lock
 	associated with an item X, LOCK(X), now has three possible states:
 	read-locked, write-locked, or unlocked.
 </p>
 <p>
-	<strong>A read-locked</strong>
-	item is also called <strong>share-locked</strong> because other
-transactions are allowed to read the item, whereas a<strong>write-locked</strong> <strong>item</strong> is called	<strong>exclusive-locked</strong> because a single transaction exclusively
+	<strong><h2>A read-locked</h2></strong>
+	item is also called <strong><h2>share-locked</h2></strong> because other
+transactions are allowed to read the item, whereas a<strong><h2>write-locked</h2></strong> <strong><h2>item</h2></strong> is called	<strong><h2>exclusive-locked</h2></strong> because a single transaction exclusively
 	holds the lock on the item.
 </p>
 <p align="center">
@@ -501,8 +501,8 @@ alt="Loading Image" class="resIMG"/></center>
 	holds a read (shared) lock or a write (exclusive) lock on item X.
 </p>
 <p>
-	<strong>3.1.3 </strong>
-	<strong>Conversion (Upgrading, Downgrading) of Locks:</strong>
+	<strong><h2>3.1.3 </h2></strong>
+	<strong><h2>Conversion (Upgrading, Downgrading) of Locks:</h2></strong>
 	It is desirable to relax conditions 4 and 5 in the preceding list in order
 	to allow lock conversion; that is, a transaction that already holds a lock
 	on item X is allowed under certain conditions to convert the lock from one
@@ -510,11 +510,11 @@ alt="Loading Image" class="resIMG"/></center>
 </p>
 <p>
 	For example, it is possible for a transaction T to issue a read_lock(X) and
-	then later to <strong>upgrade</strong> the lock by issuing a write_lock(X)
+	then later to <strong><h2>upgrade</h2></strong> the lock by issuing a write_lock(X)
 	operation. If T is the only transaction holding a read lock on X at the
 	time it issues the write_lock(X) operation, the lock can be upgraded;
 	otherwise, the transaction must wait. It is also possible for a transaction
-	T to issue a write_lock(X) and then later to <strong>downgrade</strong> the
+	T to issue a write_lock(X) and then later to <strong><h2>downgrade</h2></strong> the
 	lock by issuing a read_lock(X) operation.
 </p>
 <p>
@@ -526,15 +526,15 @@ alt="Loading Image" class="resIMG"/></center>
 	allow for lock upgrading and downgrading.
 </p>
 <p>
-	<strong>3.2 </strong>
-	<strong>Guaranteeing Serializability by Two-Phase Locking</strong>
-	<strong></strong>
+	<strong><h2>3.2 </h2></strong>
+	<strong><h2>Guaranteeing Serializability by Two-Phase Locking</h2></strong>
+	<strong><h2></h2></strong>
 </p>
 <p>
-A transaction is said to follow the	<strong>two-phase locking protocol</strong> if all locking operations
+A transaction is said to follow the	<strong><h2>two-phase locking protocol</h2></strong> if all locking operations
 	(read_lock, write_lock) precede the first unlock operation in the
-transaction. Such a transaction can be divided into two phases:	<strong>an expanding or growing (first) phase</strong>, during which new
-locks on items can be acquired but none can be released; and	<strong>a shrinking (second) phase</strong>, during which existing locks
+transaction. Such a transaction can be divided into two phases:	<strong><h2>an expanding or growing (first) phase</h2></strong>, during which new
+locks on items can be acquired but none can be released; and	<strong><h2>a shrinking (second) phase</h2></strong>, during which existing locks
 	can be released but no new locks can be acquired. If lock conversion is
 	allowed, then upgrading of locks (from read-locked to write-locked) must be
 	done during the expanding phase, and downgrading of locks (from
@@ -589,21 +589,21 @@ alt="Loading Image" class="resIMG"/></center>
 	will be prohibited by the protocol).
 </p>
 <p>
-	<strong>
+	<strong><h2>
 		3.2.1 Basic, Conservative, Strict, and Rigorous Two-Phase Locking:
-	</strong>
+	</h2></strong>
 </p>
 <p>
 	There are a number of variations of two-phase locking (2PL). The technique
-	just described is known as <strong>basic 2PL</strong>.
+	just described is known as <strong><h2>basic 2PL</h2></strong>.
 </p>
 <p>
-	A variation known as conservative <strong>2PL (or static 2PL)</strong>
+	A variation known as conservative <strong><h2>2PL (or static 2PL)</h2></strong>
 	requires a transaction to lock all the items it accesses before the
-	transaction begins execution, by <strong>predeclaring</strong> its read-set
-	and write-set. Recall from Section 3.1.2 that the <strong>read-set</strong>
+	transaction begins execution, by <strong><h2>predeclaring</h2></strong> its read-set
+	and write-set. Recall from Section 3.1.2 that the <strong><h2>read-set</h2></strong>
 	of a transaction is the set of all items that the transaction reads, and
-	the <strong>write-set</strong> is the set of all items that it writes.
+	the <strong><h2>write-set</h2></strong> is the set of all items that it writes.
 </p>
 <p>
 	If any of the predeclared items needed cannot be locked, the transaction
@@ -613,7 +613,7 @@ alt="Loading Image" class="resIMG"/></center>
 	and writeset, which is not possible in some situations.
 </p>
 <p>
-	<strong>3.3 Dealing with Deadlock and Starvation</strong>
+	<strong><h2>3.3 Dealing with Deadlock and Starvation</h2></strong>
 </p>
 <p>
 	Deadlock occurs when each transaction T in a set of two or more
@@ -641,11 +641,11 @@ alt="Loading Image" class="resIMG"/></center>
 	graph for the partial schedule in (a).
 </p>
 <p>
-	<strong>3.3.1 Deadlock Prevention Protocols</strong>
+	<strong><h2>3.3.1 Deadlock Prevention Protocols</h2></strong>
 	:
 </p>
 <p>
-One way to prevent deadlock is to use a	<strong>deadlock prevention protocol</strong>. One deadlock prevention
+One way to prevent deadlock is to use a	<strong><h2>deadlock prevention protocol</h2></strong>. One deadlock prevention
 	protocol, which is used in conservative two-phase locking, requires that
 	every transaction lock all the items it needs in advance (which is
 	generally not a practical assumption)-if any of the items cannot be
@@ -665,7 +665,7 @@ One way to prevent deadlock is to use a	<strong>deadlock prevention protocol</st
 	a decision about what to do with a transaction involved in a possible
 	deadlock situation: Should it be blocked and made to wait or should it be
 	aborted, or should the transaction preempt and abort another transaction?
-Some of these techniques use the concept of	<strong>transaction timestamp TS(T&#8242;),</strong> which is a unique
+Some of these techniques use the concept of	<strong><h2>transaction timestamp TS(T&#8242;),</h2></strong> which is a unique
 	identifier assigned to each transaction.
 </p>
 <p>
@@ -681,18 +681,18 @@ Some of these techniques use the concept of	<strong>transaction timestamp TS(T&#
 	The rules followed by these schemes are:
 </p>
 <p>
-	a) <strong>Wait-die:</strong> If TS(Ti) &lt; TS(Tj), then (Ti older than
+	a) <strong><h2>Wait-die:</h2></strong> If TS(Ti) &lt; TS(Tj), then (Ti older than
 	Tj) Ti is allowed to wait; otherwise (Ti younger than Tj ) abort Ti (Ti
 	dies) and restart it later with the same timestamp.
 </p>
 <p>
-	b) <strong>Wound-wait:</strong> If TS(Ti) &lt; TS(Tj ), then (Ti older than
+	b) <strong><h2>Wound-wait:</h2></strong> If TS(Ti) &lt; TS(Tj ), then (Ti older than
 	Tj ) abort Tj (Ti wounds Tj ) and restart it later with the same timestamp;
 	otherwise (Ti younger than Tj ) Ti is allowed to wait.
 </p>
 <p>
 	Another group of protocols that prevent deadlock do not require timestamps.
-These include the <strong>no waiting (NW)</strong> and	<strong>cautious waiting (CW) algorithms</strong>. In the no waiting
+These include the <strong><h2>no waiting (NW)</h2></strong> and	<strong><h2>cautious waiting (CW) algorithms</h2></strong>. In the no waiting
 	algorithm, if a transaction is unable to obtain a lock, it is immediately
 	aborted and then restarted after a certain time delay without checking
 	whether a deadlock will actually occur or not. In this case, no transaction
@@ -706,12 +706,12 @@ These include the <strong>no waiting (NW)</strong> and	<strong>cautious waiting 
 	with a conflicting lock. The cautious waiting rule is as follows:
 </p>
 <p>
-	a) <strong>Cautious waiting:</strong> If Tj is not blocked (not waiting for
+	a) <strong><h2>Cautious waiting:</h2></strong> If Tj is not blocked (not waiting for
 	some other locked item), then Ti is blocked and allowed to wait; otherwise
 	abort Ti.
 </p>
 <p>
-	<strong>3.3.2 Deadlock Detection:</strong>
+	<strong><h2>3.3.2 Deadlock Detection:</h2></strong>
 </p>
 <p>
 	An alternative approach to dealing with deadlock is deadlock detection,
@@ -729,7 +729,7 @@ These include the <strong>no waiting (NW)</strong> and	<strong>cautious waiting 
 </p>
 <p>
 	A simple way to detect a state of deadlock is for the system to construct
-	and maintain a <strong>wait-for graph</strong>. One node is created in the
+	and maintain a <strong><h2>wait-for graph</h2></strong>. One node is created in the
 	wait-for graph for each transaction that is currently executing. Whenever a
 	transaction Ti is waiting to lock an item X that is currently locked by a
 	transaction Tj , a directed edge (Ti &#8594; Tj ) is created in the
@@ -744,14 +744,14 @@ These include the <strong>no waiting (NW)</strong> and	<strong>cautious waiting 
 <p>
 	If the system is in a state of deadlock, some of the transactions causing
 	the deadlock must be aborted. Choosing which transactions to abort is known
-	as <strong>victim selection</strong>. The algorithm for victim selection
+	as <strong><h2>victim selection</h2></strong>. The algorithm for victim selection
 	should generally avoid selecting transactions that have been running for a
 	long time and that have performed many updates, and it should try instead
 	to select transactions that have not made many changes (younger
 	transactions).
 </p>
 <p>
-	<strong>Timeouts:</strong>
+	<strong><h2>Timeouts:</h2></strong>
 	Another simple scheme to deal with deadlock is the use of timeouts. This
 	method is practical because of its low overhead and simplicity. In this
 	method, if a transaction waits for a period longer than a system-defined
@@ -759,12 +759,12 @@ These include the <strong>no waiting (NW)</strong> and	<strong>cautious waiting 
 	and aborts it-regardless of whether a deadlock actually exists.
 </p>
 <p>
-	<strong>Starvation:</strong>
-Another problem that may occur when we use locking is	<strong>starvation</strong>, which occurs when a transaction cannot proceed
+	<strong><h2>Starvation:</h2></strong>
+Another problem that may occur when we use locking is	<strong><h2>starvation</h2></strong>, which occurs when a transaction cannot proceed
 	for an indefinite period of time while other transactions in the system
 	continue normally. This may occur if the waiting scheme for locked items is
 	unfair in that it gives priority to some transactions over others. One
-solution for starvation is to have a fair waiting scheme, such as using a	<strong>first-come-first-served</strong> queue; transactions are enabled to
+solution for starvation is to have a fair waiting scheme, such as using a	<strong><h2>first-come-first-served</h2></strong> queue; transactions are enabled to
 	lock an item in the order in which they originally requested the lock.
 </p>
 
@@ -803,12 +803,12 @@ solution for starvation is to have a fair waiting scheme, such as using a	<stron
 	purposes.
 </p>
 <p>
-	A <strong>directory</strong> with n entries is constructed, where the ith
+	A <strong><h2>directory</h2></strong> with n entries is constructed, where the ith
 	entry points to the ith database page on disk. The directory is kept in
 	main memory if it is not too large, and all references-reads or writes-to
 	database pages on disk go through it. When a transaction begins executing,
-	the <strong>current directory</strong>-whose entries point to the most
-recent or current database pages on disk-is copied into a	<strong>shadow directory</strong>. The shadow directory is then saved on
+	the <strong><h2>current directory</h2></strong>-whose entries point to the most
+recent or current database pages on disk-is copied into a	<strong><h2>shadow directory</h2></strong>. The shadow directory is then saved on
 	disk while the current directory is used by the transaction.
 </p>
 <p>
@@ -857,7 +857,7 @@ alt="Loading Image" class="resIMG"/></center>
 	directories to disk as transactions commit is significant.
 </p>
 <p>
-	A further complication is how to handle <strong>garbage collection</strong>
+	A further complication is how to handle <strong><h2>garbage collection</h2></strong>
 	when a transaction commits. The old pages referenced by the shadow
 	directory that have been updated must be released and added to a list of
 	free pages for future use. These pages are no longer needed after the

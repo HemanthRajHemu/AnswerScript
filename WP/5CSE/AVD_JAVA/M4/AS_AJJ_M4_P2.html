@@ -86,7 +86,7 @@
 
 	<div class="alertA1">
 	  <span class="closebtnA1" onclick="this.parentElement.style.display='none';">&times;</span> 
-	  <strong>NOTE!</strong>
+	  <strong><h2>NOTE!</h2></strong>
 	  Click on MENU to Browse between Subjects...
 	</div>
 <hr/>
@@ -231,40 +231,40 @@
   </p>
   <p>
      A session can be created via the 
-    <strong>getSession( ) </strong>
+    <strong><h2>getSession( ) </h2></strong>
     method of 
-    <strong>HttpServletRequest</strong>
+    <strong><h2>HttpServletRequest</h2></strong>
     . An 
-    <strong>HttpSession </strong>
+    <strong><h2>HttpSession </h2></strong>
     object is returned. This object can store a set of bindings that associate
     names with objects. The 
-    <strong>setAttribute( )</strong>
+    <strong><h2>setAttribute( )</h2></strong>
     , 
-    <strong>getAttribute( )</strong>
+    <strong><h2>getAttribute( )</h2></strong>
     , 
-    <strong>getAttributeNames( )</strong>
+    <strong><h2>getAttributeNames( )</h2></strong>
     , and 
-    <strong>removeAttribute( ) </strong>
+    <strong><h2>removeAttribute( ) </h2></strong>
     methods of 
-    <strong>HttpSession </strong>
+    <strong><h2>HttpSession </h2></strong>
     manage these bindings. It is important to note that session state is shared
     among all the servlets that are associated with a particular client.
     <br/>
   </p>
   <p>
      The following servlet illustrates how to use session state. The 
-    <strong>getSession( ) </strong>
+    <strong><h2>getSession( ) </h2></strong>
     method gets the current session. A new session is created if one does not
     already exist. The 
-    <strong>getAttribute( ) </strong>
+    <strong><h2>getAttribute( ) </h2></strong>
     method is called to obtain the object that is bound to the name “date”. That
     object is a 
-    <strong>Date </strong>
+    <strong><h2>Date </h2></strong>
     object that encapsulates the date and time when this page was last accessed.
     (Of course, there is no such binding when the page is first accessed.) A 
-    <strong>Date </strong>
+    <strong><h2>Date </h2></strong>
     object encapsulating the current date and time is then created. The 
-    <strong>setAttribute( ) </strong>
+    <strong><h2>setAttribute( ) </h2></strong>
     method is called to bind the name “date” to this object.
     <br/>
   </p>
@@ -287,14 +287,14 @@ alt="Loading Image" class="resIMG"/></center>
 			
 			  <p>
      Answer: The 
-    <strong>ServletRequest </strong>
+    <strong><h2>ServletRequest </h2></strong>
     interface includes methods that allow you to read the names and values of
     parameters that are included in a client request. We will develop a servlet
     that illustrates their use. The example contains two files. A web page is
     defined in 
-    <strong>PostParameters.htm</strong>
+    <strong><h2>PostParameters.htm</h2></strong>
     , and a servlet is defined in 
-    <strong>PostParametersServlet.java</strong>
+    <strong><h2>PostParametersServlet.java</h2></strong>
     .
     <br/>
   </p>
@@ -302,7 +302,7 @@ alt="Loading Image" class="resIMG"/></center>
 alt="Loading Image" class="resIMG"/></center>
   <p>
      The HTMLsource code for 
-    <strong>PostParameters.htm </strong>
+    <strong><h2>PostParameters.htm </h2></strong>
     is shown in the following listing. It defines a table that contains two
     labels and two text fields. One of the labels is Employee and the other is
     Phone. There is also a submit button. Notice that the action parameter of
@@ -314,15 +314,15 @@ alt="Loading Image" class="resIMG"/></center>
 alt="Loading Image" class="resIMG"/></center></p>
   <p>
      The source code for 
-    <strong>PostParametersServlet.java </strong>
+    <strong><h2>PostParametersServlet.java </h2></strong>
     is shown in the following listing. The 
-    <strong>service( ) </strong>
+    <strong><h2>service( ) </h2></strong>
     method is overridden to process client requests. The 
-    <strong>getParameterNames( ) </strong>
+    <strong><h2>getParameterNames( ) </h2></strong>
     method returns an enumeration of the parameter names. These are processed in
     a loop. You can see that the parameter name and value are output to the
     client. The parameter value is obtained via the 
-    <strong>getParameter( ) </strong>
+    <strong><h2>getParameter( ) </h2></strong>
     method.
     <br/>
   </p>
@@ -330,7 +330,7 @@ alt="Loading Image" class="resIMG"/></center></p>
   <p>
      Compile the servlet. Next, copy it to the appropriate directory, and update
     the 
-    <strong>web.xml </strong>
+    <strong><h2>web.xml </h2></strong>
     file, as previously described. Then, perform these steps to test this
     example:
     <br/>
@@ -396,11 +396,11 @@ alt="Loading Image" class="resIMG"/></center></p>
   </p>
   <p>
      The HTML source code for 
-    <strong>AddCookie.htm </strong>
+    <strong><h2>AddCookie.htm </h2></strong>
     is shown in the following listing. This page contains a text field in which
     a value can be entered. There is also a submit button on the page. When this
     button is pressed, the value in the text field is sent to 
-    <strong>AddCookieServlet </strong>
+    <strong><h2>AddCookieServlet </h2></strong>
     via an HTTP POST request.
     <br/>
   </p>
@@ -408,14 +408,14 @@ alt="Loading Image" class="resIMG"/></center></p>
 alt="Loading Image" class="resIMG"/></center> </p>
   <p>
      The source code for 
-    <strong>AddCookieServlet.java </strong>
+    <strong><h2>AddCookieServlet.java </h2></strong>
     is shown in the following listing. It gets the value of the parameter named
     “data”. It then creates a 
-    <strong>Cookie </strong>
+    <strong><h2>Cookie </h2></strong>
     object that has the name “MyCookie” and contains the value of the “data”
     parameter. The cookie is then added to the header of the HTTP response via
     the 
-    <strong>addCookie( ) </strong>
+    <strong><h2>addCookie( ) </h2></strong>
     method. A feedback message is then written to the browser.
     <br/>
   </p>
@@ -423,15 +423,15 @@ alt="Loading Image" class="resIMG"/></center> </p>
 alt="Loading Image" class="resIMG"/></center></p>
   <p>
      The source code for 
-    <strong>GetCookiesServlet.java </strong>
+    <strong><h2>GetCookiesServlet.java </h2></strong>
     is shown in the following listing. It invokes the 
-    <strong>getCookies( ) </strong>
+    <strong><h2>getCookies( ) </h2></strong>
     method to read any cookies that are included in the HTTP GET request. The
     names and values of these cookies are then written to the HTTP response.
     Observe that the 
-    <strong>getName( ) </strong>
+    <strong><h2>getName( ) </h2></strong>
     and 
-    <strong>getValue( ) </strong>
+    <strong><h2>getValue( ) </h2></strong>
     methods are called to obtain this information.
     <br/>
   </p>
@@ -440,7 +440,7 @@ alt="Loading Image" class="resIMG"/></center> </p>
   <p>
      Compile the servlets. Next, copy them to the appropriate directory, and
     update the 
-    <strong>web.xml </strong>
+    <strong><h2>web.xml </h2></strong>
     file, as previously described. Then, perform these steps to test this
     example:
     <br/>
@@ -452,13 +452,13 @@ alt="Loading Image" class="resIMG"/></center> </p>
   </p>
   <p>
      2. Display 
-    <strong>AddCookie.htm </strong>
+    <strong><h2>AddCookie.htm </h2></strong>
     in a browser.
     <br/>
   </p>
   <p>
      3. Enter a value for 
-    <strong>MyCookie</strong>
+    <strong><h2>MyCookie</h2></strong>
     .
     <br/>
   </p>

@@ -87,7 +87,7 @@
 
 	<div class="alertA1">
 	  <span class="closebtnA1" onclick="this.parentElement.style.display='none';">&times;</span> 
-	  <strong>NOTE!</strong>
+	  <strong><h2>NOTE!</h2></strong>
 	  Click on MENU to Browse between Subjects...
 	</div>
 
@@ -189,13 +189,13 @@ DATABASE MANAGEMENT SYSTEM
 	Consider the following relations for a database.
 </p>
 <p>
-	<strong>Supplier (Sno, Sname, Status, City) </strong>
+	<strong><h2>Supplier (Sno, Sname, Status, City) </h2></strong>
 </p>
 <p>
-	<strong>Product (Pno, Pname, Color, Weight, City)</strong>
+	<strong><h2>Product (Pno, Pname, Color, Weight, City)</h2></strong>
 </p>
 <p>
-	<strong>Shipments (Sno, Pno Qty) </strong>
+	<strong><h2>Shipments (Sno, Pno Qty) </h2></strong>
 </p>
 <p>
 	Specify the following queries in SQL.
@@ -286,7 +286,7 @@ DATABASE MANAGEMENT SYSTEM
 	2.1 Definition
 </p>
 <p>
-	A <strong>stored procedure</strong> is a program that is executed through a
+	A <strong><h2>stored procedure</h2></strong> is a program that is executed through a
 	single SQL statement that can be locally executed and completed within the
 	process space of the database server. The results can be packaged into one
 	big result and returned to the application, or the application logic can be
@@ -294,7 +294,7 @@ DATABASE MANAGEMENT SYSTEM
 	the client at all.
 </p>
 <p>
-	<strong>Stored procedures</strong>
+	<strong><h2>Stored procedures</h2></strong>
 	are also beneficial for software engineering reasons. Once a stored
 	procedure is registered with the database server, different users can
 	re-use the stored procedure, eliminating duplication of efforts in writing
@@ -402,7 +402,7 @@ alt="Loading Image" class="resIMG"/></center>
 	Initially, data-intensive applications were combined into a single tier,
 	including the DBMS, application logic, and user interface, a" illustrated
 	in Figure 3.1. The application typically ran on a mainframe, and users
-	accessed it through <strong><em>dumb teT'minals</em></strong> that could
+	accessed it through <strong><h2><em>dumb teT'minals</em></h2></strong> that could
 	perform only data input and display. This approach has the benefit of being
 	easily maintained by a central administrator.
 </p>
@@ -453,8 +453,8 @@ vi)	Group by and having clause. 	(6-Marks) (5a)
 			<div class="ansclass" id="ANScript4">
 			
 			<p>
-	<strong>i) </strong>
-	<strong>Nested Queries</strong>
+	<strong><h2>i) </h2></strong>
+	<strong><h2>Nested Queries</h2></strong>
 </p>
 <p>
 	Answer:
@@ -462,9 +462,9 @@ vi)	Group by and having clause. 	(6-Marks) (5a)
 <p>
 	Some queries require that existing values in the database be fetched and
 	then used in a comparison condition. Such queries can be conveniently
-	formulated by using <strong>nested queries</strong>, which are complete
+	formulated by using <strong><h2>nested queries</h2></strong>, which are complete
 	select-from-where blocks within another SQL query. That other query is
-	called the <strong>outer query</strong>.
+	called the <strong><h2>outer query</h2></strong>.
 </p>
 <p>
 	These nested queries can also appear in the WHERE clause or the FROM clause
@@ -495,8 +495,8 @@ alt="Loading Image" class="resIMG"/></center>
 alt="Loading Image" class="resIMG"/></center>
 </p>
 <p>
-	<strong>ii) </strong>
-	<strong>Aggregate functions</strong>
+	<strong><h2>ii) </h2></strong>
+	<strong><h2>Aggregate functions</h2></strong>
 </p>
 <p>
 	Answer:
@@ -506,7 +506,7 @@ alt="Loading Image" class="resIMG"/></center>
 	into a single-tuple summary. Grouping is used to create subgroups of tuples
 	before summarization. Grouping and aggregation are required in many
 	database applications, and we will introduce their use in SQL through
-examples. A number of built-in aggregate functions exist:	<strong>COUNT, SUM, MAX, MIN, and AVG.</strong>
+examples. A number of built-in aggregate functions exist:	<strong><h2>COUNT, SUM, MAX, MIN, and AVG.</h2></strong>
 </p>
 <p>
 	The COUNT function returns the number of tuples or values as specified in a
@@ -537,14 +537,14 @@ alt="Loading Image" class="resIMG"/></center>
 alt="Loading Image" class="resIMG"/></center>
 </p>
 <p>
-	<strong>iii) </strong>
-	<strong>Triggers</strong>
+	<strong><h2>iii) </h2></strong>
+	<strong><h2>Triggers</h2></strong>
 </p>
 <p>
 	Answer:
 </p>
 <p>
-	The <strong>CREATE TRIGGER</strong>, which can be used to specify automatic
+	The <strong><h2>CREATE TRIGGER</h2></strong>, which can be used to specify automatic
 	actions that the database system will perform when certain events and
 	conditions occur. This type of functionality is generally referred to as
 	active databases.
@@ -578,7 +578,7 @@ alt="Loading Image" class="resIMG"/></center>
 	ECA (Event, Condition, Action) rule has three components:
 </p>
 <p>
-	i. <strong>The event(s):</strong> These are usually database update
+	i. <strong><h2>The event(s):</h2></strong> These are usually database update
 	operations that are explicitly applied to the database. In this example the
 	events are: inserting a new employee record, changing an employee's salary,
 	or changing an employee's supervisor. The person who writes the trigger
@@ -591,7 +591,7 @@ alt="Loading Image" class="resIMG"/></center>
 	in the event is completed.
 </p>
 <p>
-	ii. The <strong>condition</strong> that determines whether the rule action
+	ii. The <strong><h2>condition</h2></strong> that determines whether the rule action
 	should be executed: Once the triggering event has occurred, an optional
 	condition may be evaluated. If no condition is specified, the action will
 	be executed once the event occurs. If a condition is specified, it is first
@@ -599,7 +599,7 @@ alt="Loading Image" class="resIMG"/></center>
 	executed. The condition is specified in the WHEN clause of the trigger.
 </p>
 <p>
-	iii. The <strong>action</strong> to be taken: The action is usually a
+	iii. The <strong><h2>action</h2></strong> to be taken: The action is usually a
 	sequence of SQL statements, but it could also be a database transaction or
 	an external program that will be automatically executed. In this example,
 	the action is to execute the stored procedure INFORM_SUPERVISOR.
@@ -610,8 +610,8 @@ alt="Loading Image" class="resIMG"/></center>
 	automatically.
 </p>
 <p>
-	<strong>iv) </strong>
-	<strong>Views and their updatability</strong>
+	<strong><h2>iv) </h2></strong>
+	<strong><h2>Views and their updatability</h2></strong>
 </p>
 <p>
 	Answer:
@@ -619,8 +619,8 @@ alt="Loading Image" class="resIMG"/></center>
 <p>
 	A view in SQL terminology is a single table that is derived from other
 	tables. These other tables can be base tables or previously defined views.
-	A <strong>view</strong> does not necessarily exist in physical form; it is
-considered to be a <strong>virtual table</strong>, in contrast to	<strong>base tables</strong>, whose tuples are always physically stored in
+	A <strong><h2>view</h2></strong> does not necessarily exist in physical form; it is
+considered to be a <strong><h2>virtual table</h2></strong>, in contrast to	<strong><h2>base tables</h2></strong>, whose tuples are always physically stored in
 	the database. This limits the possible update operations that can be
 	applied to views, but it does not provide any limitations on querying a
 	view.
@@ -654,8 +654,8 @@ alt="Loading Image" class="resIMG"/></center>
 	that defines the view.
 </p>
 <p>
-	<strong>a. </strong>
-	<strong>View Implementation, View Update, and Inline Views:</strong>
+	<strong><h2>a. </h2></strong>
+	<strong><h2>View Implementation, View Update, and Inline Views:</h2></strong>
 </p>
 <p>
 	The problem of how a DBMS can efficiently implement a view for efficient
@@ -730,8 +730,8 @@ alt="Loading Image" class="resIMG"/></center>
 	C. Views defined using grouping and aggregate functions are not updatable.
 </p>
 <p>
-	<strong>v) </strong>
-	<strong>Schema change statements </strong>
+	<strong><h2>v) </h2></strong>
+	<strong><h2>Schema change statements </h2></strong>
 </p>
 <p>
 	Answer:
@@ -744,7 +744,7 @@ alt="Loading Image" class="resIMG"/></center>
 	Certain
 </p>
 <p>
-	<strong>The DROP Command</strong>
+	<strong><h2>The DROP Command</h2></strong>
 </p>
 <p>
 	The DROP command can be used to drop named schema elements, such as tables,
@@ -764,7 +764,7 @@ alt="Loading Image" class="resIMG"/></center>
 	each element in the schema, then drop the schema itself.
 </p>
 <p>
-	<strong>The ALTER Command</strong>
+	<strong><h2>The ALTER Command</h2></strong>
 </p>
 <p>
 	The definition of a base table or of other named schema elements can be
@@ -790,8 +790,8 @@ alt="Loading Image" class="resIMG"/></center>
 alt="Loading Image" class="resIMG"/></center>
 </p>
 <p>
-	<strong>vi) </strong>
-	<strong>Group by and having clause</strong>
+	<strong><h2>vi) </h2></strong>
+	<strong><h2>Group by and having clause</h2></strong>
 </p>
 <p>
 	Answer:

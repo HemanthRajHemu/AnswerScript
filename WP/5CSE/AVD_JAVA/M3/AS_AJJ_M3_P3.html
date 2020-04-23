@@ -86,7 +86,7 @@
 
 	<div class="alertA1">
 	  <span class="closebtnA1" onclick="this.parentElement.style.display='none';">&times;</span> 
-	  <strong>NOTE!</strong>
+	  <strong><h2>NOTE!</h2></strong>
 	  Click on MENU to Browse between Subjects...
 	</div>
 <hr/>
@@ -180,35 +180,35 @@
 			<div class="ansclass" id="ANScript1">
 			
 			 <p>
-    <strong>
+    <strong><h2>
       Modifying a String
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
      Because 
-    <strong>String </strong>
+    <strong><h2>String </h2></strong>
     objects are immutable, whenever you want to modify a 
-    <strong>String</strong>
+    <strong><h2>String</h2></strong>
     , you must either copy it into a 
-    <strong>StringBuffer </strong>
+    <strong><h2>StringBuffer </h2></strong>
     or 
-    <strong>StringBuilder</strong>
+    <strong><h2>StringBuilder</h2></strong>
     , or use one of the following 
-    <strong>String </strong>
+    <strong><h2>String </h2></strong>
     methods, which will construct a new copy of the string with your
     modifications complete.
     <br/>
   </p>
   <p>
-    <strong>
+    <strong><h2>
       substring( )
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
      You can extract a substring using 
-    <strong>substring( )</strong>
+    <strong><h2>substring( )</h2></strong>
     . It has two forms. The first is String substring(int 
     <em>startIndex</em>
     ) Here, 
@@ -221,7 +221,7 @@
   </p>
   <p>
      The second form of 
-    <strong>substring( ) </strong>
+    <strong><h2>substring( ) </h2></strong>
     allows you to specify both the beginning and ending index of the substring:
     <br/>
   </p>
@@ -244,14 +244,14 @@
     <br/>
   </p>
   <p>
-    <strong>
+    <strong><h2>
       concat( )
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
      You can concatenate two strings using 
-    <strong>concat( )</strong>
+    <strong><h2>concat( )</h2></strong>
     , shown here:
     <br/>
   </p>
@@ -266,9 +266,9 @@
     contents of 
     <em>str </em>
     appended to the end. 
-    <strong>concat( ) </strong>
+    <strong><h2>concat( ) </h2></strong>
     performs the same function as 
-    <strong>+</strong>
+    <strong><h2>+</h2></strong>
     . For example,
     <br/>
   </p>
@@ -282,7 +282,7 @@
   </p>
   <p>
      puts the string “onetwo” into 
-    <strong>s2</strong>
+    <strong><h2>s2</h2></strong>
     . It generates the same result as the following sequence:
     <br/>
   </p>
@@ -295,14 +295,14 @@
     <br/>
   </p>
   <p>
-    <strong>
+    <strong><h2>
       replace( )
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
      The 
-    <strong>replace( ) </strong>
+    <strong><h2>replace( ) </h2></strong>
     method has two forms. The first replaces all occurrences of one character in
     the invoking string with another character. It has the following general
     form:
@@ -330,13 +330,13 @@
   </p>
   <p>
      puts the string “Hewwo” into 
-    <strong>s</strong>
+    <strong><h2>s</h2></strong>
     .
     <br/>
   </p>
   <p>
      The second form of 
-    <strong>replace( ) </strong>
+    <strong><h2>replace( ) </h2></strong>
     replaces one character sequence with another. It has this general form:
     <br/>
   </p>
@@ -349,14 +349,14 @@
     <br/>
   </p>
   <p>
-    <strong>
+    <strong><h2>
       trim( )
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
      The 
-    <strong>trim( ) </strong>
+    <strong><h2>trim( ) </h2></strong>
     method returns a copy of the invoking string from which any leading and
     trailing whitespace has been removed. It has this general form:
     <br/>
@@ -375,17 +375,17 @@
   </p>
   <p>
      This puts the string “Hello World” into 
-    <strong>s</strong>
+    <strong><h2>s</h2></strong>
     .
     <br/>
   </p>
   <p>
      The 
-    <strong>trim( ) </strong>
+    <strong><h2>trim( ) </h2></strong>
     method is quite useful when you process user commands. For example, the
     following program prompts the user for the name of a state and then displays
     that state’s capital. It uses 
-    <strong>trim( ) </strong>
+    <strong><h2>trim( ) </h2></strong>
     to remove any leading or trailing whitespace that may have inadvertently
     been entered by the user.
     <br/>
@@ -417,36 +417,36 @@
 			<div class="ansclass" id="ANScript2">
 			
 			 <p>
-    <strong>StringBuffer </strong>
+    <strong><h2>StringBuffer </h2></strong>
     is a peer class of 
-    <strong>String </strong>
+    <strong><h2>String </h2></strong>
     that provides much of the functionality of strings. As you know, 
-    <strong>String </strong>
+    <strong><h2>String </h2></strong>
     represents fixed-length, immutable character sequences. In contrast, 
-    <strong>StringBuffer </strong>
+    <strong><h2>StringBuffer </h2></strong>
     represents growable and writeable character sequences. 
-    <strong>StringBuffer </strong>
+    <strong><h2>StringBuffer </h2></strong>
     may have characters and substrings inserted in the middle or appended to the
     end. 
-    <strong>StringBuffer </strong>
+    <strong><h2>StringBuffer </h2></strong>
     will automatically grow to make room for such additions and often has more
     characters preallocated than are actually needed, to allow room for growth.
     Java uses both classes heavily, but many programmers deal only with 
-    <strong>String </strong>
+    <strong><h2>String </h2></strong>
     and let Java manipulate 
-    <strong>StringBuffer</strong>
+    <strong><h2>StringBuffer</h2></strong>
     s behind the scenes by using the overloaded 
-    <strong>+ </strong>
+    <strong><h2>+ </h2></strong>
     operator.
     <br/>
   </p>
   <p>
-    <strong>
+    <strong><h2>
       <br/><br/>
 			Refer 2<sup>nd</sup> Question & Answer OR <a href="/AnswerScript/WP/5CSE/AVD_JAVA/M3/AS_AJJ_M3_P1.html">CLICK HERE</a>
 			<br/><br/>	
       <br/>
-    </strong>
+    </h2></strong>
   </p>
 			
 			</div><br/>
@@ -494,14 +494,14 @@ iv.	replace ( ). 	(6-Marks) (6b)
 			<div class="ansclass" id="ANScript4">
 			
 			  <p>
-    <strong>
+    <strong><h2>
       substring( )
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
      You can extract a substring using 
-    <strong>substring( )</strong>
+    <strong><h2>substring( )</h2></strong>
     . It has two forms. 
     <br/>
   </p>
@@ -518,7 +518,7 @@ iv.	replace ( ). 	(6-Marks) (6b)
     copy of the substring that begins at 
     <em>startIndex </em>
     and runs to the end of the invoking string. The second form of 
-    <strong>substring( ) </strong>
+    <strong><h2>substring( ) </h2></strong>
     allows you to specify both the beginning and ending index of the substring:
     <br/>
   </p>
@@ -542,7 +542,7 @@ iv.	replace ( ). 	(6-Marks) (6b)
   </p>
   <p>
      The following program uses 
-    <strong>substring( ) </strong>
+    <strong><h2>substring( ) </h2></strong>
     to replace all instances of one substring with another within a string:
     <br/>
   </p>
@@ -573,12 +573,12 @@ alt="Loading Image" class="resIMG"/></center> </p>
     <br/>
   </p>
   <p>
-    <strong>
+    <strong><h2>
       <span style='color: #444444'>
         12.1 String(byte[] byte_arr)
         <br/>
       </span>
-    </strong>
+    </h2></strong>
   </p>
   <p>
     <span style='color: #444444'>
@@ -588,12 +588,12 @@ alt="Loading Image" class="resIMG"/></center> </p>
     </span>
   </p>
   <p>
-    <strong>
+    <strong><h2>
       <span style='color: #444444'>
         Example
         <br/>
       </span>
-    </strong>
+    </h2></strong>
   </p>
 <p>
       <span style='color: #000000'>
@@ -603,9 +603,9 @@ alt="Loading Image" class="resIMG"/></center> </p>
 </p>
 <p>
       <span style='color: #000000'>String s_byte =new </span>
-      <strong>
+      <strong><h2>
         <span style='color: #3F7F95'>String</span>
-      </strong>
+      </h2></strong>
       <span style='color: #000000'>
         (b_arr);
         <br/>
@@ -639,9 +639,9 @@ alt="Loading Image" class="resIMG"/></center> </p>
 </p>
 <p>
       <span style='color: #000000'>Charset cs = Charset.</span>
-      <strong>
+      <strong><h2>
         <span style='color: #3F7F95'>defaultCharset</span>
-      </strong>
+      </h2></strong>
       <span style='color: #000000'>
         ();
         <br/>
@@ -649,9 +649,9 @@ alt="Loading Image" class="resIMG"/></center> </p>
 </p>
 <p>
       <span style='color: #000000'>String s_byte_char = new </span>
-      <strong>
+      <strong><h2>
         <span style='color: #3F7F95'>String</span>
-      </strong>
+      </h2></strong>
       <span style='color: #000000'>
         (b_arr, cs);
         <br/>
@@ -684,9 +684,9 @@ alt="Loading Image" class="resIMG"/></center> </p>
 </p>
 <p>
       <span style='color: #000000'>String s = new </span>
-      <strong>
+      <strong><h2>
         <span style='color: #3F7F95'>String</span>
-      </strong>
+      </h2></strong>
       <span style='color: #000000'>
         (b_arr, &quot;US-ASCII&quot;);
         <br/>
@@ -720,9 +720,9 @@ alt="Loading Image" class="resIMG"/></center> </p>
 </p>
 <p>
       <span style='color: #000000'>Charset cs = Charset.</span>
-      <strong>
+      <strong><h2>
         <span style='color: #3F7F95'>defaultCharset</span>
-      </strong>
+      </h2></strong>
       <span style='color: #000000'>
         ();
         <br/>
@@ -730,9 +730,9 @@ alt="Loading Image" class="resIMG"/></center> </p>
 </p>
 <p>
       <span style='color: #000000'>String s = new </span>
-      <strong>
+      <strong><h2>
         <span style='color: #3F7F95'>String</span>
-      </strong>
+      </h2></strong>
       <span style='color: #000000'>
         (b_arr, 1, 3, cs);
         <br/>
@@ -767,9 +767,9 @@ alt="Loading Image" class="resIMG"/></center> </p>
 </p>
 <p>
       <span style='color: #000000'>String s = new </span>
-      <strong>
+      <strong><h2>
         <span style='color: #3F7F95'>String</span>
-      </strong>
+      </h2></strong>
       <span style='color: #000000'>
         (b_arr, 1, 4, &quot;US-ASCII&quot;);
         <br/>
@@ -802,9 +802,9 @@ alt="Loading Image" class="resIMG"/></center> </p>
 </p>
 <p>
       <span style='color: #000000'>String s = new </span>
-      <strong>
+      <strong><h2>
         <span style='color: #3F7F95'>String</span>
-      </strong>
+      </h2></strong>
       <span style='color: #000000'>
         (char_arr);
         <br/>

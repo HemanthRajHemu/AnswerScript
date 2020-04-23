@@ -86,7 +86,7 @@
 
 	<div class="alertA1">
 	  <span class="closebtnA1" onclick="this.parentElement.style.display='none';">&times;</span> 
-	  <strong>NOTE!</strong>
+	  <strong><h2>NOTE!</h2></strong>
 	  Click on MENU to Browse between Subjects...
 	</div>
 <hr/>
@@ -181,45 +181,45 @@
 			
 			 <p>
      The 
-    <strong>ArrayList </strong>
+    <strong><h2>ArrayList </h2></strong>
     class extends 
-    <strong>AbstractList </strong>
+    <strong><h2>AbstractList </h2></strong>
     and implements the 
-    <strong>List </strong>
+    <strong><h2>List </h2></strong>
     interface. 
-    <strong>ArrayList </strong>
+    <strong><h2>ArrayList </h2></strong>
     is a generic class that has this declaration: class ArrayList&lt;E&gt;
     <br/>
   </p>
   <p>
      Here, 
-    <strong>E </strong>
+    <strong><h2>E </h2></strong>
     specifies the type of objects that the list will hold.
     <br/>
   </p>
   <p>
-    <strong>ArrayList </strong>
+    <strong><h2>ArrayList </h2></strong>
     supports dynamic arrays that can grow as needed. In Java, standard arrays
     are of a fixed length. After arrays are created, they cannot grow or shrink,
     which means that you must know in advance how many elements an array will
     hold. But, sometimes, you may not know until run time precisely how large an
     array you need. To handle this situation, The Collections Framework defines 
-    <strong>ArrayList</strong>
+    <strong><h2>ArrayList</h2></strong>
     . In essence, an 
-    <strong>ArrayList </strong>
+    <strong><h2>ArrayList </h2></strong>
     is a variable-length array of object references. 
     <br/>
   </p>
   <p>
      That is, an 
-    <strong>ArrayList </strong>
+    <strong><h2>ArrayList </h2></strong>
     can dynamically increase or decrease in size. Array lists are created with
     an initial size. When this size is exceeded, the collection is automatically
     enlarged. When objects are removed, the array can be shrunk.
     <br/>
   </p>
   <p>
-    <strong>ArrayList </strong>
+    <strong><h2>ArrayList </h2></strong>
     has the constructors shown here:
     <br/>
   </p>
@@ -271,47 +271,47 @@ alt="Loading Image" class="resIMG"/></center> </p>
 			
 			<p>
      The 
-    <strong>Queue </strong>
+    <strong><h2>Queue </h2></strong>
     interface extends 
-    <strong>Collection </strong>
+    <strong><h2>Collection </h2></strong>
     and declares the behavior of a queue, which is often a first-in, first-out
     list. However, there are types of queues in which the ordering is based upon
     other criteria. 
-    <strong>Queue </strong>
+    <strong><h2>Queue </h2></strong>
     is a generic interface that has this declaration: interface Queue&lt;E&gt; 
     <br/>
   </p>
   <p>
      Here, 
-    <strong>E </strong>
+    <strong><h2>E </h2></strong>
     specifies the type of objects that the queue will hold. The methods defined
     by Queue
     <br/>
   </p>
   <p>
-    <strong>
+    <strong><h2>
       Different Methods
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
-    <strong>
+    <strong><h2>
       E element() 
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
      Returns the element at the head of the queue. The element is not removed.
     It throws 
-    <strong>NoSuchElementException</strong>
+    <strong><h2>NoSuchElementException</h2></strong>
      if the queue is empty.
     <br/>
   </p>
   <p>
-    <strong>
+    <strong><h2>
       boolean offer(E obj) 
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
      Attempts to add obj to the queue. Returns true if obj was added and false
@@ -319,10 +319,10 @@ alt="Loading Image" class="resIMG"/></center> </p>
     <br/>
   </p>
   <p>
-    <strong>
+    <strong><h2>
       E peek() 
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
      Returns the element at the head of the queue. It returns null if the queue
@@ -330,10 +330,10 @@ alt="Loading Image" class="resIMG"/></center> </p>
     <br/>
   </p>
   <p>
-    <strong>
+    <strong><h2>
       E poll() 
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
      Returns the element at the head of the queue, removing the element in the
@@ -341,71 +341,71 @@ alt="Loading Image" class="resIMG"/></center> </p>
     <br/>
   </p>
   <p>
-    <strong>
+    <strong><h2>
       E remove() 
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
      Removes the element at the head of the queue, returning the element in the
     process. It throws 
-    <strong>NoSuchElementException</strong>
+    <strong><h2>NoSuchElementException</h2></strong>
      if the queue is empty.
     <br/>
   </p>
   <p>
      Several methods throw a 
-    <strong>ClassCastException </strong>
+    <strong><h2>ClassCastException </h2></strong>
     when an object is incompatible with the elements in the queue. A 
-    <strong>NullPointerException </strong>
+    <strong><h2>NullPointerException </h2></strong>
     is thrown if an attempt is made to store a 
-    <strong>null </strong>
+    <strong><h2>null </h2></strong>
     object and 
-    <strong>null </strong>
+    <strong><h2>null </h2></strong>
     elements are not allowed in the queue. An 
-    <strong>IllegalArgumentException </strong>
+    <strong><h2>IllegalArgumentException </h2></strong>
     is thrown if an invalid argument is used. An 
-    <strong>IllegalStateException </strong>
+    <strong><h2>IllegalStateException </h2></strong>
     is thrown if an attempt is made to add an element to a fixed-length queue
     that is full. A 
-    <strong>NoSuchElementException </strong>
+    <strong><h2>NoSuchElementException </h2></strong>
     is thrown if an attempt is made to remove an element from an empty queue.
     <br/>
   </p>
   <p>
      Despite its simplicity, 
-    <strong>Queue </strong>
+    <strong><h2>Queue </h2></strong>
     offers several points of interest. First, elements can only be removed from
     the head of the queue. Second, there are two methods that obtain and remove
     elements: 
-    <strong>poll() </strong>
+    <strong><h2>poll() </h2></strong>
     and 
-    <strong>remove()</strong>
+    <strong><h2>remove()</h2></strong>
     . The difference between them is that 
-    <strong>poll() </strong>
+    <strong><h2>poll() </h2></strong>
     returns 
-    <strong>null </strong>
+    <strong><h2>null </h2></strong>
     if the queue is empty, but 
-    <strong>remove() </strong>
+    <strong><h2>remove() </h2></strong>
     throws an exception. Third, there are two methods, 
-    <strong>element() </strong>
+    <strong><h2>element() </h2></strong>
     and 
-    <strong>peek( )</strong>
+    <strong><h2>peek( )</h2></strong>
     , that obtain but don’t remove the element at the head of the queue. 
     <br/>
   </p>
   <p>
      They differ only in that 
-    <strong>element() </strong>
+    <strong><h2>element() </h2></strong>
     throws an exception if the queue is empty, but 
-    <strong>peek( ) </strong>
+    <strong><h2>peek( ) </h2></strong>
     returns 
-    <strong>null</strong>
+    <strong><h2>null</h2></strong>
     . Finally, notice that 
-    <strong>offer() </strong>
+    <strong><h2>offer() </h2></strong>
     only attempts to add an element to a queue. Because some queues have a fixed
     length and might be full, 
-    <strong>offer() </strong>
+    <strong><h2>offer() </h2></strong>
     can fail.
     <br/>
   </p>
@@ -456,7 +456,7 @@ iv.	fill		(8-Marks) (4b)<br/>
 			<div class="ansclass" id="ANScript4">
 			
 			 <p>
-    <strong>ArrayList </strong>
+    <strong><h2>ArrayList </h2></strong>
     supports dynamic arrays that can grow as needed. In Java, standard arrays
     are of a fixed length. After arrays are created, they cannot grow or shrink,
     which means that you must know in advance how many elements an array will
@@ -465,14 +465,14 @@ iv.	fill		(8-Marks) (4b)<br/>
     <br/>
   </p>
   <p>
-    <strong>
+    <strong><h2>
       binarySearch()
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
      The 
-    <strong>binarySearch( ) </strong>
+    <strong><h2>binarySearch( ) </h2></strong>
     method uses a binary search to find a specified value. This method must be
     applied to sorted arrays.
     <br/>
@@ -545,19 +545,19 @@ iv.	fill		(8-Marks) (4b)<br/>
     is the array to be searched, and 
     <em>value </em>
     is the value to be located. The last two forms throw a 
-    <strong>ClassCastException </strong>
+    <strong><h2>ClassCastException </h2></strong>
     if 
     <em>array </em>
     contains elements that cannot be compared (for example, 
-    <strong>Double </strong>
+    <strong><h2>Double </h2></strong>
     and 
-    <strong>StringBuffer</strong>
+    <strong><h2>StringBuffer</h2></strong>
     ) or if 
     <em>value </em>
     is not compatible with the types in 
     <em>array. </em>
     In the last form, the 
-    <strong>Comparator </strong>
+    <strong><h2>Comparator </h2></strong>
     <em>c </em>
     is used to determine the order of the elements in 
     <em>array. </em>
@@ -570,14 +570,14 @@ iv.	fill		(8-Marks) (4b)<br/>
     <br/>
   </p>
   <p>
-    <strong>
+    <strong><h2>
       copyOf()
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
      The 
-    <strong>copyOf( ) </strong>
+    <strong><h2>copyOf( ) </h2></strong>
     method was added by Java SE 6. It returns a copy of an array and has the
     following forms:
     <br/>
@@ -640,9 +640,9 @@ iv.	fill		(8-Marks) (4b)<br/>
     . If the copy is longer than 
     <em>source</em>
     , then the copy is padded with zeros (for numeric arrays), 
-    <strong>null</strong>
+    <strong><h2>null</h2></strong>
     s (for object arrays), or 
-    <strong>false </strong>
+    <strong><h2>false </h2></strong>
     (for boolean arrays). If the copy is shorter than 
     <em>source</em>
     , then the copy is truncated. In the last form, the type of 
@@ -650,37 +650,37 @@ iv.	fill		(8-Marks) (4b)<br/>
     becomes the type of the array returned. If 
     <em>len </em>
     is negative, a 
-    <strong>NegativeArraySizeException </strong>
+    <strong><h2>NegativeArraySizeException </h2></strong>
     is thrown. If 
     <em>source </em>
     is 
-    <strong>null</strong>
+    <strong><h2>null</h2></strong>
     , a 
-    <strong>NullPointerException </strong>
+    <strong><h2>NullPointerException </h2></strong>
     is thrown. If 
     <em>resultT </em>
     is incompatible with the type of 
     <em>source, </em>
     an 
-    <strong>ArrayStoreException </strong>
+    <strong><h2>ArrayStoreException </h2></strong>
     is thrown.
     <br/>
   </p>
   <p>
-    <strong>
+    <strong><h2>
       equals()
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
      The 
-    <strong>equals( ) </strong>
+    <strong><h2>equals( ) </h2></strong>
     method returns 
-    <strong>true </strong>
+    <strong><h2>true </h2></strong>
     if two arrays are equivalent. Otherwise, it returns 
-    <strong>false</strong>
+    <strong><h2>false</h2></strong>
     . The 
-    <strong>equals( ) </strong>
+    <strong><h2>equals( ) </h2></strong>
     method has the following forms:
     <br/>
   </p>
@@ -752,21 +752,21 @@ iv.	fill		(8-Marks) (4b)<br/>
   <p> </p>
   <p> </p>
   <p>
-    <strong>
+    <strong><h2>
       fill()
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
      The 
-    <strong>fill( ) </strong>
+    <strong><h2>fill( ) </h2></strong>
     method assigns a value to all elements in an array. In other words, it fills
     an
     <br/>
   </p>
   <p>
      array with a specified value. The 
-    <strong>fill( ) </strong>
+    <strong><h2>fill( ) </h2></strong>
     method has two versions. The first version, which
     <br/>
   </p>
@@ -876,120 +876,120 @@ ii)	List.		(8-Marks) (3a)<br/>
 			<div class="ansclass" id="ANScript5">
 			
 			  <p>
-    <strong>
+    <strong><h2>
       Set Interface
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
      The 
-    <strong>Set </strong>
+    <strong><h2>Set </h2></strong>
     interface defines a set. It extends 
-    <strong>Collection </strong>
+    <strong><h2>Collection </h2></strong>
     and declares the behavior of a collection that does not allow duplicate
     elements. Therefore, the 
-    <strong>add( ) </strong>
+    <strong><h2>add( ) </h2></strong>
     method returns 
-    <strong>false </strong>
+    <strong><h2>false </h2></strong>
     if an attempt is made to add duplicate elements to a set. It does not define
     any additional methods of its own. 
-    <strong>Set </strong>
+    <strong><h2>Set </h2></strong>
     is a generic interface that has this declaration: interface Set&lt;E&gt;
     Here, 
-    <strong>E </strong>
+    <strong><h2>E </h2></strong>
     specifies the type of objects that the set will hold.
     <br/>
   </p>
   <p>
-    <strong>
+    <strong><h2>
       List Interface
       <br/>
-    </strong>
+    </h2></strong>
   </p>
   <p>
      The 
-    <strong>List </strong>
+    <strong><h2>List </h2></strong>
     interface extends 
-    <strong>Collection </strong>
+    <strong><h2>Collection </h2></strong>
     and declares the behavior of a collection that stores a sequence of
     elements. Elements can be inserted or accessed by their position in the
     list, using a zero-based index. A list may contain duplicate elements. 
-    <strong>List </strong>
+    <strong><h2>List </h2></strong>
     is a generic interface that has this declaration: interface List&lt;E&gt;
     <br/>
   </p>
   <p>
      Here, 
-    <strong>E </strong>
+    <strong><h2>E </h2></strong>
     specifies the type of objects that the list will hold.
     <br/>
   </p>
   <p>
      In addition to the methods defined by 
-    <strong>Collection</strong>
+    <strong><h2>Collection</h2></strong>
     , 
-    <strong>List </strong>
+    <strong><h2>List </h2></strong>
     defines some of its own, which are summarized in Table 17-2. Note again that
     several of these methods will throw an 
-    <strong>UnsupportedOperationException </strong>
+    <strong><h2>UnsupportedOperationException </h2></strong>
     if the list cannot be modified, and a 
-    <strong>ClassCastException </strong>
+    <strong><h2>ClassCastException </h2></strong>
     is generated when one object is incompatible with another, such as when an
     attempt is made to add an incompatible object to a list. Also, several
     methods will throw an 
-    <strong>IndexOutOfBoundsException </strong>
+    <strong><h2>IndexOutOfBoundsException </h2></strong>
     if an invalid index is used. A 
-    <strong>NullPointerException </strong>
+    <strong><h2>NullPointerException </h2></strong>
     is thrown if an attempt is made to store a 
-    <strong>null </strong>
+    <strong><h2>null </h2></strong>
     object and 
-    <strong>null </strong>
+    <strong><h2>null </h2></strong>
     elements are not allowed in the list. An 
-    <strong>IllegalArgumentException </strong>
+    <strong><h2>IllegalArgumentException </h2></strong>
     is thrown if an invalid argument is used.
     <br/>
   </p>
   <p>
      To the versions of 
-    <strong>add() </strong>
+    <strong><h2>add() </h2></strong>
     and 
-    <strong>addAll() </strong>
+    <strong><h2>addAll() </h2></strong>
     defined by 
-    <strong>Collection</strong>
+    <strong><h2>Collection</h2></strong>
     , 
-    <strong>List </strong>
+    <strong><h2>List </h2></strong>
     adds the methods 
-    <strong>add(int, E) </strong>
+    <strong><h2>add(int, E) </h2></strong>
     and 
-    <strong>addAll(int, Collection)</strong>
+    <strong><h2>addAll(int, Collection)</h2></strong>
     . These methods insert elements at the specified index. Also, the semantics
     of 
-    <strong>add(E) </strong>
+    <strong><h2>add(E) </h2></strong>
     and 
-    <strong>addAll(Collection) </strong>
+    <strong><h2>addAll(Collection) </h2></strong>
     defined by 
-    <strong>Collection </strong>
+    <strong><h2>Collection </h2></strong>
     are changed by 
-    <strong>List </strong>
+    <strong><h2>List </h2></strong>
     so that they add elements to the end of the list.
     <br/>
   </p>
   <p>
      To obtain the object stored at a specific location, call 
-    <strong>get() </strong>
+    <strong><h2>get() </h2></strong>
     with the index of the object. To assign a value to an element in the list,
     call 
-    <strong>set()</strong>
+    <strong><h2>set()</h2></strong>
     , specifying the index of the object to be changed. To find the index of an
     object, use 
-    <strong>indexOf() </strong>
+    <strong><h2>indexOf() </h2></strong>
     or 
-    <strong>lastIndexOf()</strong>
+    <strong><h2>lastIndexOf()</h2></strong>
     . You can obtain a sublist of a list by calling 
-    <strong>subList()</strong>
+    <strong><h2>subList()</h2></strong>
     , specifying the beginning and ending indexes of the sublist. As you can
     imagine, 
-    <strong>subList() </strong>
+    <strong><h2>subList() </h2></strong>
     makes list processing quite convenient.
     <br/>
   </p>

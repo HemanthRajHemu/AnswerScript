@@ -87,7 +87,7 @@
 
 	<div class="alertA1">
 	  <span class="closebtnA1" onclick="this.parentElement.style.display='none';">&times;</span> 
-	  <strong>NOTE!</strong>
+	  <strong><h2>NOTE!</h2></strong>
 	  Click on MENU to Browse between Subjects...
 	</div>
 
@@ -226,7 +226,7 @@
 </p>
 <p>
 	The first line of an HTTP request message is called the request line; the
-	subsequent lines are called the <strong>header lines</strong>. The request
+	subsequent lines are called the <strong><h2>header lines</h2></strong>. The request
 	line has three fields: the method field, the URL field, and the HTTP
 	version field. The method field can take on several different values,
 	including GET, POST, HEAD, PUT, and DELETE. The great majority of HTTP
@@ -237,18 +237,18 @@
 	browser implements version HTTP/1.1.
 </p>
 <p>
-Now let's look at the header lines in the example. The header line	<strong>Host:</strong> www.someschool.edu specifies the host on which the
+Now let's look at the header lines in the example. The header line	<strong><h2>Host:</h2></strong> www.someschool.edu specifies the host on which the
 	object resides. You might think that this header line is unnecessary, as
 	there is already a TCP connection in place to the host.
 </p>
 <p>
-	By including the <strong>Connection:</strong> close header line, the
+	By including the <strong><h2>Connection:</h2></strong> close header line, the
 	browser is telling the server that it doesn't want to bother with
 	persistent connections; it wants the server to close the connection after
 	sending the requested object.
 </p>
 <p>
-	The <strong>User-agent:</strong> header line specifies the user agent, that
+	The <strong><h2>User-agent:</h2></strong> header line specifies the user agent, that
 	is, the browser type that is making the request to the server. Here the
 	user agent is Mozilla/5.0, a Firefox browser. This header line is useful
 	because the server can actually send different versions of the same object
@@ -256,7 +256,7 @@ Now let's look at the header lines in the example. The header line	<strong>Host:
 	the same URL.)
 </p>
 <p>
-	Finally, the <strong>Acceptlanguage:</strong> header indicates that the
+	Finally, the <strong><h2>Acceptlanguage:</h2></strong> header indicates that the
 	user prefers to receive a French version of the object, if such an object
 	exists on the server; otherwise, the server should send its default
 	version. The Accept-language: header is just one of many content
@@ -322,7 +322,7 @@ alt="Loading Image" class="resIMG"/><br/></center>
 </p>
 <p>
 	Let's take a careful look at this response message. It has three sections:
-an <strong>initial status line, six header lines,</strong> and then the	<strong>entity body</strong>. The entity body is the meat of the message-it
+an <strong><h2>initial status line, six header lines,</h2></strong> and then the	<strong><h2>entity body</h2></strong>. The entity body is the meat of the message-it
 	contains the requested object itself (represented by data data data data
 	data ...). The status line has three fields: the protocol version field, a
 	status code, and a corresponding status message. In this example, the
@@ -460,7 +460,7 @@ alt="Loading Image" class="resIMG"/><br/></center>
 	characteristics; for example, they both run on top of TCP. However, the two
 	application-layer protocols have some important differences. The most
 	striking difference is that FTP uses two parallel TCP connections to
-transfer a file, a	<strong>control connection and a data connection.</strong>
+transfer a file, a	<strong><h2>control connection and a data connection.</h2></strong>
 </p>
 <p>
 	The control connection is used for sending control information between the
@@ -473,7 +473,7 @@ transfer a file, a	<strong>control connection and a data connection.</strong>
 	this reason, HTTP is said to send its control information in-band.
 </p>
 <p>
-	<strong>FTP Commands and Replies:</strong>
+	<strong><h2>FTP Commands and Replies:</h2></strong>
 </p>
 <p>
 	The commands, from client to server, and replies, from server to client,
@@ -484,27 +484,27 @@ transfer a file, a	<strong>control connection and a data connection.</strong>
 	arguments. Some of the more common commands are given below:
 </p>
 <p>
-	i. <strong>USER username:</strong> Used to send the user identification to
+	i. <strong><h2>USER username:</h2></strong> Used to send the user identification to
 	the server.
 </p>
 <p>
-	ii. <strong>PASS password:</strong> Used to send the user password to the
+	ii. <strong><h2>PASS password:</h2></strong> Used to send the user password to the
 	server.
 </p>
 <p>
-	iii. <strong>LIST:</strong> Used to ask the server to send back a list of
+	iii. <strong><h2>LIST:</h2></strong> Used to ask the server to send back a list of
 	all the files in the current remote directory. The list of files is sent
 	over a (new and non-persistent) data connection rather than the control TCP
 	connection.
 </p>
 <p>
-	iv. <strong>RETR filename:</strong> Used to retrieve (that is, get) a file
+	iv. <strong><h2>RETR filename:</h2></strong> Used to retrieve (that is, get) a file
 	from the current directory of the remote host. This command causes the
 	remote host to initiate a data connection and to send the requested file
 	over the data connection.
 </p>
 <p>
-	v. <strong>STOR filename:</strong> Used to store (that is, put) a file into
+	v. <strong><h2>STOR filename:</h2></strong> Used to store (that is, put) a file into
 	the current directory of the remote host.
 </p>
 <p>

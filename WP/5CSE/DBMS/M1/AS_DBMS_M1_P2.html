@@ -87,7 +87,7 @@
 
 	<div class="alertA1">
 	  <span class="closebtnA1" onclick="this.parentElement.style.display='none';">&times;</span> 
-	  <strong>NOTE!</strong>
+	  <strong><h2>NOTE!</h2></strong>
 	  Click on MENU to Browse between Subjects...
 	</div>
 
@@ -226,17 +226,17 @@ DATABASE MANAGEMENT SYSTEM
 </p>
 <p>
 	The database and the DBMS catalog are usually stored on disk. Access to the
-	disk is controlled primarily by the <strong>operating system (OS)</strong>,
+	disk is controlled primarily by the <strong><h2>operating system (OS)</h2></strong>,
 	which schedules disk read/write.
 </p>
 <p>
-	Many DBMSs have their own <strong>buffer management</strong> module to
+	Many DBMSs have their own <strong><h2>buffer management</h2></strong> module to
 	schedule disk read/write, because management of buffer storage has a
 	considerable effect on performance. Reducing disk read/write improves
 	performance considerably.
 </p>
 <p>
-	A higher-level <strong>stored data manager</strong> module of the DBMS
+	A higher-level <strong><h2>stored data manager</h2></strong> module of the DBMS
 	controls access to DBMS information that is stored on disk, whether it is
 	part of the database or the catalog.
 </p>
@@ -260,35 +260,35 @@ DATABASE MANAGEMENT SYSTEM
 </p>
 <p>
 	Casual users and persons with occasional need for information from the
-	database interact using the <strong>interactive query</strong> interface in
+	database interact using the <strong><h2>interactive query</h2></strong> interface in
 	Figure 7.1. We have not explicitly shown any menu-based or form-based or
 	mobile interactions that are typically used to generate the interactive
 	query automatically or to access canned transactions.
 </p>
 <p>
 	These queries are parsed and validated for correctness of the query syntax,
-the names of files and data elements, and so on by a	<strong>query compiler</strong> that compiles them into an internal form.
+the names of files and data elements, and so on by a	<strong><h2>query compiler</h2></strong> that compiles them into an internal form.
 </p>
 <p>
 	This internal query is subjected to query optimization. Among other things,
-	the <strong>query optimizer</strong> is concerned with the rearrangement
+	the <strong><h2>query optimizer</h2></strong> is concerned with the rearrangement
 	and possible reordering of operations, elimination of redundancies, and use
 	of efficient search algorithms during execution.
 </p>
 <p>
 	Application programmers write programs in host languages such as Java, C,
-or C++ that are submitted to a precompiler. The	<strong>precompiler</strong> extracts DML commands from an application
+or C++ that are submitted to a precompiler. The	<strong><h2>precompiler</h2></strong> extracts DML commands from an application
 	program written in a host programming language. These commands are sent to
 	the DML compiler for compilation into object code for database access.
 </p>
 <p>
-In the lower part of Figure 7.1, the	<strong>runtime database processor</strong> executes (1) the privileged
+In the lower part of Figure 7.1, the	<strong><h2>runtime database processor</h2></strong> executes (1) the privileged
 	commands, (2) the executable query plans, and (3) the canned transactions
 	with runtime parameters.
 </p>
 <p>
-	It works with the <strong>system catalog</strong> and may update it with
-	statistics. It also works with the <strong>stored data manager</strong>,
+	It works with the <strong><h2>system catalog</h2></strong> and may update it with
+	statistics. It also works with the <strong><h2>stored data manager</h2></strong>,
 	which in turn uses basic operating system services for carrying out
 	low-level input/output (read/write) operations between the disk and main
 	memory.
@@ -300,17 +300,17 @@ In the lower part of Figure 7.1, the	<strong>runtime database processor</strong>
 	management.
 </p>
 <p>
-	We have shown <strong>concurrency control and backup and recovery</strong>
+	We have shown <strong><h2>concurrency control and backup and recovery</h2></strong>
 	systems separately as a module in this figure. They are integrated into the
 	working of the runtime database processor for purposes of transaction
 	management.
 </p>
 <p>
-	It is common to have the <strong>client program</strong> that accesses the
+	It is common to have the <strong><h2>client program</h2></strong> that accesses the
 	DBMS running on a separate computer or device from the computer on which
-the database resides. The former is called the	<strong>client computer</strong> running DBMS client software and the
-	latter is called the <strong>database server</strong>. In many cases, the
-client accesses a middle computer, called the	<strong>application server</strong>, which in turn accesses the database
+the database resides. The former is called the	<strong><h2>client computer</h2></strong> running DBMS client software and the
+	latter is called the <strong><h2>database server</h2></strong>. In many cases, the
+client accesses a middle computer, called the	<strong><h2>application server</h2></strong>, which in turn accesses the database
 	server.
 </p>
 			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/5CSE/DBMS/M1/M1IMG/7.1.png" 
@@ -331,7 +331,7 @@ alt="Loading Image" class="resIMG"/></center>
 			<div class="ansclass" id="ANScript3">
 			
 			<p>
-	<strong>Entities and Their Attributes</strong>
+	<strong><h2>Entities and Their Attributes</h2></strong>
 	. The basic concept that the ER model represents is an entity, which is a
 	thing or object in the real world with an independent existence. An entity
 	may be an object with a physical existence (for example, a particular
@@ -339,7 +339,7 @@ alt="Loading Image" class="resIMG"/></center>
 	existence (for instance, a company, a job, or a university course).
 </p>
 <p>
-	Each entity has <strong>attributes</strong>-the particular properties that
+	Each entity has <strong><h2>attributes</h2></strong>-the particular properties that
 	describe it. For example, an EMPLOYEE entity may be described by the
 	employee's name, age, address, salary, and job. A particular entity will
 	have a value for each of its attributes. The attribute values that describe
@@ -413,8 +413,8 @@ alt="Loading Image" class="resIMG"/></center>
 			<div class="ansclass" id="ANScript5">
 			
 			<p>
-	<strong>1.1 </strong>
-	<strong>Database Administrators</strong>
+	<strong><h2>1.1 </h2></strong>
+	<strong><h2>Database Administrators</h2></strong>
 </p>
 <p>
 	In any organization where many people use the same resources, there is a
@@ -434,9 +434,9 @@ alt="Loading Image" class="resIMG"/></center>
 	staff that carries out these functions.
 </p>
 <p>
-	<strong>1.2 </strong>
-	<strong> </strong>
-	<strong>Database Designers</strong>
+	<strong><h2>1.2 </h2></strong>
+	<strong><h2> </h2></strong>
+	<strong><h2>Database Designers</h2></strong>
 </p>
 <p>
 	Database designers are responsible for identifying the data to be stored in
