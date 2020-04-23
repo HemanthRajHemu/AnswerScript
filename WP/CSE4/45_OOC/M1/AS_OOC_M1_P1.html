@@ -88,7 +88,7 @@
 
 	<div class="alertA1">
 	  <span class="closebtnA1" onclick="this.parentElement.style.display='none';">&times;</span> 
-	    <strong>NOTE!</strong>
+	    <strong><h2>NOTE!</h2></strong>
 	  Click on MENU to Browse between Subjects...
 	</div>
 
@@ -198,7 +198,7 @@ Total Number of Contact Hours 50 </h1><h1>Exam Hours 03
 			<div class="QAS"><a onclick="show('ANScript1')">Question 1<h1>Explain how C++ allows member functions in structures. Give example. (06 Marks)</h1></a></div>
 			<div class="ansclass  animate-bottom" id="ANScript1">
 			<p>
-The C++ allows member functions in Structure. The Structures (the	  <strong>struct</strong> keyword) have been redefined to allow member
+The C++ allows member functions in Structure. The Structures (the	  <strong><h2>struct</h2></strong> keyword) have been redefined to allow member
 	functions also. Illustrates Below
 </p>
 <p align="center">
@@ -206,35 +206,35 @@ The C++ allows member functions in Structure. The Structures (the	  <strong>stru
 alt="Loading Image" class="resIMG"/></center><br/>
 </p>
 <p align="center">
-	  <strong>Program 1.1: </strong>
+	  <strong><h2>Program 1.1: </h2></strong>
 	Illustration of C++ allows member functions in structures
 </p>
 <p>
-First, we must notice that functions have also been defined within	  <strong>the scope of the structure definition.</strong> This means that not
+First, we must notice that functions have also been defined within	  <strong><h2>the scope of the structure definition.</h2></strong> This means that not
 	only the member data of the structure can be accessed through the variables
 	of the structures but also the member functions can be invoked.
 </p>
 <p>
-	The   <strong>struct</strong> keyword has actually been redefined in C++.
-	This latter point is illustrated by the   <strong>main( ) function</strong>
+	The   <strong><h2>struct</h2></strong> keyword has actually been redefined in C++.
+	This latter point is illustrated by the   <strong><h2>main( ) function</h2></strong>
 	in Program 1.1 above. We must make careful note of the way variables of the
 	structure have been declared and how the member functions have been
 	invoked.
 </p>
 <p>
-	  <strong>Member functions</strong>
-	are invoked in much the same way as   <strong>member data</strong> are
-accessed, that is, by using the   <strong>variable-to-member</strong> access	  <strong>operator</strong>.
+	  <strong><h2>Member functions</h2></strong>
+	are invoked in much the same way as   <strong><h2>member data</h2></strong> are
+accessed, that is, by using the   <strong><h2>variable-to-member</h2></strong> access	  <strong><h2>operator</h2></strong>.
 </p>
 <p>
-	In a   <strong>member function</strong>, one can refer directly to members of
+	In a   <strong><h2>member function</h2></strong>, one can refer directly to members of
 	the object for which the member function is invoked. For example, as a
-	result of the second line of the   <strong>main( ) function</strong> in
-Program 1.1, it is   <strong>d1.iFeet</strong> that gets the value of	  <strong>2</strong>.
+	result of the second line of the   <strong><h2>main( ) function</h2></strong> in
+Program 1.1, it is   <strong><h2>d1.iFeet</h2></strong> that gets the value of	  <strong><h2>2</h2></strong>.
 </p>
 <p>
-On the other hand, it is   <strong>d2.iFeet</strong> that gets the value of	  <strong>3</strong> when the fourth line is invoked. This is explained in
-	the section on '  <strong>this' pointer</strong> that follows shortly.
+On the other hand, it is   <strong><h2>d2.iFeet</h2></strong> that gets the value of	  <strong><h2>3</h2></strong> when the fourth line is invoked. This is explained in
+	the section on '  <strong><h2>this' pointer</h2></strong> that follows shortly.
 </p>
 <p>
 	Each structure variable contains a separate copy of the member data within
@@ -242,12 +242,12 @@ On the other hand, it is   <strong>d2.iFeet</strong> that gets the value of	  <s
 </p>
 <p>
 	However, only one copy of the member function exists. Again, the section on
-	the '  <strong>this'</strong> pointer explains this. However, in the above
+	the '  <strong><h2>this'</h2></strong> pointer explains this. However, in the above
 	example, note that the member data of structure variables can still be
 	accessed directly.
 </p>
 <p>
-	The following line of code illustrates   <strong>this</strong>.
+	The following line of code illustrates   <strong><h2>this</h2></strong>.
 </p>
 <p>
 	d1.iFeet=2; //legal
@@ -280,22 +280,22 @@ On the other hand, it is   <strong>d2.iFeet</strong> that gets the value of	  <s
 			<div class="ansclass  animate-bottom" id="ANScript2">
 			
 <p>
-	  <strong>Data abstraction</strong>
-is a   <strong>virtue</strong> by which   <strong>an object hides its</strong>  <strong>internal operations</strong> from the  <strong>rest of the program</strong>. It makes it	  <strong>unnecessary</strong> for the
-	  <strong>
+	  <strong><h2>Data abstraction</h2></strong>
+is a   <strong><h2>virtue</h2></strong> by which   <strong><h2>an object hides its</h2></strong>  <strong><h2>internal operations</h2></strong> from the  <strong><h2>rest of the program</h2></strong>. It makes it	  <strong><h2>unnecessary</h2></strong> for the
+	  <strong><h2>
 		client programs to know how the data is internally arranged
-	</strong>
-	in the   <strong>object</strong>. Thus, it obviates the need for the client
+	</h2></strong>
+	in the   <strong><h2>object</h2></strong>. Thus, it obviates the need for the client
 	programs to write precautionary code upon creating and while using objects.
 </p>
 <p>
 	Now, in order to understand this concept, let us take an example in C++.
-The library programmer, who has designed the  <strong>Distance class</strong>, wants to ensure that the	  <strong>fInches portion</strong> of an object of the class should never
-	exceed   <strong>12.</strong> If a value   <strong>larger than 12</strong> is
-specified by an application programmer while calling the	  <strong>Distance::setInches( ) function</strong>, the logic incorporated
+The library programmer, who has designed the  <strong><h2>Distance class</h2></strong>, wants to ensure that the	  <strong><h2>fInches portion</h2></strong> of an object of the class should never
+	exceed   <strong><h2>12.</h2></strong> If a value   <strong><h2>larger than 12</h2></strong> is
+specified by an application programmer while calling the	  <strong><h2>Distance::setInches( ) function</h2></strong>, the logic incorporated
 	within the definition of the function should automatically increment the
-value of   <strong>iFeet </strong>and decrement the value of	  <strong>fInches</strong> by suitable amounts. A   <strong>modified</strong>
-	definition of the   <strong>Distance::setInches( )</strong> function is as
+value of   <strong><h2>iFeet </h2></strong>and decrement the value of	  <strong><h2>fInches</h2></strong> by suitable amounts. A   <strong><h2>modified</h2></strong>
+	definition of the   <strong><h2>Distance::setInches( )</h2></strong> function is as
 	follows.
 </p>
 <p align="center">
@@ -303,20 +303,20 @@ value of   <strong>iFeet </strong>and decrement the value of	  <strong>fInches</
 alt="Loading Image" class="resIMG"/></center><br/>
 </p>
 <p>
-Here, we notice that an application programmer need	  <strong>notsend values less than 12</strong> while   <strong>calling</strong>
-the   <strong>Distance::setInches( ) function</strong>. The  <strong>default logic</strong> within the	  <strong>Distance::setInches( )</strong> function does the necessary
-	adjustments. This is an   <strong>example of data abstraction</strong>.
+Here, we notice that an application programmer need	  <strong><h2>notsend values less than 12</h2></strong> while   <strong><h2>calling</h2></strong>
+the   <strong><h2>Distance::setInches( ) function</h2></strong>. The  <strong><h2>default logic</h2></strong> within the	  <strong><h2>Distance::setInches( )</h2></strong> function does the necessary
+	adjustments. This is an   <strong><h2>example of data abstraction</h2></strong>.
 </p>
 <p>
-	The above   <strong>restriction may not appear mandatory</strong>. However,
+	The above   <strong><h2>restriction may not appear mandatory</h2></strong>. However,
 	very soon we will create classes where similar restrictions will be
 	absolutely necessary (and also complicated).
 </p>
 <p>
-	Similarly, the definition of the   <strong>Distance::add( )</strong> function
+	Similarly, the definition of the   <strong><h2>Distance::add( )</h2></strong> function
 	should also be modified as follows by the library programmer. Here, it can
-	be assumed that the value of   <strong>fInches portion</strong> of neither
-the invoking object nor the object appearing as	  <strong>formal argument ('dd') can be greater than 12</strong>.
+	be assumed that the value of   <strong><h2>fInches portion</h2></strong> of neither
+the invoking object nor the object appearing as	  <strong><h2>formal argument ('dd') can be greater than 12</h2></strong>.
 </p>
 <p align="center">
 				<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/CSE4/45_OOC/M1/SS/2.2.png" 
@@ -324,16 +324,16 @@ alt="Enforcing restrictions on the data members of a class" class="resIMG"/></ce
 </p>
 <p>
 	Now, if we write the statements shown in 2.2, (Enforcing restrictions on
-	the data members of a class) then the value of   <strong>d3.fInches</strong>
-will become   <strong>3</strong> (not 15) and the value of	  <strong>d3.iFeet </strong>will become   <strong>4</strong> (not 3).
+	the data members of a class) then the value of   <strong><h2>d3.fInches</h2></strong>
+will become   <strong><h2>3</h2></strong> (not 15) and the value of	  <strong><h2>d3.iFeet </h2></strong>will become   <strong><h2>4</h2></strong> (not 3).
 </p>
 <p>
 	It has already been mentioned that real-world objects never attain an
 	invalid state. They also do not start in an invalid state.
 </p>
 <p>
-Let us continue with our earlier example-the	  <strong>Distance class</strong>. Recollect that it is the library
-programmer's intention to ensure that the value of  <strong>fInches portion of none</strong> of the objects of the	  <strong>class Distance should exceed 12</strong>. Now, let us consider
+Let us continue with our earlier example-the	  <strong><h2>Distance class</h2></strong>. Recollect that it is the library
+programmer's intention to ensure that the value of  <strong><h2>fInches portion of none</h2></strong> of the objects of the	  <strong><h2>class Distance should exceed 12</h2></strong>. Now, let us consider
 	Program 2.3.
 </p>
 <p align="center">
@@ -341,13 +341,13 @@ programmer's intention to ensure that the value of  <strong>fInches portion of n
 alt="Object gets created with improper values" class="resIMG"/></center><br/>
 </p>
 <p align="center">
-	  <strong>Program 2.3:</strong>
+	  <strong><h2>Program 2.3:</h2></strong>
 	Object gets created with improper values
 </p>
 <p>
-As you can see, the value of   <strong>fInches</strong> of '	  <strong>d1</strong>' is larger than   <strong>12</strong>! This happened
-because the value of both   <strong>iFeet</strong> and  <strong>fInches</strong> automatically got set to junk values when '  <strong>d1</strong>' was allocated memory and the junk value is	  <strong>larger than 12</strong> for   <strong>d1.fInches</strong>. Thus, the
-objective of the library programmer to keep the value of  <strong>fInches less than 12</strong> has	  <strong>not yet been achieved</strong>.
+As you can see, the value of   <strong><h2>fInches</h2></strong> of '	  <strong><h2>d1</h2></strong>' is larger than   <strong><h2>12</h2></strong>! This happened
+because the value of both   <strong><h2>iFeet</h2></strong> and  <strong><h2>fInches</h2></strong> automatically got set to junk values when '  <strong><h2>d1</h2></strong>' was allocated memory and the junk value is	  <strong><h2>larger than 12</h2></strong> for   <strong><h2>d1.fInches</h2></strong>. Thus, the
+objective of the library programmer to keep the value of  <strong><h2>fInches less than 12</h2></strong> has	  <strong><h2>not yet been achieved</h2></strong>.
 </p>
 <p>
 	Distance d1;
@@ -359,12 +359,12 @@ objective of the library programmer to keep the value of  <strong>fInches less t
 	d1.setInches(0.0); //initialization
 </p>
 <p>
-Obviously, the library programmer would like to add a function to the  <strong>Distance class</strong> that gets called	  <strong>automatically</strong> whenever an object is created and sets the
-values of the data members of the object properly. Such a function is the	  <strong>constructor.</strong>
+Obviously, the library programmer would like to add a function to the  <strong><h2>Distance class</h2></strong> that gets called	  <strong><h2>automatically</h2></strong> whenever an object is created and sets the
+values of the data members of the object properly. Such a function is the	  <strong><h2>constructor.</h2></strong>
 </p>
 <p>
-	  <strong>Data abstraction</strong>
-	is   <strong>effective</strong> due to   <strong>data hiding only.</strong>
+	  <strong><h2>Data abstraction</h2></strong>
+	is   <strong><h2>effective</h2></strong> due to   <strong><h2>data hiding only.</h2></strong>
 </p>
 
 
@@ -379,17 +379,17 @@ values of the data members of the object properly. Such a function is the	  <str
 			<div class="ansclass  animate-bottom" id="ANScript3">
 
 <p>
-C++ allows  <strong>two or more functions</strong> to have the <strong>same name</strong>. For this, however, they <strong>must have different signatures</strong>. <strong>Signature of a function</strong> means the	 <strong>number, type, and sequence of formal arguments</strong> of the
+C++ allows  <strong><h2>two or more functions</h2></strong> to have the <strong><h2>same name</h2></strong>. For this, however, they <strong><h2>must have different signatures</h2></strong>. <strong><h2>Signature of a function</h2></strong> means the	 <strong><h2>number, type, and sequence of formal arguments</h2></strong> of the
 	function.
 </p>
 <p>
-In order to  <strong>distinguish</strong> amongst the <strong>functions</strong> with the  <strong>same name,</strong> the <strong>compiler expects</strong> their <strong>signatures to be different</strong>. Depending upon the	 <strong>type of parameters</strong> that are  <strong>passed</strong> to the
-	f <strong>unction call</strong>, the  <strong>compiler decides</strong> which
-of the  <strong>available definitions</strong> will be	 <strong>invoked</strong>.
+In order to  <strong><h2>distinguish</h2></strong> amongst the <strong><h2>functions</h2></strong> with the  <strong><h2>same name,</h2></strong> the <strong><h2>compiler expects</h2></strong> their <strong><h2>signatures to be different</h2></strong>. Depending upon the	 <strong><h2>type of parameters</h2></strong> that are  <strong><h2>passed</h2></strong> to the
+	f <strong><h2>unction call</h2></strong>, the  <strong><h2>compiler decides</h2></strong> which
+of the  <strong><h2>available definitions</h2></strong> will be	 <strong><h2>invoked</h2></strong>.
 </p>
 <p>
-For this,  <strong>function prototypes</strong> should be <strong>provided</strong> to the  <strong>compiler</strong> for matching the	 <strong>function calls</strong>. Accordingly,  <strong>the linker</strong>,
-during  <strong>link time</strong>,  <strong>links </strong>the <strong>function call</strong> with the	 <strong>correct function definition</strong>. Program 3.1 clarifies this.
+For this,  <strong><h2>function prototypes</h2></strong> should be <strong><h2>provided</h2></strong> to the  <strong><h2>compiler</h2></strong> for matching the	 <strong><h2>function calls</h2></strong>. Accordingly,  <strong><h2>the linker</h2></strong>,
+during  <strong><h2>link time</h2></strong>,  <strong><h2>links </h2></strong>the <strong><h2>function call</h2></strong> with the	 <strong><h2>correct function definition</h2></strong>. Program 3.1 clarifies this.
 </p>
 <p align="center">
 			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/CSE4/45_OOC/M1/SS/3.1.png" 
@@ -405,15 +405,15 @@ alt="Loading Image" class="resIMG"/></center><br/>
 </p>
 <p>
 	The two function prototypes at the beginning of the program tell the
-	compiler the two different ways in which the  <strong>add( )</strong>
-function can be  <strong>called</strong>. When the compiler encounters the	 <strong>two distinct calls to the add( ) function</strong>, it already has
-	the  <strong>prototypes to satisfy them both</strong>. Thus, the compilation
-	phase is  <strong>completed successfully</strong>. During linking, the
-linker finds the two necessary definitions of the	 <strong>add( ) function</strong> and, hence, links successfully to create
+	compiler the two different ways in which the  <strong><h2>add( )</h2></strong>
+function can be  <strong><h2>called</h2></strong>. When the compiler encounters the	 <strong><h2>two distinct calls to the add( ) function</h2></strong>, it already has
+	the  <strong><h2>prototypes to satisfy them both</h2></strong>. Thus, the compilation
+	phase is  <strong><h2>completed successfully</h2></strong>. During linking, the
+linker finds the two necessary definitions of the	 <strong><h2>add( ) function</h2></strong> and, hence, links successfully to create
 	the executable file.
 </p>
 <p>
-	The  <strong>compiler decides</strong> which function is to be called based
+	The  <strong><h2>compiler decides</h2></strong> which function is to be called based
 	upon the number, type, and sequence of parameters that are passed to the
 	function call. When the compiler encounters the first function call,
 </p>
@@ -430,26 +430,26 @@ linker finds the two necessary definitions of the	 <strong>add( ) function</stro
 	handled by the compiler and the linker.
 </p>
 <p>
-	Note the importance of  <strong>function prototyping</strong>. Since
-	function prototyping is  <strong>mandatory in C++,</strong> it is possible
+	Note the importance of  <strong><h2>function prototyping</h2></strong>. Since
+	function prototyping is  <strong><h2>mandatory in C++,</h2></strong> it is possible
 	for the compiler to support function overloading properly. The compiler is
 	able to not only restrict the number of ways in which a function can be
-called but also support more than one way in which a function can be called	 <strong>Function overloading</strong> is possible because of the necessity
+called but also support more than one way in which a function can be called	 <strong><h2>Function overloading</h2></strong> is possible because of the necessity
 	to prototype functions.
 </p>
 <p>
-	 <strong>Function overloading</strong>
-	is also known as  <strong>function polymorphism</strong> because, just like
-	 <strong>
+	 <strong><h2>Function overloading</h2></strong>
+	is also known as  <strong><h2>function polymorphism</h2></strong> because, just like
+	 <strong><h2>
 		polymorphism in the real world where an entity exists in more than one
 		form
-	</strong>
+	</h2></strong>
 	, the same function name carries different meanings.
 </p>
 <p>
-	 <strong>Function polymorphism</strong>
-is static in nature because the function definition to be	 <strong>executed is selected</strong> by the compiler during compile time
-itself. Thus, an	 <strong>overloaded function is said to exhibit static polymorphism</strong>
+	 <strong><h2>Function polymorphism</h2></strong>
+is static in nature because the function definition to be	 <strong><h2>executed is selected</h2></strong> by the compiler during compile time
+itself. Thus, an	 <strong><h2>overloaded function is said to exhibit static polymorphism</h2></strong>
 	.
 </p>
 
@@ -480,9 +480,9 @@ itself. Thus, an	 <strong>overloaded function is said to exhibit static polymorp
 			<div class="QAS"><a onclick="show('ANScript4')">Question 4<h1>How we can make some specific member functions of one class friendly to another class? (06 Marks)</h1></a></div>
 			<div class="ansclass  animate-bottom" id="ANScript4">
 			<p>
-A class can be a  <strong>friend of another class</strong>.	 <strong>Member functions</strong> of a  <strong>friend class</strong> can
-	access  <strong>private data members</strong> of objects of the class of
-	which it is a  <strong>friend</strong>. If class B is to be made a friend of
+A class can be a  <strong><h2>friend of another class</h2></strong>.	 <strong><h2>Member functions</h2></strong> of a  <strong><h2>friend class</h2></strong> can
+	access  <strong><h2>private data members</h2></strong> of objects of the class of
+	which it is a  <strong><h2>friend</h2></strong>. If class B is to be made a friend of
 	class A, then the statement
 </p>
 <p>
@@ -513,9 +513,9 @@ alt="Friend member functions:" class="resIMG"/></center><br/>
 	Program 4.2 Effect of declaring a friend class
 </p>
 <p>
-	 <strong>4.2 </strong>
-	 <strong>Friend member functions:</strong>
-	 <strong></strong>
+	 <strong><h2>4.2 </h2></strong>
+	 <strong><h2>Friend member functions:</h2></strong>
+	 <strong><h2></h2></strong>
 </p>
 <p>
 	How can we make some specific member functions of one class friendly to
@@ -576,7 +576,7 @@ alt="Forward declaring a class that requires a friend" class="resIMG"/></center>
 			<div class="QAS"><a onclick="show('ANScript5')">Question 5<h1>What is constructor? List the different types of constructors and explain default constructor with example. (08 Marks)</h1></a></div>
 			<div class="ansclass  animate-bottom" id="ANScript5">
 			<p>
-	A constructor in C++ is a  <strong>special method</strong> that is
+	A constructor in C++ is a  <strong><h2>special method</h2></strong> that is
 	automatically called when an object of a class is created.
 </p>
 <p>
@@ -606,17 +606,17 @@ alt="Types of Constructors" class="resIMG"/></center><br/>
 	</li>
 </ol>
 <p>
-	5.2  <strong>Types of Constructors:</strong>
+	5.2  <strong><h2>Types of Constructors:</h2></strong>
 </p>
 <p align="center">
-	 <strong>
+	 <strong><h2>
 					<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/CSE4/45_OOC/M1/SS/5.2.png" 
 alt="Default Constructors" class="resIMG"/></center><br/>
-	</strong>
-	 <strong></strong>
+	</h2></strong>
+	 <strong><h2></h2></strong>
 </p>
 <p>
-	 <strong>5.2.1 Default Constructors:</strong>
+	 <strong><h2>5.2.1 Default Constructors:</h2></strong>
 	Default constructor is the constructor which doesn't take any argument. It
 	has no parameters.
 </p>
@@ -628,7 +628,7 @@ alt="Program Illustrating Default Constructor" class="resIMG"/></center><br/>
 	Program 5.3 Program Illustrating Default Constructor
 </p>
 <p>
-	5.2.2  <strong>Parameterized Constructors:</strong> It is possible to pass
+	5.2.2  <strong><h2>Parameterized Constructors:</h2></strong> It is possible to pass
 	arguments to constructors. Typically, these arguments help initialize an
 	object when it is created. To create a parameterized constructor, simply
 	add parameters to it the way you would to any other function. When you
@@ -652,7 +652,7 @@ alt="Program Illustrating Parameterized Constructors" class="resIMG"/></center><
 	II. It is used to overload constructors.
 </p>
 <p>
-	5.2.3  <strong>Copy Constructor</strong>: A copy constructor is a member
+	5.2.3  <strong><h2>Copy Constructor</h2></strong>: A copy constructor is a member
 	function which initializes an object using another object of the same
 	class.
 </p>
