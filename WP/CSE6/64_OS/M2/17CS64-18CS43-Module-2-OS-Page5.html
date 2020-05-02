@@ -191,13 +191,94 @@ Number of Lecture Hours/Week 3</h1><h1> Exam Marks 60 </h1>
 <!-- Answer Script -->
 
 			<div class="ansCover">
-			<div class="QAS"><a onclick="show('ANScript1')">Question 1<h1> QUESTION 1</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript1')">Question 21<h1>What is Busy waiting in critical section concept? How semaphore is used to solve critical section problem? What are the advantages of semaphores? (10 Marks)</h1></a></div>
 			<div class="ansclass  animate-bottom" id="ANScript1">
 			
 			<h2>Answer:</h2>
 			
 			
-			
+			<p><h3>
+	<strong><h2>21.1 Busy Waiting in Critical Section:</h2></strong>
+</h3></p>
+<p><h3>
+	While a process is in its critical section, any other process that tries to
+	enter its critical section must loop continuously in the entry code. This
+	continual looping is clearly a problem in a real multiprogramming system,
+	where a single CPU is shared among many processes.
+</h3></p>
+<p><h3>
+	Busy waiting wastes CPU cycles that some other process might be able to use
+	productively. This type of semaphore is also called a spinlock because the
+	process "spins" while waiting for the lock. (Spinlocks do have an advantage
+	in that no context switch is required when a process must wait on a lock,
+	and a context switch may take considerable time.
+</h3></p>
+<p><h3>
+	Thus, when locks are expected to be held for short times, spinlocks are
+	useful; they are often employed on multiprocessor systems where one thread
+	can "spin" on one processor while another thread performs its critical
+	section on another processor.)
+</h3></p>
+<p><h3>
+	To overcome the need for busy waiting, we can modify the definition of the
+	wait( ) and signal( ) semaphore operations. When a process executes the
+	wait( ) operation and finds that the semaphore value is not positive, it
+	must wait.
+</h3></p>
+<p><h3>
+	However, rather than engaging in busy waiting, the process can block
+	itself. The block operation places a process into a waiting queue
+	associated with the semaphore, and the state of the process is switched to
+	the waiting state. Then control is transferred to the CPU scheduler, which
+	selects another process to execute.
+</h3></p>
+<p><h3>
+	<strong><h2>21.2 </h2></strong>
+	<strong><h2>
+		A solution to the critical-section problem must satisfy the following
+		three requirements:
+	</h2></strong>
+</h3></p>
+<p><h3>
+	<strong><h2>1. Mutual exclusion:</h2></strong>
+	If process P; is executing in its critical section, then no other processes
+	can be executing in their critical sections.
+</h3></p>
+<p><h3>
+	<strong><h2>2. Progress:</h2></strong>
+	If no process is executing in its critical section and some processes wish
+	to enter their critical sections, then only those processes that are not
+	executing in their remainder sections can participate in the decision on
+	which will enter its critical section next, and this selection cannot be
+	postponed indefinitely.
+</h3></p>
+<p><h3>
+	<strong><h2>3. Bounded waiting:</h2></strong>
+	There exists a bound, or limit, on the number of times that other processes
+	are allowed to enter their critical sections after a process has made a
+	request to enter its critical section and before that request is granted.
+</h3></p>
+<p><h3>
+	<strong><h2>21.3 Advantages of Semaphore:</h2></strong>
+</h3></p>
+<p><h3>
+	i. They do not allow more than one process to enter the critical section.
+	In this way, mutual exclusion is achieved and thus they are extremely
+	efficient than other techniques for synchronization.
+</h3></p>
+<p><h3>
+	ii. Due to busy waiting in semaphore, there is no wastage of process time
+	and resources. This is because the processes are only allowed to enter the
+	critical section after satisfying a certain condition.
+</h3></p>
+<p><h3>
+	iii. They are machine-independent as they run in the machine-independent
+	code of the microkernel.
+</h3></p>
+<p><h3>
+	iv. They allow flexible management of resources.
+</h3></p>
+
 			
 			
 			
@@ -224,14 +305,16 @@ Number of Lecture Hours/Week 3</h1><h1> Exam Marks 60 </h1>
 
 
 <!-- Answer Script -->
-			<div class="QAS"><a onclick="show('ANScript2')">Question 2<h1>Question  2			</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript2')">Question 22<h1>What is a monitor? Explain the solution to the classical dining philosopher's problem, using monitor. (10 Marks)</h1></a></div>
 			<div class="ansclass  animate-bottom" id="ANScript2">
 			
 			<h2>Answer:</h2>
 			
 			
 			
-			
+			<p><strong>Refer 6<sup>th</sup> 
+Question & Answer or <a href="/AnswerScript/WP/CSE6/64_OS/M2/17CS64-18CS43-Module-2-OS-Page2.html">Click Here</a></h2></strong></p>
+
 			
 			
 			</div><br/>
@@ -241,13 +324,15 @@ Number of Lecture Hours/Week 3</h1><h1> Exam Marks 60 </h1>
 			
 			
 <!-- Answer Script -->
-			<div class="QAS"><a onclick="show('ANScript3')">Question 3<h1>Question 3</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript3')">Question 23<h1>State Peterson’s solution in Detail</h1></a></div>
 			<div class="ansclass  animate-bottom" id="ANScript3">
 
 			<h2>Answer:</h2>
 			
 			
-			
+			<p><strong>Refer 13<sup>th</sup> 
+Question & Answer or <a href="/AnswerScript/WP/CSE6/64_OS/M2/17CS64-18CS43-Module-2-OS-Page3.html">Click Here</a></h2></strong></p>
+
 			
 			
 			
@@ -274,13 +359,48 @@ Number of Lecture Hours/Week 3</h1><h1> Exam Marks 60 </h1>
 
 <!-- Answer Script -->
 
-			<div class="QAS"><a onclick="show('ANScript4')">Question 4<h1>Question 4</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript4')">Question 24<h1>Explain Bounded-Buffer Problem with Synchronization? </h1></a></div>
 			<div class="ansclass  animate-bottom" id="ANScript4">
 			
 			<h2>Answer:</h2>
 			
 			
-			
+			<p><h3>
+	<strong><h2>Bounded-Buffer Problem</h2></strong>
+	is commonly used to illustrate the power of synchronization primitives. We
+	present here a general structure of this scheme without committing
+	ourselves to any particular implementation.
+</h3></p>
+<p><h3>
+	We assume that the pool consists of n buffers, each capable of holding one
+	item. The mutex semaphore provides mutual exclusion for accesses to the
+	buffer pool and is initialized to the value 1. The empty and full
+	semaphores count the number of empty and full buffers. The semaphore empty
+	is initialized to the value n; the semaphore full is initialized to the
+	value 0.
+</h3></p>
+<p><h3>
+	The code for the producer process is shown in Figure 24.1; the code for the
+	consumer process is shown in Figure 24.2. Note the symmetry between the
+	producer and the consumer. We can interpret this code as the producer
+	producing full buffers for the consumer or as the consumer producing empty
+	buffers for the producer.
+</h3></p>
+<p align="center">
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/CSE6/64_OS/M2/SS/24.1.jpg" 
+alt="The structure of the producer process." class="resIMG"/></center><br/>
+</h3></p>
+<p align="center">
+	Fig 24.1 The structure of the producer process.
+</h3></p>
+<p align="center">
+			<center><img src="https://hemanthrajhemu.github.io/AnswerScript/WP/CSE6/64_OS/M2/SS/24.2.jpg" 
+alt="The structure of the consumer process" class="resIMG"/></center><br/>
+</h3></p>
+<p align="center">
+	Fig 24.2 The structure of the consumer process
+</h3></p>
+
 			
 			
 			
@@ -293,15 +413,10 @@ Number of Lecture Hours/Week 3</h1><h1> Exam Marks 60 </h1>
 			
 <!-- Answer Script -->
 
-			<div class="QAS"><a onclick="show('ANScript5')">Question 5<h1>Question 5</h1></a></div>
+			<div class="QAS"><a onclick="show('ANScript5')">NULL</a></div>
 			<div class="ansclass  animate-bottom" id="ANScript5">
 
-			<h2>Answer:</h2>
-			
-			
-			
-			
-			
+			NULL
 			
 			</div><br/>
 			</div>
@@ -337,16 +452,29 @@ Number of Lecture Hours/Week 3</h1><h1> Exam Marks 60 </h1>
 
 <center>
 <div id="showPGE">
-  <button class="btn active" onclick="window.location.href='/AnswerScript/WP/5CSE/AI/M1/AS_AI_M1_P1.html'">1</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/AI/M1/AS_AI_M1_P2.html'">2</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/AI/M1/AS_AI_M1_P3.html'">3</button>
-  <button class="btn" onclick="window.location.href='/AnswerScript/WP/5CSE/AI/M1/AS_AI_M1_P4.html'">4</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/CSE6/64_OS/M2/17CS64-18CS43-Module-2-OS-Page1.html'">1</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/CSE6/64_OS/M2/17CS64-18CS43-Module-2-OS-Page2.html'">2</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/CSE6/64_OS/M2/17CS64-18CS43-Module-2-OS-Page3.html'">3</button>
+  <button class="btn" onclick="window.location.href='/AnswerScript/WP/CSE6/64_OS/M2/17CS64-18CS43-Module-2-OS-Page4.html'">4</button>
+  <button class="btn active" onclick="window.location.href='/AnswerScript/WP/CSE6/64_OS/M2/17CS64-18CS43-Module-2-OS-Page5.html'">5</button>
+  
   
   
 </div>
 </center>
 
 <br/><br/>
+
+<div class="desp">
+
+<p>
+<H1>lIKE OUR CONTENT SUPPORT US BY FOLLOWING US ON INSTAGRAM : <a href="https://www.instagram.com/futurevisionbie/">@futurevisionbie</a></H1>
+<h1>For immediate Notification Join the <a href="https://telegram.me/joinchat/AAAAAFTtp8kuvCHALxuMaQ">Telegram Channel</a></h1>
+</p>
+
+</div>
+<br/>
+<br/>
 <!-- Answer Script -->
 
 <div class="alertA1">
